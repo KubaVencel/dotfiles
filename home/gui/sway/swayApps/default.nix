@@ -42,11 +42,12 @@
     
     style =  ''
       * {
-        background: rgba(30, 30, 46, 0.1);
+        background: rgba(30, 30, 46, 0.5);
       }
 
       window {
         background-color: rgba(30, 30, 46, 0.25);
+        border: none;
       }
       
       button {
