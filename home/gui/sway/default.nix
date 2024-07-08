@@ -77,7 +77,7 @@
       	{ command = "swww-daemon"; }
         { command = "foot --server"; }
         { command = "pkill -SIGHUP kanshi"; always = true; }
-        { command = "swww img ~/.wallpapers/girlOnRoofAnimeAestheticSunset.jpg"; }
+        { command = "swww img ~/stylix/girlOnRoofAnimeAestheticSunset.jpg"; }
                 ];
 
       bars = [
