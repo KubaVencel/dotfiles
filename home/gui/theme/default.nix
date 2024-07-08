@@ -2,7 +2,7 @@
 
 #cursorTheme themegtk
 catppuccin.flavor = "mocha";
-catppuccin.enable = true;
+#catppuccin.enable = true;
 
 home.pointerCursor = {
     gtk.enable = true;
