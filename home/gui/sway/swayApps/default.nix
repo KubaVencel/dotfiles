@@ -51,8 +51,8 @@
       }
       
       button {
-        color: rgba(17, 17, 27, 0.15);
-        background-color: rgba(147, 153, 178, 0.45);
+        color: rgba(17, 17, 27, 0.30);
+        background-color: rgba(17, 17, 27, 0.40);
         border: 1px solid;
         border-top: none;
         border-color: rgba(17, 17, 27, 0.5);
