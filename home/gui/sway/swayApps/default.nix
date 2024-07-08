@@ -53,6 +53,7 @@
         color: rgba(17, 17, 27, 0.15);
         background-color: rgba(147, 153, 178, 0.45);
         border: 3px solid;
+        border-color: rgba(17, 17, 27, 0.5);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 25%;
