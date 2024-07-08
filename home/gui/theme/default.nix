@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
 
 #cursorTheme themegtk
-catppuccin.flavour = "mocha";
+catppuccin.flavor = "mocha";
 catppuccin.enable = true;
 
 home.pointerCursor = {
