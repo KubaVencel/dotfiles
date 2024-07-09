@@ -42,7 +42,7 @@
     
     style =  ''
       * {
-        font-family: JetBrains;
+        font-family: JetBrains-mono;
         background-image: none;
 	transition: 20ms;
 	box-shadow: none;
@@ -145,7 +145,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "JetBrains";
+      font = "JetBrains-mono";
       font-size = 20;
       show-failed-attempts = true;
       daemonize = true;
