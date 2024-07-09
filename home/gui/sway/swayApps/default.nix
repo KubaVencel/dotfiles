@@ -42,23 +42,34 @@
     
     style =  ''
       * {
-        background: rgba(30, 30, 46, 0.5);
+        font-family: JetBrains;
+        background-image: none;
+	transition: 20ms;
+	box-shadow: none;
       }
 
       window {
-        background-color: rgba(30, 30, 46, 0.25);
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
       }
       
       button {
-        color: rgba(17, 17, 27, 0.30);
+        color: #11111b;
+        font-size:20px;
+        
+        background-repeat: no-repeat;
         background-color: rgba(17, 17, 27, 0.40);
+        background-position: center;
+        background-size:
+
         border-width: 1px; 
         border-style: solid;
-        margin: 5px;
         border-color: rgba(17, 17, 27, 0.5);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 25%;
+
+        margin: 1px;
       }
       
       button:active,
