@@ -47,7 +47,16 @@
 	transition: 20ms;
 	box-shadow: none;
       }
-      
+
+      window {
+        background: rgba(30, 30, 46, 0.25);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 1px; 
+        border-style: solid;
+        border-colo: rgba(255, 255, 255, 0.25);
+      }
+
       #lock {
         background-image: image(url("/home/vheac/home/gui/sway/swayApps/icons/lock.png"));
       }
