@@ -47,38 +47,6 @@
 	transition: 20ms;
 	box-shadow: none;
       }
-
-      window {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        border: 1px; 
-        border-style: solid;
-        border-colo: rgba(255, 255, 255, 0.25);
-      }
-      
-      button {
-        color: #11111b;
-        font-size:20px;
-        
-        background-repeat: no-repeat;
-        background-color: rgba(17, 17, 27, 0.40);
-        background-position: center;
-        background-size:
-
-        border-width: 1px; 
-        border-style: solid;
-        border-color: rgba(17, 17, 27, 0.5);
-
-        margin: 1px;
-      }
-      
-      button:active,
-      button:focus,
-      button:hover {
-        color: rgba(17, 17, 27, 0.15);
-        background-color: rgba(108, 112, 134, 0.50);
-      }
       
       #lock {
         background-image: image(url("/home/vheac/home/gui/sway/swayApps/icons/lock.png"));
