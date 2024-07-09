@@ -42,7 +42,7 @@
     
     style =  ''
       * {
-        font-family: JetBrains-mono;
+        font-family: "JetBrains-mono";
         background-image: none;
 	transition: 20ms;
 	box-shadow: none;
