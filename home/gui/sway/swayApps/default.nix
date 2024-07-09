@@ -49,12 +49,35 @@
       }
 
       window {
-        background: rgba(30, 30, 46, 0.25);
+        background: linear-gradient(135deg, rgba(17, 17, 27, 0.5), rgba(17, 17, 27, 0.7));
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
+        
         border: 1px; 
         border-style: solid;
-        border-colo: rgba(255, 255, 255, 0.25);
+        border-color: rgba(30, 30, 46, 0.25);
+      }
+      
+      button {
+        color: #a6adc8;
+        font-size: 20px;
+        
+        background-repeat: no-repeat;
+        background-color: rgba(17, 17, 27, 0.35);
+        background-position: center;
+        background-size: 25%;
+
+        border-width: 1px; 
+        border-style: solid;
+        border-color: rgba(17, 17, 27, 0.5);
+
+        margin: 1px;
+      }
+      
+      
+      button:active,
+      button:hover {
+        color: #a6adc8;
+        background-color: rgba(17, 17, 27, 0.25);
       }
 
       #lock {
