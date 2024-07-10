@@ -49,7 +49,7 @@
       }
 
       window {
-        background: linear-gradient(135deg, rgba(17, 17, 27, 0.5), rgba(17, 17, 27, 0.7));
+        background: linear-gradient(135deg, rgba(17, 17, 27, 0.25), rgba(17, 17, 27, 0.50));
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         
         border: 1px; 
@@ -62,7 +62,7 @@
         font-size: 20px;
         
         background-repeat: no-repeat;
-        background-color: rgba(17, 17, 27, 0.35);
+        background-color: rgba(17, 17, 27, 0.25);
         background-position: center;
         background-size: 25%;
 
@@ -77,7 +77,7 @@
       button:active,
       button:hover {
         color: #a6adc8;
-        background-color: rgba(17, 17, 27, 0.25);
+        background-color: rgba(17, 17, 27, 0.15);
       }
 
       #lock {
