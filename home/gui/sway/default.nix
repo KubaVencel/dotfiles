@@ -15,6 +15,9 @@
     extraOptions = [ "--unsupported-gpu" ];
 
     extraSessionCommands = ''
+      ### Autostart
+      exec_always autotiling -w 1 3 5 7 9
+
       export SDL_VIDEODRIVER=wayland
 
       export GTK_THEME=Catppuccin-Mocha-Compact-Mauve-dark

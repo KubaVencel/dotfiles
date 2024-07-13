@@ -99,7 +99,7 @@
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "adbusers" "wireshark" "docker" ];
     shell = pkgs.zsh;
   };
-
+  
   # List services that you want to enable:
   services = {
     # Enable the OpenSSH daemon.
@@ -164,12 +164,14 @@
     libnotify
     glib # # gsettings
     pulseaudioFull
+    autotiling
 
     swww # wallpapers
 
     # essential system utils
     htop
     wget
+    curl
     neovim
     tmux
     curl

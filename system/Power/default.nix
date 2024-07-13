@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }: {
+    { pkgs, config, lib, ... }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -13,7 +13,8 @@
   boot.initrd.systemd.enable = true;
   boot.kernelParams = [ 
 ];
-
+  
+  programs.steam.enable = true;
   # Nvidia
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "nvidia-x11"
