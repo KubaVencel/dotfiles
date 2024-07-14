@@ -12,13 +12,12 @@
 
     systemd.enable = true;
 
-    extraOptions = [ "--unsupported-gpu" ];
+    extraOptions = [ 
+      "--unsupported-gpu"
+    ];
 
     extraSessionCommands = ''
-      ### Autostart
-      exec_always autotiling -w 1 3 5 7 9
-
-      export SDL_VIDEODRIVER=wayland
+      #export SDL_VIDEODRIVER=wayland
 
       export GTK_THEME=Catppuccin-Mocha-Compact-Mauve-dark
 
@@ -81,6 +80,7 @@
         { command = "foot --server"; }
         { command = "pkill -SIGHUP kanshi"; always = true; }
         { command = "swww img ~/stylix/girlOnRoofAnimeAestheticSunset.jpg"; }
+        { command = "autotiling";}
                 ];
 
       bars = [
