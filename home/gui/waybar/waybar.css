@@ -1,5 +1,4 @@
 /* Colors */
-
 @define-color rosewater 	#f5e0dc; 
 @define-color	flamingo   	#f2cdcd;
 @define-color	pink  	    	#f5c2e7; 
@@ -153,8 +152,8 @@
 
 #window {
   font-size: 17px;
-  margin-right: 35px;
-  margin-left: 35px;
+  margin-left: 35pt;
+  margin-right: 35pt;
 }
 
 #custom-arrow8 {
