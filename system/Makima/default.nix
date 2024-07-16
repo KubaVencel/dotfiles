@@ -14,6 +14,11 @@
   boot.kernelParams = [ 
 ];
 
+  systemd.services.ModemManager = {
+    enable = lib.mkForce true;
+    wantedBy = [ "multi-user.target" "network.target" ];
+  };
+
 specialisation = {
     sync.configuration = {
       system.nixos.tags = [ "sync" ];

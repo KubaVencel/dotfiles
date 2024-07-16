@@ -30,7 +30,8 @@
     discord
     
     kate
-    
+    gimp 
+
     grim
     slurp
 
