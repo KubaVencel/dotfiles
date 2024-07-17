@@ -9,12 +9,12 @@
       reload_style_on_change= true; 
       modules-left= [
         "custom/powermenu"
-	"sway/workspaces"
+	"hyprland/workspaces"
   	"custom/arrow10"
       ];
     
       modules-center= [
-        "sway/window"
+        "hyprland/window"
       ];
     
       modules-right= [
@@ -36,7 +36,7 @@
         "clock#date"
         "custom/arrow1"
         "clock#time"
-        "sway/language"
+        "hyprland/language"
       ];
 
       "custom/powermenu"= {		

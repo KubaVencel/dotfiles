@@ -114,12 +114,12 @@ in
           preserve_split = true; # you probably want this
         };
 
-        master = {
-          # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-          new_is_master = true;
-          # soon :)
-          # orientation = "center";
-        };
+#        master = {
+#          # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+#          new_is_master = true;
+#          # soon :)
+#          # orientation = "center";
+#        };
 
         gestures = {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
