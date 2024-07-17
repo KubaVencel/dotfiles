@@ -3,7 +3,7 @@
   let
     startScript = pkgs.writeShellScriptBin "start" ''
       ${pkgs.swww}/bin/swww init &
-      ${pkgs.foor}/bin/foor --server &
+      ${pkgs.foot}/bin/foor --server &
       
       systemctl --user import-environment PATH &
       systemctl --user restart xdg-desktop-portal.service &
@@ -24,7 +24,6 @@ in
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
           "${pkgs.bash}/bin/bash ${startScript}/bin/start"
           "waybar"
-	  "dunst"
 	  "mako"
         ];
 	general = {
