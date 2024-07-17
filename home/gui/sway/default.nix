@@ -17,8 +17,6 @@
     ];
 
     extraSessionCommands = ''
-      #export SDL_VIDEODRIVER=wayland
-
       export GTK_THEME=Catppuccin-Mocha-Compact-Mauve-dark
 
       # Invisible cursor

@@ -18,15 +18,15 @@ home.pointerCursor = {
 # gtk themegtk
   gtk = {
     enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Mauve-dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
-        size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "mocha";
-      };
-    };
+    # theme = {
+    #   name = "Catppuccin-Mocha-Compact-Mauve-dark";
+    #   package = pkgs.catppuccin-gtk.override {
+    #     accents = [ "mauve" ];
+    #     size = "compact";
+    #     tweaks = [ "rimless" "black" ];
+    #     variant = "mocha";
+    #   };
+    # };
 
   # cursorTheme
     cursorTheme = {
@@ -41,17 +41,16 @@ home.pointerCursor = {
     };
   };
 
-  # qt theme
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-        name = "Catppuccin Mocha Mauve Modern";
-        package = pkgs.catppuccin-kde.override {
-        flavour = [ "mocha" ];
-        accents = [ "mauve" ];
-        winDecStyles = [ "modern" ];
-        };
-      };
-    };
+
+  #   enable = true;
+  #   platformTheme.name = "adwaita";
+  #   style = {
+  #       name = "Catppuccin Mocha Mauve Modern";
+  #       package = pkgs.catppuccin-kde.override {
+  #       flavour = [ "mocha" ];
+  #       accents = [ "mauve" ];
+  #       winDecStyles = [ "modern" ];
+  #       };
+  #     };
+  #   };
 }

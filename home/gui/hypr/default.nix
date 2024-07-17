@@ -2,14 +2,15 @@
 
   let
     startScript = pkgs.writeShellScriptBin "start" ''
-     ${pkgs.swww}/bin/swww init &
+      ${pkgs.swww}/bin/swww init &
+      ${pkgs.foor}/bin/foor --server &
+      
+      systemctl --user import-environment PATH &
+      systemctl --user restart xdg-desktop-portal.service &
 
-     systemctl --user import-environment PATH &
-     systemctl --user restart xdg-desktop-portal.service &
-
-     # wait a tiny bit for wallpaper
-     sleep 2
-
+      # wait a tiny bit for wallpaper
+      sleep 2
+      ${pkgs.swww}/bin/swww img ~/stylix/girlOnRoofAnimeAestheticSunset.jpg
   '';
 
 in

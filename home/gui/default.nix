@@ -1,8 +1,10 @@
 { pkgs, ... }: {
   imports = [
-    ./kanshi
-    ./sway
+    #./kanshi
+    #./sway
+    ./hypr
     ./waybar
+    ./wlogout
     ./nixColors
     ./theme
   ];
@@ -161,4 +163,3 @@
     
   fonts.fontconfig.enable = true;
 }
-  
