@@ -35,7 +35,9 @@ in
 
           layout = "master";
         };
-
+      
+        monitor = "eDP-1, 1920x1080@60, 0x0, 1";
+        
         env = [
           "XCURSOR_SIZE,24"
 	  #"GBM_BACKEND,nvidia-drm"
@@ -70,7 +72,7 @@ in
 
           sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
         };
-
+        
         misc = {
           enable_swallow = true;
           force_default_wallpaper = 0;
