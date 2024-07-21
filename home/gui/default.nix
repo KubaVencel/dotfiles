@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    ./sway
-    ./kansi
+    #./sway
+    #./kanshi
     ./hypr
     ./waybar
     ./wlogout

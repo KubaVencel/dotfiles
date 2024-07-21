@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
 
 #cursorTheme themegtk
-catppuccin.flavor = "mocha";
+#catppuccin.flavor = "mocha";
 #catppuccin.enable = true;
 
 home.pointerCursor = {
@@ -16,8 +16,8 @@ home.pointerCursor = {
    };
 
 # gtk themegtk
-  gtk = {
-    enable = true;
+   gtk = {
+     enable = true;
     # theme = {
     #   name = "Catppuccin-Mocha-Compact-Mauve-dark";
     #   package = pkgs.catppuccin-gtk.override {
@@ -29,10 +29,10 @@ home.pointerCursor = {
     # };
 
   # cursorTheme
-    cursorTheme = {
-      package = pkgs.catppuccin-cursors.mochaLight;
-      name = "catppuccin-mocha-light-cursors";
-    };
+    # cursorTheme = {
+    #   package = pkgs.catppuccin-cursors.mochaLight;
+    #   name = "catppuccin-mocha-light-cursors";
+    # };
 
   # icons 
     iconTheme = {
