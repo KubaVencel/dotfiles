@@ -1,9 +1,6 @@
 { pkgs, config, ... }: {
 
 #cursorTheme themegtk
-#catppuccin.flavor = "mocha";
-#catppuccin.enable = true;
-
 home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;

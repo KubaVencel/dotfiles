@@ -16,6 +16,11 @@
           icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           definedAliases = [ "@np" ];
         };
+        "ecosia" = {
+          urls = [{
+            template = "https://www.ecosia.org/search?q=";
+          }];
+        };
       };
       
       search.force = true;

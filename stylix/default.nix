@@ -59,7 +59,7 @@
     #targets.plymouth.enable = true;
     # stylix.targets.nixos-icons.enable = true;
 
-    autoEnable = false;
+    autoEnable = true;
   };
 }
 

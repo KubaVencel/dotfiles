@@ -36,7 +36,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, catppuccin, lanzaboote, nixvim, agenix, nix-index-database, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, catppuccin, agenix, nix-index-database, ... }@inputs: {
     nixosConfigurations =
       let
         makeNixosConfiguration = name: modules: nixpkgs.lib.nixosSystem {
@@ -73,6 +73,7 @@
           modules = [
             ./home
             ./home/gui
+            stylix.homeManagerModules.stylix
             catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index
