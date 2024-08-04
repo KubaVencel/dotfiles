@@ -30,8 +30,9 @@
       ];
 
       extraConfig = "${builtins.readFile ./user.js}";
-      userChrome = "${builtins.readFile  ./userChrome.css}";
-	  
+
+      userChrome = "${builtins.readFile  ./userChrome.css}";	  
+      
       userContent = "${builtins.readFile ./userContent.css}";
 
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
