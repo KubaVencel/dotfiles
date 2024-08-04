@@ -19,7 +19,6 @@
       garbageDay = "sudo nix-collect-garbage -d";
       storeGarbage = "sudo nix-store --gc --print-dead";
       nixDeleteOld = "nix-env --delete-generations";
-      dotfiles = "/usr/bin/git --git-dir=$HOME/ --work-tree=$HOME";
       storeRepair = "sudo nix-store --verify --check-contents --repair";
     };
     history = {
