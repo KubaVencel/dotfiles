@@ -9,12 +9,12 @@
       reload_style_on_change= true; 
       modules-left= [
         "custom/powermenu"
-	"hyprland/workspaces"
+	"sway/workspaces"
   	"custom/arrow10"
       ];
     
       modules-center= [
-        "hyprland/window"
+        "sway/window"
       ];
     
       modules-right= [
@@ -36,7 +36,7 @@
         "clock#date"
         "custom/arrow1"
         "clock#time"
-        "hyprland/language"
+        "sway/language"
       ];
 
       "custom/powermenu"= {		
@@ -109,7 +109,7 @@
     	tooltip= false;
       };
 
-      hyprland-workspaces= {
+      sway-workspaces= {
     	disable-scroll-wraparound= true;
       	smooth-scrolling-threshold= 4;
         enable-bar-scroll= true;
