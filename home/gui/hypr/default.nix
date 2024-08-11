@@ -36,7 +36,7 @@ in
           layout = "master";
         };
         
-        monitor = "DP-1, 2560x1440@239.97Hz";
+        monitor = "DP-1, 2560x1440@239.97, 0x0, 1";
         #monitor = "eDP-1, 1920x1080@60, 0x0, 1";
         
         env = [
