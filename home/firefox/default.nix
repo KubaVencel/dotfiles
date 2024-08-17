@@ -3,7 +3,7 @@
   programs.firefox = {
     enable = true;
     profiles.echoes = {
-      search.default = "ecosia";
+      search.default = "Ecosia search";
       search.engines = {
         "Nix Packages" = {
           urls = [{

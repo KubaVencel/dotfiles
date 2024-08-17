@@ -4,6 +4,8 @@
     startScript = pkgs.writeShellScriptBin "start" ''
       ${pkgs.swww}/bin/swww init &
       ${pkgs.foot}/bin/foor --server &
+
+      export MOZ_ENABLE_WAYLAND=1
       
       systemctl --user import-environment PATH &
       systemctl --user restart xdg-desktop-portal.service &

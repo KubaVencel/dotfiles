@@ -59,7 +59,7 @@
           background = "#1e1e2e";
           text = "#cdd6f4";
           border = "#cba6f7";
-          button-background = "#313244";
+          button-background = "#6e738d";
         };  
       };
     };
@@ -161,7 +161,7 @@
         };
 
         fonts = {
-          names = [ "SourceCodePro" ];
+          names = [ "JetBrains" ];
           size = 13.0;
         };
 
@@ -182,9 +182,8 @@
         mode = "1920x1080@60.031Hz";
         position = "0,0";
           scale = "1.1";
+        };
       };
-       };
-
 
       input = {
         "type:keyboard" = {

@@ -9,12 +9,12 @@
       reload_style_on_change= true; 
       modules-left= [
         "custom/powermenu"
-	"hyprland/workspaces"
+	"sway/workspaces"
   	"custom/arrow10"
       ];
     
       modules-center= [
-        "hyprland/window"
+        "sway/window"
       ];
     
       modules-right= [
@@ -36,7 +36,7 @@
         "clock#date"
         "custom/arrow1"
         "clock#time"
-        "hyprland/language"
+        "sway/language"
       ];
 
       "custom/powermenu"= {		
@@ -53,7 +53,7 @@
 
       /* Modules */
 
-      "hyprland/language" = {
+      "sway/language" = {
         format = " {}";
         min-length = 5;
         # on-click = "${pkgs.sway}/bin/swaymsg 'input * xkb_switch_layout next'";
@@ -103,13 +103,13 @@
         tooltip= false;
       };
 
-      hyprland= {
+      sway= {
         format= "{}";
     	max-length= 30;
     	tooltip= false;
       };
 
-      hyprland-workspaces= {
+      sway-workspaces= {
     	disable-scroll-wraparound= true;
       	smooth-scrolling-threshold= 4;
         enable-bar-scroll= true;
