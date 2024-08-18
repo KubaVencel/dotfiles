@@ -3,8 +3,13 @@
   programs.firefox = {
     enable = true;
     profiles.echoes = {
-      search.default = "Ecosia search";
       search.engines = {
+        "ecosia" = {
+          urls = [{ template = "https://www.ecosia.org/search?q={searchTerms}"; }];
+          iconUpdateURL = " ";
+          definedAliases = [ "@ecosia" ];
+        };
+
         "Nix Packages" = {
           urls = [{
             template = "https://search.nixos.org/packages";
@@ -18,7 +23,10 @@
         };
       };
       
-      search.force = true;
+      search = {
+        force = true;
+        default = "ecosia";
+      };
 
       bookmarks = [
         {
@@ -41,7 +49,6 @@
 	darkreader
         ublock-origin
         return-youtube-dislikes
-        ecosia
         #sponsorblock
         #tridactyl
       ];
