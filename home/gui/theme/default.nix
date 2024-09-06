@@ -15,6 +15,7 @@ home.pointerCursor = {
 # gtk themegtk
    gtk = {
      enable = true;
+     catppuccin.enable = true;
     # theme = {
     #   name = "Catppuccin-Mocha-Compact-Mauve-dark";
     #   package = pkgs.catppuccin-gtk.override {

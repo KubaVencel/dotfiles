@@ -21,13 +21,15 @@
     };
   };
 	
-  
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     spotify
     thunderbird
+    protonmail-bridge-gui
     discord
+    bitwarden
+    keepassxc
     
     kate
     gimp 
