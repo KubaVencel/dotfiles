@@ -56,7 +56,7 @@
       "hyprland/language" = {
         format = " {}";
         min-length = 5;
-        # on-click = "${pkgs.hyprland}/bin/hyprlandmsg 'input * xkb_switch_layout next'";
+        on-click = "${pkgs.hyprland}/bin/hyprlandmsg 'input * xkb_switch_layout next'";
         tooltip = false;
       };
 
