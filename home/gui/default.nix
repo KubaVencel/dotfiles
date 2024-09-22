@@ -2,7 +2,7 @@
   imports = [
     ./sway
     #./kanshi
-    ./hypr
+    #./hypr
     ./waybar
     ./wlogout
     ./nixColors

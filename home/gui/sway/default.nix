@@ -176,7 +176,7 @@
       "Dell Inc. DELL AW2723DF 5W3LNP3" = {
         mode = "2560x1440@239.970Hz";
         position = "0,0";
-        scale = "1";
+        scale = "1.1";
       };
       "eDP-1" = {
         mode = "1920x1080@60.031Hz";

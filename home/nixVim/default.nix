@@ -68,7 +68,7 @@ programs.nixvim = {
       enable = true;
 
       servers = {
-        tsserver.enable = true;
+        ts-ls.enable = true;
         nixd.enable = true;
         html.enable = true;
         cssls.enable = true;

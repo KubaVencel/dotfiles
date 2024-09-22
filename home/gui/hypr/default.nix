@@ -4,8 +4,6 @@
     startScript = pkgs.writeShellScriptBin "start" ''
       ${pkgs.swww}/bin/swww init &
       ${pkgs.foot}/bin/foor --server &
-
-      export MOZ_ENABLE_WAYLAND=1
       
       systemctl --user import-environment PATH &
       systemctl --user restart xdg-desktop-portal.service &
@@ -29,29 +27,30 @@ in
 	  "mako"
         ];
 	general = {
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 2.5;
+          gaps_out = 5;
           border_size = 2;
           "col.active_border" = "rgba(cba6f7d9) rgba(b4befed9) 60deg";
           "col.inactive_border" = "rgba(1e1e2ed9)";
 
           layout = "master";
         };
-        
-        monitor = ", preferred, auto, 1";
-        
+      
+        monitor = "DP-1, 2560x1440@240, 0x0, 1";
+
         env = [
           "XCURSOR_SIZE,24"
-	  #"GBM_BACKEND,nvidia-drm"
-   	  #"__GLX_VENDOR_LIBRARY_NAME,nvidia"
-  	  #"LIBVA_DRIVER_NAME,nvidia"
-    	  #"__GL_GSYNC_ALLOWED"
-    	  #"__GL_VRR_ALLOWED"
-	  #"MOZ_ENABLE_WAYLAND,1"
-	  #"WLR_RENDERER_ALLOW_SOFTWARE,1"
-      	  #"QT_QPA_PLATFORM,wayland"
-	  #"SDL_VIDEODRIVER,wayland"
-	  #"WLR_DRM_NO_MODIFIERS=1"
+          "GBM_BACKEND,nvidia-drm"
+          "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+          "LIBVA_DRIVER_NAME,nvidia"
+          "XDG_SESSION_TYPE,wayland"
+          #"__GL_GSYNC_ALLOWED"
+          #"__GL_VRR_ALLOWED"
+          #"MOZ_ENABLE_WAYLAND,1"
+          #"WLR_RENDERER_ALLOW_SOFTWARE,1"
+          #"QT_QPA_PLATFORM,wayland"
+          #"SDL_VIDEODRIVER,wayland"
+          #"WLR_DRM_NO_MODIFIERS=1"
         ];
 
         input = {
