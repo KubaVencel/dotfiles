@@ -7,9 +7,13 @@
           name = "Power";
           outputs = [
             {
-              criteria = "Dell Inc. DELL AW2723DF 5W3LNP3";
+              criteria = "DP-1";
               status = "enable";
               mode = "2560x1440@239.970Hz";
+            }
+            {
+              criteria = "eDP-1";
+              status = "disable";
             }
           ];
         };

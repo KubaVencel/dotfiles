@@ -2,6 +2,30 @@
   imports = [
     ./swayApps
   ];
+  home.sessionVariables = {
+    # Invisible cursor
+    #WLR_NO_HARDWARE_CURSORS = "1";
+    # fix some java apps
+    _JAVA_AWT_WM_NONREPARENTING = "1";
+    # General wayland environment variables
+    #XDG_SESSION_TYPE = "wayland";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    SDL_VIDEODRIVER = "wayland";
+    GDK_BACKEND = "wayland";
+    # Firefox wayland environment variable
+    MOZ_ENABLE_WAYLAND = "1";
+    MOZ_USE_XINPUT2 = "1";
+      
+    # OpenGL Variables
+    GBM_BACKEND = "nvidia-drm";
+    #__GL_GSYNC_ALLOWED = "0";
+    #__GL_VRR_ALLOWED = "0";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      
+    # Xwayland compatibility
+    #XWAYLAND_NO_GLAMOR = "1";
+  };
 
   wayland.windowManager.sway = {
     enable = true;
@@ -17,29 +41,31 @@
     ];
 
     extraSessionCommands = ''
-      # Invisible cursor
-      export WLR_NO_HARDWARE_CURSORS=1
-      
-      # fix some java apps
-      export _JAVA_AWT_WM_NONREPARENTING=1
-      
-      # General wayland environment variables
-      export XDG_SESSION_TYPE=wayland
-      export QT_QPA_PLATFORM=wayland
-      export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-      
-      # Firefox wayland environment variable
-      export MOZ_ENABLE_WAYLAND=1
-      export MOZ_USE_XINPUT2=1
+      # # Invisible cursor
+      # export WLR_NO_HARDWARE_CURSORS=1
+      #
+      # # fix some java apps
+       #export _JAVA_AWT_WM_NONREPARENTING=1
+      #
+      # # General wayland environment variables
+       #export XDG_SESSION_TYPE=wayland
+       #export QT_QPA_PLATFORM=wayland
+      # #export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+       #export SDL_VIDEODRIVER=wayland
+      #
+      #
+      # # Firefox wayland environment variable
+       #export MOZ_ENABLE_WAYLAND=1
+       #export MOZ_USE_XINPUT2=1
       
       # OpenGL Variables
-      export GBM_BACKEND=nvidia-drm
-      export __GL_GSYNC_ALLOWED=0
-      export __GL_VRR_ALLOWED=0
-      export __GLX_VENDOR_LIBRARY_NAME=nvidia
+      #export GBM_BACKEND=nvidia-drm
+      #export __GL_GSYNC_ALLOWED=0
+      #export __GL_VRR_ALLOWED=0
+      #export __GLX_VENDOR_LIBRARY_NAME=nvidia
       
       # Xwayland compatibility
-      #export XWAYLAND_NO_GLAMOR=1
+      # #export XWAYLAND_NO_GLAMOR=1
       
       # home-manager home.sessionVariables
       source ${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh
@@ -173,16 +199,16 @@
         };
 
       output = {
-      "Dell Inc. DELL AW2723DF 5W3LNP3" = {
-        mode = "2560x1440@239.970Hz";
-        position = "0,0";
-        scale = "1.1";
-      };
-      "eDP-1" = {
-        mode = "1920x1080@60.031Hz";
-        position = "0,0";
-          scale = "1.1";
+        "DP-1" = {
+          mode = "2560x1440@239.970Hz";
+          position = "0,0";
+          scale = "1";
         };
+     #   "eDP-1" = {
+     #     mode = "1920x1080@60.031Hz";
+     #     position = "0,0";
+     #     scale = "1.1";
+     #   };
       };
 
       input = {

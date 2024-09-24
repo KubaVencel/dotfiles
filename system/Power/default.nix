@@ -16,18 +16,18 @@
   
   programs.steam.enable = true;
   # Nvidia
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "nvidia-x11"
-    "nvidia-settings"
-    "nvidia-persistenced" 
-  ];
+  #nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+  #  "nvidia-x11"
+  #  "nvidia-settings"
+  #  "nvidia-persistenced" 
+  #];
 
-  services.xserver = {
-    enable = true;
-    videoDrivers = [
-      "nvidia"
-    ];
-  };
+  #services.xserver = {
+  #  enable = true;
+  #  videoDrivers = [
+  #    "nvidia"
+  #  ];
+  #};
 
   hardware.nvidia = {
     # nvidia-drm.modeset=1
@@ -41,7 +41,7 @@
     powerManagement.finegrained = false; 
     open = false;
 
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   # vaapi
