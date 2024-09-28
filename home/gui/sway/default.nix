@@ -3,13 +3,13 @@
     ./swayApps
   ];
   
-  home.sessionVariables = {
+  environment.variables = {
     # Invisible cursor
     WLR_NO_HARDWARE_CURSORS = "1";
     
     # fix some java apps
     _JAVA_AWT_WM_NONREPARENTING = "1";
-    
+ 
     # General wayland environment variables
     XDG_SESSION_TYPE = "wayland";
     QT_QPA_PLATFORM = "wayland";
@@ -22,6 +22,7 @@
     MOZ_USE_XINPUT2 = "1";
       
     # OpenGL Variables
+    LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
@@ -35,6 +36,7 @@
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    xwayland.enable = true;
 
     # Unbreak the backticks (home-manager#5311)
     checkConfig = false;

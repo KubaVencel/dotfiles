@@ -11,6 +11,7 @@
 
   # needed to unlock LUKS with key from TPM
   boot.initrd.systemd.enable = true;
+  
   # Steam
   programs.steam = {
     enable = true;
@@ -34,46 +35,71 @@
   };
 
   hardware.nvidia = {
-    # nvidia-drm.modeset=1
-    modesetting.enable = true;
+    nvidia = {
+      # nvidia-drm.modeset=1
+      modesetting.enable = true;
 
-    # Allow headless mode
-    nvidiaPersistenced = true;
+      forceFullCompositionPipeline = true;
 
-    powerManagement.enable = true;
-    powerManagement.finegrained = false; 
-    open = false;
+      # Allow headless mode
+      nvidiaPersistenced = true;
 
-    #package = config.boot.kernelPackages.nvidiaPackages.production;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    #package = config.boot.kernelPackages.nvidiaPackages.beta;
-  };
-  
-  # vaapi
-  hardware =  {
+      powerManagement.enable = true;
+      powerManagement.finegrained = false; 
+      open = false;
+
+      #package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      #package = config.boot.kernelPackages.nvidiaPackages.beta;
+    };
+
     graphics = {
       enable = true;
       enable32Bit = true;
-      extraPackages = with pkgs; [
+      extraPackages = with pkgs; 
+      [ 
+        nvidia-vaapi-driver
  	vaapiVdpau
         libvdpau-va-gl
-        ];
-      };
+      ];
     };
+  };
 
-specialisation = {
-    sync.configuration = {
-      system.nixos.tags = [ "sync" ];
+  environment.systemPackages = with pkgs; [
+    nvtopPackages.nvidia
+    mesa
+    vulkan-loader
+    vulkan-validation-layers
+    vulkan-extension-layer
+    vulkan-tools
+    libva
+    libva-utils
+  ];
 
-      boot = {
-          kernelParams =
-            [ 
-              "nvidia-drm.modeset=1" ];
-              # kernelPackages = pkgs.linuxPackages_5_4;
-              extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
-        };
-      };
-    };
+  boot = {
+    /*
+       kernelParams = [
+      "ibt=off"
+      "fbdev=1"
+    ];
+    */
+
+    blacklistedKernelModules = ["nouveau"];
+  };
+
+# specialisation = {
+#     sync.configuration = {
+#       system.nixos.tags = [ "sync" ];
+#
+#       boot = {
+#           kernelParams =
+#             [ 
+#               "nvidia-drm.modeset=1" ];
+#               # kernelPackages = pkgs.linuxPackages_5_4;
+#               extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+#         };
+#       };
+#     };
 
 
 
