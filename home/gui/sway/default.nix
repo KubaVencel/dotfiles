@@ -3,7 +3,7 @@
     ./swayApps
   ];
   
-  environment.variables = {
+  home.sessionVariables = {
     # Invisible cursor
     WLR_NO_HARDWARE_CURSORS = "1";
     
@@ -36,7 +36,6 @@
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    xwayland.enable = true;
 
     # Unbreak the backticks (home-manager#5311)
     checkConfig = false;

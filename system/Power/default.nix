@@ -34,7 +34,7 @@
     ];
   };
 
-  hardware.nvidia = {
+  hardware = {
     nvidia = {
       # nvidia-drm.modeset=1
       modesetting.enable = true;
