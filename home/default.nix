@@ -39,6 +39,9 @@
 
     pcmanfm
     lazygit
+    
+    glxinfo
+    pciutils
   ];
 
   # nicely reload system units when changing configs

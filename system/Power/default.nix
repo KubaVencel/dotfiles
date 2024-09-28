@@ -11,23 +11,27 @@
 
   # needed to unlock LUKS with key from TPM
   boot.initrd.systemd.enable = true;
-  boot.kernelParams = [ 
-];
-  
-  programs.steam.enable = true;
-  # Nvidia
-  #nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-  #  "nvidia-x11"
-  #  "nvidia-settings"
-  #  "nvidia-persistenced" 
-  #];
+  # Steam
+  programs.steam = {
+    enable = true;
+    #remotePlay.openFirewall = true;
+    #dedicatedServer.openFirewall = true;
+    gamescopeSession.enable = true;
+  };
 
-  #services.xserver = {
-  #  enable = true;
-  #  videoDrivers = [
-  #    "nvidia"
-  #  ];
-  #};
+  # Nvidia
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "nvidia-x11"
+    "nvidia-settings"
+    "nvidia-persistenced" 
+  ];
+
+  services.xserver = {
+    enable = true;
+    videoDrivers = [
+      "nvidia"
+    ];
+  };
 
   hardware.nvidia = {
     # nvidia-drm.modeset=1
@@ -36,23 +40,23 @@
     # Allow headless mode
     nvidiaPersistenced = true;
 
-
     powerManagement.enable = true;
     powerManagement.finegrained = false; 
     open = false;
 
+    #package = config.boot.kernelPackages.nvidiaPackages.production;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
-
+  
   # vaapi
   hardware =  {
     graphics = {
       enable = true;
-     # driSupport = true;
-     # driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [
  	vaapiVdpau
-	libvdpau-va-gl
+        libvdpau-va-gl
         ];
       };
     };
@@ -63,9 +67,10 @@ specialisation = {
 
       boot = {
           kernelParams =
-            [ "acpi_rev_override" "mem_sleep_default=deep" "nvidia-drm.modeset=1" ];
-          # kernelPackages = pkgs.linuxPackages_5_4;
-          # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+            [ 
+              "nvidia-drm.modeset=1" ];
+              # kernelPackages = pkgs.linuxPackages_5_4;
+              extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
         };
       };
     };

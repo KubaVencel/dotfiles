@@ -11,10 +11,6 @@
               status = "enable";
               mode = "2560x1440@239.970Hz";
             }
-            {
-              criteria = "eDP-1";
-              status = "disable";
-            }
           ];
         };
       }

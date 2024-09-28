@@ -30,7 +30,8 @@ programs.nixvim = {
     shiftwidth = 2; # Tab width should be 2
     };
 
-  plugins = {
+    plugins = {
+      web-devicons.enable = true;
     nix.enable = true; # Support for writing Nix expressions in vim 
 
     lualine.enable = true; # A blazing fast and easy to configure Neovim statusline written in Lua.

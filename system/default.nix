@@ -55,6 +55,7 @@
 
   # Configure keymap in X11
   services.xserver = {
+    enable = true;
     xkb.layout = "cz";
     xkb.variant = "";
   };
@@ -157,6 +158,8 @@
 
   environment.systemPackages = with pkgs; [
     # system
+    linux-firmware
+    brightnessctl
     home-manager
     openssh
     polkit
@@ -219,7 +222,8 @@
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
-    
+    light.enable = true;
+
     dconf.enable =true;
 
     zsh.enable = true;

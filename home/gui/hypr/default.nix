@@ -5,8 +5,8 @@
       ${pkgs.swww}/bin/swww init &
       ${pkgs.foot}/bin/foor --server &
       
-      systemctl --user import-environment PATH &
-      systemctl --user restart xdg-desktop-portal.service &
+      #systemctl --user import-environment PATH &
+      #systemctl --user restart xdg-desktop-portal.service &
 
       # wait a tiny bit for wallpaper
       sleep 2
@@ -39,11 +39,11 @@ in
         monitor = "DP-1, 2560x1440@240, 0x0, 1";
 
         env = [
-          "XCURSOR_SIZE,24"
-          "GBM_BACKEND,nvidia-drm"
-          "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-          "LIBVA_DRIVER_NAME,nvidia"
-          "XDG_SESSION_TYPE,wayland"
+         # "XCURSOR_SIZE,24"
+         # "GBM_BACKEND,nvidia-drm"
+         # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+         # "LIBVA_DRIVER_NAME,nvidia"
+         # "XDG_SESSION_TYPE,wayland"
           #"__GL_GSYNC_ALLOWED"
           #"__GL_VRR_ALLOWED"
           #"MOZ_ENABLE_WAYLAND,1"
