@@ -39,7 +39,7 @@
       # nvidia-drm.modeset=1
       modesetting.enable = true;
 
-      forceFullCompositionPipeline = true;
+      #forceFullCompositionPipeline = true;
 
       # Allow headless mode
       nvidiaPersistenced = true;
