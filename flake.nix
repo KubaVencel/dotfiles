@@ -1,13 +1,18 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    # Default to the nixos-unstable branch
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    catppuccin.url = "github:catppuccin/nix";
+    # Latest stable branch of nixpkgs, used for version rollback
+    # The current latest version is 23.11
+    #nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

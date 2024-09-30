@@ -58,50 +58,11 @@
       enable32Bit = true;
       extraPackages = with pkgs; 
       [ 
-        nvidia-vaapi-driver
  	vaapiVdpau
         libvdpau-va-gl
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    nvtopPackages.nvidia
-    mesa
-    vulkan-loader
-    vulkan-validation-layers
-    vulkan-extension-layer
-    vulkan-tools
-    libva
-    libva-utils
-  ];
-
-  boot = {
-    /*
-       kernelParams = [
-      "ibt=off"
-      "fbdev=1"
-    ];
-    */
-
-    blacklistedKernelModules = ["nouveau"];
-  };
-
-# specialisation = {
-#     sync.configuration = {
-#       system.nixos.tags = [ "sync" ];
-#
-#       boot = {
-#           kernelParams =
-#             [ 
-#               "nvidia-drm.modeset=1" ];
-#               # kernelPackages = pkgs.linuxPackages_5_4;
-#               extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
-#         };
-#       };
-#     };
-
-
 
  # lanzaboote
 
