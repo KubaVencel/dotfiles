@@ -11,31 +11,38 @@
 
   # needed to unlock LUKS with key from TPM
   boot.initrd.systemd.enable = true;
-  boot.kernelParams = [ 
-];
+  boot.kernelParams = [
+  ];
+  
+  programs.steam = {
+    enable = true;
+    # remotePlay.openFirewall = true;
+    # dedicatedServer.openFirewall = true;
+    gamescopeSession.enable = true;
+  };  
 
   systemd.services.ModemManager = {
     enable = lib.mkForce true;
     wantedBy = [ "multi-user.target" "network.target" ];
   };
 
-specialisation = {
+  specialisation = {
     sync.configuration = {
-      system.nixos.tags = [ "sync" ];
-
-      boot = {
-          kernelParams =
-            [ "acpi_rev_override" "mem_sleep_default=deep" "nvidia-drm.modeset=1" ];
-          # kernelPackages = pkgs.linuxPackages_5_4;
-          # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
-        };
+    system.nixos.tags = [ "sync" ];
+    boot = {
+      kernelParams =[ 
+        "acpi_rev_override" 
+        "mem_sleep_default=deep" 
+        "nvidia-drm.modeset=1" 
+      ];
+      # kernelPackages = pkgs.linuxPackages_5_4;
+      # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
       };
     };
+  };
 
-
-
- # lanzaboote
-
+  # lanzaboote
+  
   # Lanzaboote currently replaces the systemd-boot module.
   # This setting is usually set to true in configuration.nix
   # generated at installation time. So we force it to false

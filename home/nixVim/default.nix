@@ -69,17 +69,17 @@ programs.nixvim = {
       enable = true;
 
       servers = {
-        ts-ls.enable = true;
+        ts_ls.enable = true;
         nixd.enable = true;
         html.enable = true;
         cssls.enable = true;
 
-        lua-ls = {
+        lua_ls = {
           enable = true;
           settings.telemetry.enable = false;
         };
 
-        rust-analyzer = {
+        rust_analyzer = {
           installRustc = true;
           enable = true;
           installCargo = true;

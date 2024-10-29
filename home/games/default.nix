@@ -17,7 +17,7 @@
     # heroic
     mangohud
 
-    steamPackages.steam-runtime
+    #steamPackages.steam-runtime
   ];
 
 #   myHomeManager.impermanence.directories = [
