@@ -205,15 +205,28 @@
         };
 
       output = {
+        #"DP-1" = {
+        #  mode = "2560x1440@239.970Hz";
+        #  position = "0,0";
+        #  scale = "1";
+        #};
         "DP-1" = {
-          mode = "2560x1440@239.970Hz";
+          mode = "1920x1080@60.031Hz";
           position = "0,0";
           scale = "1";
+          scale_filter = "linear";
+          transform = "normal";
+          max_render_time = "off";
+          adaptive_sync = "disabled";
         };
         "eDP-1" = {
           mode = "1920x1080@60.031Hz";
           position = "0,0";
           scale = "1.1";
+          scale_filter = "linear";
+          transform = "normal";
+          max_render_time = "off";
+          adaptive_sync = "disabled";
         };
       };
 

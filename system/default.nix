@@ -67,13 +67,13 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     source-code-pro
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ];})
+    pkgs.nerd-fonts.jetbrains-mono
     ];
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    font = "lat2-sun16";
+    font = "lat2-terminus16";
     # keyMap = "us";
     # useXkbConfig = true; # use xkbOptions in tty.
   };
