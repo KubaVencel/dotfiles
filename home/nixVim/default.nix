@@ -38,7 +38,7 @@ programs.nixvim = {
 
     bufferline.enable = true; # A snazzy 💅 buffer line (with tabpage integration) for Neovim built using lua.
     
-    nvim-colorizer.enable = true; # A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.
+    colorizer.enable = true; # A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.
 
     transparent.enable = true;
     luasnip.enable = true;

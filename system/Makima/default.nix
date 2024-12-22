@@ -4,7 +4,8 @@
     ./hardware-configuration.nix
   ];
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;  
+  # Enables wireless support via wpa_supplicant.
   # Use the systemd-boot EFI boot loader.
   #boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,8 +15,12 @@
   boot.kernelParams = [
   ];
 
-  # Thermald proactively prevents overheating on Intel CPUs and works well with other tools.
+  # Thermald proactively prevents overheating on Intel CPUs 
+  # and works well with other tools.
   services.thermald.enable = true;
+  
+  # tlp : A common tool used to save power on laptops is tlp, 
+  # which has sensible defaults for most laptops. 
 
   services.tlp = {
     enable = true;
@@ -36,6 +41,36 @@
       STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
     };
   };
+  
+  # smartmontools is a package which provides tools for monitoring drives
+  # which support the S.M.A.R.T. system for monitoring hard drive health.
+  # It includes the smartd and smartctl programs.
+  
+    services.smartd = {
+    enable = true;
+    devices = [
+      {
+        device = "/dev/nvme0n1"; 
+        # FIXME: Change this to your actual disk; use lsblk to find the appropriate value
+      }
+    ];
+  };
+
+  # fingerprint reader
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      #driver = pkgs.libfprint-2-tod1-vfs0090; 
+      #(If the vfs0090 Driver does not work, use the following driver)
+      driver = pkgs.libfprint-2-tod1-goodix; 
+      #(On my device it only worked with this driver)
+    }; 
+  };
+
+  #security.pam.services.swaylock = {};
+  security.pam.services.swaylock.fprintAuth = true;
+
 
   programs.steam = {
     enable = true;
@@ -56,7 +91,7 @@
       kernelParams =[ 
         "acpi_rev_override" 
         "mem_sleep_default=deep" 
-        "nvidia-drm.modeset=1" 
+        #"nvidia-drm.modeset=1" 
       ];
       # kernelPackages = pkgs.linuxPackages_5_4;
       # extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
