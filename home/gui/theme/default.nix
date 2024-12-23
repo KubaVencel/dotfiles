@@ -1,5 +1,9 @@
 { pkgs, config, ... }: {
-
+#Catppuccin
+catppuccin = {
+    btop.enable = true;
+    gtk.enable = true;
+  };
 #cursorTheme themegtk
 home.pointerCursor = {
     gtk.enable = true;
@@ -15,7 +19,6 @@ home.pointerCursor = {
 # gtk themegtk
    gtk = {
      enable = true;
-     catppuccin.enable = true;
     # theme = {
     #   name = "Catppuccin-Mocha-Compact-Mauve-dark";
     #   package = pkgs.catppuccin-gtk.override {

@@ -1,27 +1,32 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
+  programs.mangohud.enable = true;
+
   home.packages = with pkgs; [
-    lutris
-    steam
-    steam-run
+    #steam
+    #steam-run
     protonup-ng
-    gamemode
-    dxvk
-    # parsec-bin
+    steamtinkerlaunch
+    er-patcher
 
-    gamescope
-
-    # heroic
     mangohud
+    gamemode
+    gamescope
+    
+    dxvk
+    parsec-bin
 
-    #steamPackages.steam-runtime
+    r2modman
+
+    heroic
+    lutris
+    bottles
   ];
-
-#   myHomeManager.impermanence.directories = [
-#     ".local/share/Steam"
-#     ".config/r2modmanPlus-local"
-#   ];
 }

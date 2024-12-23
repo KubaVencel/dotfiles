@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernel.sysctl = {"vm.swappiness" = 10;};
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/cf198d20-5bd2-43cc-9d33-3ef60b932c76";

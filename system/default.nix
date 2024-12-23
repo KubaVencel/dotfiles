@@ -103,7 +103,7 @@
     openssh = {
   	enable = true;
   	# require public key authentication for better security
-  	settings.PasswordAuthentication = false;
+        settings.PasswordAuthentication = false;
   	settings.KbdInteractiveAuthentication = false;
   	#settings.PermitRootLogin = "yes";
 	};
@@ -148,14 +148,25 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
+  
+  # kernel
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # XanMod
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
+  # zen
+  #boot.kernelPackages = pkgs.linuxPackages_zen;
 
   environment.defaultPackages = [ ];
 
   environment.systemPackages = with pkgs; [
     # system
     linux-firmware
+    
+    libdrm
+    mesa
+
     brightnessctl
     home-manager
     openssh
@@ -191,18 +202,17 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    
     configPackages = with pkgs; [
-      xdg-desktop-portal-wlr
-     ];
-  
-     # gtk portal needed to make gtk apps happy
-    extraPortals = with pkgs; [
-      #xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-kde
      ];
-   };
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-kde
+      pkgs.xdg-desktop-portal-wlr
+    ];
+  };
 
    security = {
      pam.services.swaylock = {};
@@ -230,6 +240,34 @@
     wireshark.enable = true;
   };
 
-  # Fancy boot splash screen
-  #boot.plymouth.enable = true;
+  boot = {
+    plymouth = {
+      enable = true;
+      theme = "darth_vader";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        #hud3, deus ex, glitch, cuts
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "darth_vader" ];
+        })
+      ];
+    };
+
+    # Enable "Silent Boot"
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+    ];
+    # Hide the OS choice for bootloaders.
+    # It's still possible to open the bootloader list by pressing any key
+    # It will just not appear on screen unless a key is pressed
+    loader.timeout = 0;
+  };
 }

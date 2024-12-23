@@ -39,9 +39,6 @@
 
     pcmanfm
     lazygit
-    
-    glxinfo
-    pciutils
   ];
 
   # nicely reload system units when changing configs
@@ -80,7 +77,6 @@
 
   programs.btop = {
     enable = true;
-    catppuccin.enable = true;
   };
 
   programs.htop = {

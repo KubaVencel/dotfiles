@@ -3,35 +3,35 @@
     ./swayApps
   ];
   
-  home.sessionVariables = {
-    # Invisible cursor
-    WLR_NO_HARDWARE_CURSORS = "1";
-    
-    # fix some java apps
-    _JAVA_AWT_WM_NONREPARENTING = "1";
- 
-    # General wayland environment variables
-    XDG_SESSION_TYPE = "wayland";
-    QT_QPA_PLATFORM = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    SDL_VIDEODRIVER = "wayland";
-    GDK_BACKEND = "wayland";
-    
-    # Firefox wayland environment variable
-    MOZ_ENABLE_WAYLAND = "1";
-    MOZ_USE_XINPUT2 = "1";
-      
-    # OpenGL Variables
-    LIBVA_DRIVER_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GL_GSYNC_ALLOWED = "0";
-    __GL_VRR_ALLOWED = "0";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      
-    # Xwayland compatibility
-    XWAYLAND_NO_GLAMOR = "1";
-    WLR_DRM_DEVICES = "/dev/dri/card1";
-  };
+   home.sessionVariables = {
+     # # Invisible cursor
+     # WLR_NO_HARDWARE_CURSORS = "1";
+     #
+     # # fix some java apps
+     # _JAVA_AWT_WM_NONREPARENTING = "1";
+     #
+     # # General wayland environment variables
+     # XDG_SESSION_TYPE = "wayland";
+     # QT_QPA_PLATFORM = "wayland";
+     # QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"; 
+     # SDL_VIDEODRIVER = "wayland";
+     # GDK_BACKEND = "wayland";
+     #
+     # # Firefox wayland environment variable
+     # MOZ_ENABLE_WAYLAND = "1";
+     # MOZ_USE_XINPUT2 = "1";
+     #
+     # # OpenGL Variables
+     # LIBVA_DRIVER_NAME = "nvidia";
+     # GBM_BACKEND = "nvidia-drm";
+     # __GL_GSYNC_ALLOWED = "0";
+     # __GL_VRR_ALLOWED = "0";
+     # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+     #
+     # # Xwayland compatibility
+     # XWAYLAND_NO_GLAMOR = "1";
+    # WLR_DRM_DEVICES = "/dev/dri/card1";
+   };
 
   wayland.windowManager.sway = {
     enable = true;
@@ -210,8 +210,8 @@
         #  position = "0,0";
         #  scale = "1";
         #};
-        "DP-1" = {
-          mode = "1920x1080@60.031Hz";
+        "HDMI-A-2" = {
+          mode = "1920x1080@144.013Hz";
           position = "0,0";
           scale = "1";
           scale_filter = "linear";
