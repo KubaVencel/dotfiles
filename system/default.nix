@@ -243,12 +243,12 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "darth_vader";
+      theme = "red_loader";
       themePackages = with pkgs; [
         # By default we would install all themes
-        #hud3, deus ex, glitch, cuts
+        #colorfull_sliced, cuts, flame, pixels, red loader, slicer
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "darth_vader" ];
+          selected_themes = [ "red_loader" ];
         })
       ];
     };
