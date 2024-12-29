@@ -76,11 +76,13 @@
     width = 400;
   };
 
-  services.wlsunset = {
+  services.gammastep = {
     enable = true;
-    latitude = "49.06682";
-    longitude = "17.45725";
-    temperature.night = 4500;
+    dawnTime = "6:00-7:30";
+    duskTime = "18:30-20:00";
+    #latitude = "49.06682";
+    #longitude = "17.45725";
+    temperature.night = 3500;
   };
   
   # Calendar things
