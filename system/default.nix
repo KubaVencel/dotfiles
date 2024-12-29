@@ -37,7 +37,6 @@
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
-
   # Select internationalisation properties.
   i18n.defaultLocale = "cs_CZ.UTF-8";
 
@@ -150,10 +149,10 @@
   system.stateVersion = "23.11"; # Did you read the comment?
   
   # kernel
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # XanMod
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
   # zen
   #boot.kernelPackages = pkgs.linuxPackages_zen;
