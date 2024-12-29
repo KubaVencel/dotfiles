@@ -44,13 +44,13 @@ in
          # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
          # "LIBVA_DRIVER_NAME,nvidia"
          # "XDG_SESSION_TYPE,wayland"
-          #"__GL_GSYNC_ALLOWED"
-          #"__GL_VRR_ALLOWED"
-          #"MOZ_ENABLE_WAYLAND,1"
-          #"WLR_RENDERER_ALLOW_SOFTWARE,1"
-          #"QT_QPA_PLATFORM,wayland"
-          #"SDL_VIDEODRIVER,wayland"
-          #"WLR_DRM_NO_MODIFIERS=1"
+         # "__GL_GSYNC_ALLOWED"
+         # "__GL_VRR_ALLOWED"
+         # "MOZ_ENABLE_WAYLAND,1"
+         # "WLR_RENDERER_ALLOW_SOFTWARE,1"
+         # "QT_QPA_PLATFORM,wayland"
+         # "SDL_VIDEODRIVER,wayland"
+         # "WLR_DRM_NO_MODIFIERS=1"
         ];
 
         input = {

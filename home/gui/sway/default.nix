@@ -30,7 +30,7 @@
      #
      # # Xwayland compatibility
      # XWAYLAND_NO_GLAMOR = "1";
-    # WLR_DRM_DEVICES = "/dev/dri/card1";
+     # WLR_DRM_DEVICES = "/dev/dri/card1";
    };
 
   wayland.windowManager.sway = {
