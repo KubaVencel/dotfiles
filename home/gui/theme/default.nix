@@ -1,9 +1,15 @@
 { pkgs, config, ... }: {
 #Catppuccin
-catppuccin = {
+  catppuccin = {
     btop.enable = true;
-    gtk.enable = true;
+    gtk.enable = false;
   };
+
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
 #cursorTheme themegtk
 home.pointerCursor = {
     gtk.enable = true;
@@ -19,21 +25,21 @@ home.pointerCursor = {
 # gtk themegtk
    gtk = {
      enable = true;
-    # theme = {
-    #   name = "Catppuccin-Mocha-Compact-Mauve-dark";
-    #   package = pkgs.catppuccin-gtk.override {
-    #     accents = [ "mauve" ];
-    #     size = "compact";
-    #     tweaks = [ "rimless" "black" ];
-    #     variant = "mocha";
-    #   };
-    # };
+     theme = {
+       name = "Catppuccin-Mocha-Compact-Mauve-dark";
+       package = pkgs.catppuccin-gtk.override {
+         accents = [ "mauve" ];
+         size = "compact";
+         tweaks = [ "rimless" "black" ];
+         variant = "mocha";
+       };
+     };
 
-  # cursorTheme
-    # cursorTheme = {
-    #   package = pkgs.catppuccin-cursors.mochaLight;
-    #   name = "catppuccin-mocha-light-cursors";
-    # };
+   # cursorTheme
+     cursorTheme = {
+       package = pkgs.catppuccin-cursors.mochaLight;
+       name = "catppuccin-mocha-light-cursors";
+     };
 
   # icons 
     iconTheme = {
@@ -42,16 +48,10 @@ home.pointerCursor = {
     };
   };
 
-
-  #   enable = true;
-  #   platformTheme.name = "adwaita";
-  #   style = {
-  #       name = "Catppuccin Mocha Mauve Modern";
-  #       package = pkgs.catppuccin-kde.override {
-  #       flavour = [ "mocha" ];
-  #       accents = [ "mauve" ];
-  #       winDecStyles = [ "modern" ];
-  #       };
-  #     };
-  #   };
+  # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
+  xdg.configFile = {
+    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+  };
 }

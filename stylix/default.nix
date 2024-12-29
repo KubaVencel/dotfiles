@@ -4,6 +4,8 @@
   ...
 }: {
   stylix = {
+    enable = true;
+    polarity = "dark";
     base16Scheme = {
       base00 = "1e1e2e"; # Base
       base01 = "181825"; # Mantle
@@ -24,13 +26,13 @@
     };
 
     # does not work >:(
-    # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     image = ./girlOnRoofAnimeAestheticSunset.jpg;
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+        package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrains Mono Nerd Font";
       };
       sansSerif = {
@@ -50,14 +52,16 @@
       };
     };
 
-    #cursor.name = "Bibata-Modern-Ice";
-    #cursor.package = pkgs.bibata-cursors;
-
-    #targets.chromium.enable = true;
-    #targets.grub.enable = true;
-    #targets.grub.useImage = true;
-    #targets.plymouth.enable = true;
-    # stylix.targets.nixos-icons.enable = true;
+    targets = {
+      gtk.enable = true;
+      gnome.enable = true;
+      chromium.enable = true;
+      spicetify.enable = true;
+      grub.enable = true;
+      grub.useImage = true;
+      plymouth.enable = false;
+      nixos-icons.enable = true;
+    };
 
     autoEnable = true;
   };
