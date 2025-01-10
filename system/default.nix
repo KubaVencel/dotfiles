@@ -161,41 +161,43 @@
 
   environment.systemPackages = with pkgs; [
     # system
-    linux-firmware
-    
+    linux-firmware  
     libdrm
     mesa
 
     brightnessctl
+    light
     home-manager
+
     openssh
     polkit
+
     sbctl # secure boot keys
     libnotify
-    glib # # gsettings
+    glib # gsettings
+
     pulseaudioFull
     autotiling
-    light
 
     swww # wallpapers
 
-    # essential system utils
-    htop
+    # system utils
     btop
+    htop
     wget
     curl
+    git
+
     neovim
     tmux
-    curl
+
     gnutls
     fastfetch
     networkmanagerapplet
 
     # non-essential programs
     pulsemixer
-    git
     wl-clipboard
-    neovim
   ];
 
   xdg.portal = {

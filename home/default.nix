@@ -25,8 +25,6 @@
 
   home.packages = with pkgs; [
     spotify
-    spicetify-cli
-    spotifyd
 
     thunderbird
     protonmail-bridge-gui
