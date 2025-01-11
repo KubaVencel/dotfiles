@@ -106,18 +106,18 @@
       (text "NetworkIO")
     ]);
   };
-
+  
   programs.chromium = {
-    enable = true;
-    commandLineArgs = [
-      "--enable-ozone"
-      "--ozone-platform=wayland"
-    ];
-    extensions = [
-      # ublock origin
-      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
-    ];
-  };
+     enable = true;
+     commandLineArgs = [
+       "--enable-ozone"
+       "--ozone-platform=wayland"
+     ];
+     extensions = [
+       # ublock origin
+       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
+     ];
+   };
 
   home.stateVersion = "23.11";
  }
