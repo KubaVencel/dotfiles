@@ -1,13 +1,17 @@
 { pkgs, config, ... }: {
 #Catppuccin
-  catppuccin = {
-    btop.enable = true;
-    gtk.enable = false;
-  };
-
-  dconf = {
+catppuccin = {
+    flavor = "mocha";
     enable = true;
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    
+    # disable themed apps
+    waybar.enable = false;
+    wlogout.enable = false;
+    mako.enable = false;
+    imv.enable = false;
+
+    gtk.enable = true;
+    btop.enable = true;
   };
 
 #cursorTheme themegtk
@@ -22,19 +26,9 @@ home.pointerCursor = {
     size = 17;
    };
 
-# gtk themegtk
+  # gtk themegtk
    gtk = {
      enable = true;
-     theme = {
-       name = "Catppuccin-Mocha-Compact-Mauve-dark";
-       package = pkgs.catppuccin-gtk.override {
-         accents = [ "mauve" ];
-         size = "compact";
-         tweaks = [ "rimless" "black" ];
-         variant = "mocha";
-       };
-     };
-
    # cursorTheme
      cursorTheme = {
        package = pkgs.catppuccin-cursors.mochaLight;
@@ -46,12 +40,5 @@ home.pointerCursor = {
       package =  pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
     };
-  };
-
-  # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
-  xdg.configFile = {
-    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 }
