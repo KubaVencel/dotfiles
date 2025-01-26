@@ -36,6 +36,8 @@
 
     prism= {
       url = "github:IogaMaster/prism";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
 
     nix-index-database = {
@@ -53,7 +55,7 @@
           modules = [
             ({ ... }: { networking.hostName = name; })
             ./system
-            ./stylix
+            ./stylix/default.nix
             home-manager.nixosModules.home-manager
           ] ++ modules;
         };

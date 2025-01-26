@@ -3,6 +3,7 @@
   programs.home-manager.enable = true;
   
   imports = [
+    ../stylix/prism.nix
     ./firefox
     ./starship
     ./zsh
