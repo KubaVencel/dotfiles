@@ -55,7 +55,7 @@
           modules = [
             ({ ... }: { networking.hostName = name; })
             ./system
-            ./stylix/default.nix
+            ./theming/stylix.nix
             home-manager.nixosModules.home-manager
           ] ++ modules;
         };
