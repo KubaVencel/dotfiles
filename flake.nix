@@ -34,10 +34,8 @@
     
     stylix.url = "github:danth/stylix";
 
-    prism = {
+    prism= {
       url = "github:IogaMaster/prism";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
 
     nix-index-database = {
@@ -46,7 +44,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, catppuccin, agenix, nix-index-database, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, prism, catppuccin, agenix, nix-index-database, ... }@inputs: {
     nixosConfigurations =
       let
         makeNixosConfiguration = name: modules: nixpkgs.lib.nixosSystem {
@@ -84,6 +82,7 @@
             ./home
             ./home/gui
             stylix.homeManagerModules.stylix
+            prism.homeModules.prism
             catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index

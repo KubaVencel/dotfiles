@@ -2,7 +2,7 @@
 # prism image recolor to theme  
 prism = {
   enable = true;
-  wallpapers = /home/vheac/stylix/img/;
+  wallpapers = /home/vheac/stylix/img;
   outPath = "/home/vheac/stylix/img/prism"; # Where in your home directory to output to.
 
   # There are a few different ways of setting the colorscheme.
