@@ -149,13 +149,10 @@
   system.stateVersion = "23.11"; # Did you read the comment?
   
   # kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # XanMod
-  #boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  
   # zen
-  #boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   environment.defaultPackages = [ ];
 

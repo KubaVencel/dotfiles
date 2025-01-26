@@ -34,6 +34,11 @@
     
     stylix.url = "github:danth/stylix";
 
+    prism = {
+      url = "github:IogaMaster/prism";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";

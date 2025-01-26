@@ -28,7 +28,7 @@
     # does not work >:(
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    image = ./girlOnRoofAnimeAestheticSunset.jpg;
+    image = ./img/girlOnRoofAnimeAestheticSunset.jpg;
 
     fonts = {
       monospace = {
@@ -66,4 +66,3 @@
     autoEnable = true;
   };
 }
-
