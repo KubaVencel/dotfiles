@@ -3,7 +3,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-
+  
   # networking.wireless.enable = true;  
   # Enables wireless support via wpa_supplicant.
   # Use the systemd-boot EFI boot loader.
@@ -59,13 +59,9 @@
   # fingerprint reader
   services.fprintd = {
     enable = true;
-    tod = {
-      enable = true;
-      driver = pkgs.libfprint-2-tod1-vfs0090; 
-      #(If the vfs0090 Driver does not work, use the following driver)
-      #driver = pkgs.libfprint-2-tod1-goodix; 
-      #(On my device it only worked with this driver)
-    }; 
+    #tod = {
+    #  enable = true;
+    #}; 
   };
 
   #security.pam.services.swaylock = {};

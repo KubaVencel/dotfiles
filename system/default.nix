@@ -95,7 +95,30 @@
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "adbusers" "wireshark" "docker" ];
     shell = pkgs.zsh;
   };
+
+  # Yubikey
+  services.udev = {
+    packages = [ pkgs.yubikey-personalization ];
+    extraRules = ''
+      ACTION=="remove",\
+      ENV{ID_BUS}=="usb",\
+      ENV{ID_MODEL_ID}=="0407",\
+      ENV{ID_VENDOR_ID}=="1050",\
+      ENV{ID_VENDOR}=="Yubico",\
+      RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"
+      '';
+    };
+
+    programs.gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
   
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
+
   # List services that you want to enable:
   services = {
     # Enable the OpenSSH daemon.
@@ -109,7 +132,7 @@
 	
     # Enable tailscale
     tailscale.enable = true;
-
+    
     # Dbus 
     dbus = {
       enable = true;
@@ -119,7 +142,7 @@
     greetd = {
       enable = true;
       settings = {
-        default_session = {
+          default_session = {
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
           user = "greeter";
         };
