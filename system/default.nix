@@ -114,10 +114,10 @@
       enableSSHSupport = true;
     };
   
-  security.pam.services = {
-    login.u2fAuth = true;
-    sudo.u2fAuth = true;
-  };
+#  security.pam.services = {
+#    login.u2fAuth = true;
+#    sudo.u2fAuth = true;
+ # };
 
   # List services that you want to enable:
   services = {
@@ -125,7 +125,7 @@
     openssh = {
   	enable = true;
   	# require public key authentication for better security
-        settings.PasswordAuthentication = false;
+        settings.PasswordAuthentication = true;
   	settings.KbdInteractiveAuthentication = false;
   	#settings.PermitRootLogin = "yes";
 	};
