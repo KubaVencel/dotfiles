@@ -48,6 +48,7 @@
 	decentraleyes
 	darkreader
         ublock-origin
+        privacy-badger
         return-youtube-dislikes
         #sponsorblock
         #tridactyl
