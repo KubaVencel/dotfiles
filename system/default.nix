@@ -109,15 +109,16 @@
       '';
     };
 
-    programs.gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
   
-#  security.pam.services = {
-#    login.u2fAuth = true;
-#    sudo.u2fAuth = true;
- # };
+  security.pam.services = {
+    swaylock = {};
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
 
   # List services that you want to enable:
   services = {
@@ -236,8 +237,6 @@
   };
 
    security = {
-     pam.services.swaylock = {};
-
      polkit.enable = true;
 
      sudo.enable = true;
