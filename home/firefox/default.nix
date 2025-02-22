@@ -43,7 +43,7 @@
       
       userContent = "${builtins.readFile ./userContent.css}";
 
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
         bitwarden
 	decentraleyes
 	darkreader
