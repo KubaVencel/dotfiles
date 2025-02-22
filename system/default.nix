@@ -109,12 +109,13 @@
       '';
     };
 
-    programs.gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
   
   security.pam.services = {
+    swaylock = {};
     login.u2fAuth = true;
     sudo.u2fAuth = true;
   };
@@ -125,7 +126,7 @@
     openssh = {
   	enable = true;
   	# require public key authentication for better security
-        settings.PasswordAuthentication = false;
+        settings.PasswordAuthentication = true;
   	settings.KbdInteractiveAuthentication = false;
   	#settings.PermitRootLogin = "yes";
 	};
@@ -236,8 +237,6 @@
   };
 
    security = {
-     pam.services.swaylock = {};
-
      polkit.enable = true;
 
      sudo.enable = true;
