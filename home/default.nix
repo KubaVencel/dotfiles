@@ -33,7 +33,7 @@
     bitwarden
     keepassxc
     
-    kate
+    kdePackages.kate
     gimp 
 
     grim
