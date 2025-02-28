@@ -53,8 +53,10 @@ programs.nixvim = {
         rust_analyzer = {
           installRustc = true;
           enable = true;
-          installCargo = true;
+            installCargo = true;
+          };
         };
       };
     };
-  }
+  };
+}
