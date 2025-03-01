@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ./kanshi
+    #./kanshi
     ./waybar
     ./wlogout
     ./nixColors
