@@ -210,16 +210,15 @@
         #  position = "0,0";
         #  scale = "1";
         #};
-        # TODO# TODO# TODO  
-        #"" = {
-        #  mode = "1920x1080@144.013Hz";
-        #  position = "0,0";
-        #  scale = "1";
-        #  scale_filter = "linear";
-        #  transform = "normal";
-        #  max_render_time = "off";
-        #  adaptive_sync = "disabled";
-        #};
+        "Microstep MSI G241 0x00002317" = {
+          mode = "1920x1080@144.013Hz";
+          position = "0,0";
+          scale = "1.1";
+          scale_filter = "linear";
+          transform = "normal";
+          max_render_time = "off";
+          adaptive_sync = "disabled";
+        };
 
       input = {
         "type:keyboard" = {

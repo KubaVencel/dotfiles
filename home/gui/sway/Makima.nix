@@ -208,7 +208,7 @@
         "AU Optronics 0x243D Unknown" = {
           mode = "1920x1080@60.031Hz";
           position = "0,0";
-          scale = "1.4";
+          scale = "1.3";
           scale_filter = "linear";
           transform = "normal";
           max_render_time = "off";
