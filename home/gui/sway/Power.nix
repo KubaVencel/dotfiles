@@ -210,25 +210,16 @@
         #  position = "0,0";
         #  scale = "1";
         #};
-        "HDMI-A-2" = {
-          mode = "1920x1080@144.013Hz";
-          position = "0,0";
-          scale = "1";
-          scale_filter = "linear";
-          transform = "normal";
-          max_render_time = "off";
-          adaptive_sync = "disabled";
-        };
-        "eDP-1" = {
-          mode = "1920x1080@60.031Hz";
-          position = "0,0";
-          scale = "1.1";
-          scale_filter = "linear";
-          transform = "normal";
-          max_render_time = "off";
-          adaptive_sync = "disabled";
-        };
-      };
+        # TODO# TODO# TODO  
+        #"" = {
+        #  mode = "1920x1080@144.013Hz";
+        #  position = "0,0";
+        #  scale = "1";
+        #  scale_filter = "linear";
+        #  transform = "normal";
+        #  max_render_time = "off";
+        #  adaptive_sync = "disabled";
+        #};
 
       input = {
         "type:keyboard" = {

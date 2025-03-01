@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, hostname, ... }:
 
   let
     startScript = pkgs.writeShellScriptBin "start" ''
@@ -35,8 +35,8 @@ in
 
           layout = "master";
         };
-      
-        monitor = "DP-1, 2560x1440@240, 0x0, 1";
+
+        monitor = "eDP-1, 1920x1080@60.03100, 0x0, 1.5";
 
         env = [
          # "XCURSOR_SIZE,24"
