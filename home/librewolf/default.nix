@@ -1,6 +1,6 @@
 { lib, inputs, pkgs, ... }:
 {
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
     profiles.echoes = {
       search.engines = {

@@ -4,7 +4,7 @@
   
   imports = [
     ../theming/prism.nix
-    ./firefox
+    ./librewolf
     ./starship
     ./zsh
     ./games
@@ -26,6 +26,8 @@
 
   home.packages = with pkgs; [
     spotify
+    ungoogled-chromium
+    brave
 
     thunderbird
     protonmail-bridge-gui
@@ -108,17 +110,5 @@
     ]);
   };
   
-  programs.chromium = {
-     enable = true;
-     commandLineArgs = [
-       "--enable-ozone"
-       "--ozone-platform=wayland"
-     ];
-     extensions = [
-       # ublock origin
-       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
-     ];
-   };
-
   home.stateVersion = "23.11";
  }
