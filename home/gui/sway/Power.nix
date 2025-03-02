@@ -102,6 +102,7 @@
       terminal = "${pkgs.foot}/bin/footclient";
       menu = "${pkgs.fuzzel}/bin/fuzzel";
       workspaceAutoBackAndForth = true;
+      defaultWorkspace = "1";
 
       startup = [
       	{ command = "swww-daemon"; }
@@ -219,7 +220,8 @@
           max_render_time = "off";
           adaptive_sync = "disabled";
         };
-
+      };
+      
       input = {
         "type:keyboard" = {
           xkb_layout = "us,cz";

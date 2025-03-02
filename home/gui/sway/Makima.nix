@@ -102,6 +102,7 @@
       terminal = "${pkgs.foot}/bin/footclient";
       menu = "${pkgs.fuzzel}/bin/fuzzel";
       workspaceAutoBackAndForth = true;
+      defaultWorkspace = "1";
 
       startup = [
       	{ command = "swww-daemon"; }
