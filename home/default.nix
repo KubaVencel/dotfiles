@@ -57,6 +57,34 @@
     };
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  services.ssh-agent.enable = true;
+
+  programs.lf = {
+    enable = true;
+    settings = {
+      scrolloff = 3;
+    };
+    keybindings = {
+      D = "delete";
+      "<delete>" = "delete";
+      T = "trash";
+      "<esc>" = "quit";
+      "<enter>" = "open";
+      "o" = "terminal";
+    };
+    extraConfig = ''
+      $mkdir -p ~/.trash
+      cmd trash %set -f; mv "$fx" ~/.trash
+      cmd terminal &${pkgs.foot}/bin/footclient
+      set mouse
+    '';
+  };
+
   programs.git = {
     enable = true;
     userName = "kubaVencel";
