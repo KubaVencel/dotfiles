@@ -116,7 +116,7 @@
       enable = true;
       settings = {
         flavor = "mocha";
-        transparent_mode = true;
+        transparent_background = true;
       };
     };
 

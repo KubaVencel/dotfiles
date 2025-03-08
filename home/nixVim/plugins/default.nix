@@ -11,7 +11,7 @@ programs.nixvim = {
     
     colorizer.enable = true; # A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.
 
-    transparent.enable = true;
+    #transparent.enable = true;
     luasnip.enable = true;
     treesitter.enable = true;
     gitsigns.enable = true;
