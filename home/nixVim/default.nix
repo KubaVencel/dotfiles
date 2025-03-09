@@ -242,8 +242,8 @@
           desc = "Exit terminal mode";
         };
       }
+
       # TIP: Disable arrow keys in normal mode
-      /*
       {
         mode = "n";
         key = "<left>";
@@ -264,7 +264,7 @@
         key = "<down>";
         action = "<cmd>echo 'Use j to move!!'<CR>";
       }
-      */
+
       # Keybinds to make split navigation easier.
       #  Use CTRL+<hjkl> to switch between windows
       #

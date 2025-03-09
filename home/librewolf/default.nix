@@ -4,6 +4,11 @@
     enable = true;
     profiles.echoes = {
       search.engines = {
+        "kagi" = {
+          urls = [{ template = "https://kagi.com/search?q={searchTerms}"; }];
+          #iconUpdateURL = " ";
+          definedAliases = [ "@kagi" ];
+        };
         "ecosia" = {
           urls = [{ template = "https://www.ecosia.org/search?q={searchTerms}"; }];
           iconUpdateURL = " ";
@@ -25,7 +30,7 @@
       
       search = {
         force = true;
-        default = "ecosia";
+        default = "kagi";
       };
 
       bookmarks = [
