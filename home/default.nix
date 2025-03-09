@@ -28,7 +28,6 @@
     spotify
     ungoogled-chromium
     brave
-    ladybird
 
     thunderbird
     protonmail-bridge-gui

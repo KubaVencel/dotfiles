@@ -201,8 +201,8 @@
         gaps = {
           smartGaps = true;
           smartBorders = "on";
-          inner = 10;
-          outer = 0;
+          inner = 2;
+          outer = 2;
         };
 
       output = {
@@ -340,7 +340,7 @@
       };
 
       window = {
-        border = 2;
+        border = 3;
         titlebar = false;
       };
     };
