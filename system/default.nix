@@ -190,7 +190,9 @@
     mesa
 
     brightnessctl
+    chayang
     light
+    procps
     home-manager
 
     openssh
@@ -224,20 +226,21 @@
     wl-clipboard
   ];
 
-  # xdg.portal = {
-  #   enable = true;
-  #   wlr.enable = true;
-  #   configPackages = with pkgs; [
-  #     xdg-desktop-portal-gtk
-  #    ];
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-gnome
-  #     pkgs.xdg-desktop-portal-gtk
-  #     pkgs.xdg-desktop-portal-hyprland
-  #     pkgs.xdg-desktop-portal-kde
-  #     pkgs.xdg-desktop-portal-wlr
-  #   ];
-  # };
+   xdg.portal = {
+     enable = true;
+     wlr.enable = true;
+     configPackages = with pkgs; [
+       xdg-desktop-portal-gtk
+      ];
+     extraPortals = [
+       pkgs.xdg-desktop-portal-gnome
+       pkgs.xdg-desktop-portal-gtk
+       pkgs.xdg-desktop-portal-hyprland
+      #pkgs.xdg-desktop-portal-kde
+       pkgs.kdePackages.xdg-desktop-portal-kde
+       pkgs.xdg-desktop-portal-wlr
+     ];
+   };
 
    security = {
      polkit.enable = true;
