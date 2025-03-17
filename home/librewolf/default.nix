@@ -2,6 +2,10 @@
 {
   programs.librewolf = {
     enable = true;
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+    };
     profiles.echoes = {
       search.engines = {
         "kagi" = {
@@ -58,7 +62,7 @@
         #sponsorblock
         #tridactyl
       ];
-
+      # https://www.deviceinfo.me/
     };
   };
 }

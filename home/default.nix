@@ -28,6 +28,7 @@
     spotify
     ungoogled-chromium
     brave
+    vlc
 
     thunderbird
     protonmail-bridge-gui

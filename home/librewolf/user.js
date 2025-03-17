@@ -17,7 +17,7 @@
  * SECTION: FASTFOX                                                         *
 ****************************************************************************/
 /** GENERAL ***/
-
+user_pref("browser.profiles.enabled", true);
 user_pref("content.notify.interval", 100000);
 
 /** GFX ***/
@@ -27,6 +27,7 @@ user_pref("gfx.content.skia-font-cache-size", 20);
 
 /** DISK CACHE ***/
 user_pref("browser.cache.jsbc_compression_level", 3);
+user_pref("browser.cache.disk.enable", false);
 
 /** MEDIA CACHE ***/
 user_pref("media.memory_cache_max_size", 65536);
@@ -49,6 +50,7 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 
 /** SPECULATIVE LOADING ***/
 user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
 user_pref("network.prefetch-next", false);
 user_pref("network.predictor.enabled", false);
 
@@ -71,6 +73,13 @@ user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("browser.uitour.enabled", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("privacy.resistFingerprinting", true);
+user_pref("browser.uitour.enabled", false);
+user_pref("privacy.donottrackheader.enabled" = true);
+user_pref("privacy.fingerprintingProtection" = true);
+user_pref("privacy.trackingprotection.emailtracking.enabled" = true);
+user_pref("privacy.trackingprotection.enabled" = true);
+user_pref("privacy.trackingprotection.fingerprinting.enabled" = true);
+user_pref("privacy.trackingprotection.socialtracking.enabled" = true);
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.OCSP.enabled", 0);
@@ -93,12 +102,14 @@ user_pref("privacy.history.custom", true);
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.urlbar.update2.engineAliasRefresh", true);
 user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
 user_pref("browser.formfill.enable", false);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
 user_pref("network.IDN_show_punycode", true);
+user_pref("browser.urlbar.groupLabels.enabled", false);
 
 /** HTTPS-FIRST POLICY ***/
 user_pref("dom.security.https_only_mode", true);
@@ -161,6 +172,8 @@ user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
+user_pref("extensions.enabledScopes", 5);
+user_pref("browser.search.update", false);
 
 /** CRASH REPORTS ***/
 user_pref("breakpad.reportURL", "");
@@ -195,12 +208,12 @@ user_pref("browser.compactmode.show", true);
 user_pref("browser.display.focus_ring_on_anything", true);
 user_pref("browser.display.focus_ring_style", 0);
 user_pref("browser.display.focus_ring_width", 0);
-user_pref("layout.css.prefers-color-scheme.content-override", 2);
+user_pref("layout.css.prefers-color-scheme.content-override", 0); // Dark (0), Light (1), System (2), Browser (3) [DEFAULT FF95+]
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
 
 /** COOKIE BANNER HANDLING ***/
-user_pref("cookiebanners.service.mode", 1);
-user_pref("cookiebanners.service.mode.privateBrowsing", 1);
+user_pref("cookiebanners.service.mode", 2);
+user_pref("cookiebanners.service.mode.privateBrowsing", 2);
 
 /** FULLSCREEN NOTICE ***/
 user_pref("full-screen-api.transition-duration.enter", "0 0");
@@ -212,10 +225,13 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.urlbar.unitConversion.enabled", true);
 user_pref("browser.urlbar.trending.featureGate", false);
+user_pref("browser.urlbar.trimHttps", true);
 
 /** NEW TAB PAGE ***/
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
+
 
 /** POCKET ***/
 user_pref("extensions.pocket.enabled", false);
@@ -223,6 +239,7 @@ user_pref("extensions.pocket.enabled", false);
 /** DOWNLOADS ***/
 user_pref("browser.download.always_ask_before_handling_new_types", true);
 user_pref("browser.download.manager.addToRecentDocs", false);
+user_pref("browser.download.useDownloadDir", false);
 
 /** PDF ***/
 user_pref("browser.download.open_pdf_attachments_inline", true);
@@ -233,6 +250,10 @@ user_pref("browser.menu.showViewImageInfo", true);
 user_pref("findbar.highlightAll", true);
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
+/** TAB UNLOAD ***/
+user_pref("browser.tabs.unloadOnLowMemory", true);
+user_pref("browser.tabs.min_inactive_duration_before_unload", 300000); // 5min; default=600000
+
 /****************************************************************************
  * START: MY OVERRIDES                                                      *
 ****************************************************************************/
@@ -240,8 +261,8 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
-user_pref("browser.startup.page", 0);
-user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.startup.page", "about:newtab");
+user_pref("browser.startup.homepage", "about:newtab");
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
@@ -253,6 +274,32 @@ user_pref("browser.newtabpage.activity-stream.default.sites", "");
 ****************************************************************************/
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("mousewheel.min_line_scroll_amount", 15); // 10-40; adjust this number to your liking; default=5
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80); // default=50
+user_pref("general.smoothScroll.currentVelocityWeighting", "0.15"); // default=.25
+user_pref("general.smoothScroll.stopDecelerationWeighting", "0.6"); // default=.4
+// Firefox Nightly only:
+// [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1846935
+user_pref("general.smoothScroll.msdPhysics.enabled", false); // [FF122+ Nightly]
+
+uuser_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this number to your liking
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
