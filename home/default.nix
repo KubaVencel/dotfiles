@@ -29,6 +29,7 @@
     ungoogled-chromium
     brave
     vlc
+    smile
 
     thunderbird
     protonmail-bridge-gui
@@ -41,7 +42,7 @@
 
     grim
     slurp
-
+    
     pcmanfm
     lazygit
   ];

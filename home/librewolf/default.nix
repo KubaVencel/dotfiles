@@ -37,14 +37,18 @@
         default = "kagi";
       };
 
-      bookmarks = [
-        {
-          name = "wikipedia";
-          tags = [ "wiki" ];
-          keyword = "wiki";
-          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "wikipedia";
+            tags = [ "wiki" ];
+            keyword = "wiki";
+            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
         }
       ];
+    };
+
 
       extraConfig = "${builtins.readFile ./user.js}";
 
