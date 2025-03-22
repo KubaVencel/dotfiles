@@ -175,12 +175,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
   
-  # kernel
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
-  
-  # zen
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-
   environment.defaultPackages = [ ];
 
   environment.systemPackages = with pkgs; [
@@ -267,6 +261,26 @@
   };
 
   boot = {
+    # kernel
+    #kernelPackages = pkgs.linuxPackages_latest;
+  
+    # zen
+    kernelPackages = pkgs.linuxPackages_zen;
+    
+    # needed to unlock LUKS with key from TPM
+    initrd.systemd.enable = true;
+  
+    # loader = {
+    #   efi.canTouchEfiVariables = true;
+    #   grub = {
+    #     enable = true;
+    #     device = "nodev";
+    #     efiSupport = true;
+    #     gfxmodeEfi = "2560x1080";
+    #     theme = pkgs.catppuccin-grub;
+    #   };
+    # };
+
     plymouth = {
       enable = true;
       theme = "red_loader";
