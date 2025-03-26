@@ -18,9 +18,7 @@
   # and works well with other tools.
   services.thermald.enable = true;
   
-  # tlp : A common tool used to save power on laptops is tlp, 
-  # which has sensible defaults for most laptops. 
-
+  # tlp : A common tool used to save power on laptops is tlp,# which has sensible defaults for most laptops. 
   services.tlp = {
     enable = true;
     settings = {
@@ -44,7 +42,6 @@
   # smartmontools is a package which provides tools for monitoring drives
   # which support the S.M.A.R.T. system for monitoring hard drive health.
   # It includes the smartd and smartctl programs.
-  
     services.smartd = {
     enable = true;
     devices = [

@@ -29,6 +29,7 @@
     ungoogled-chromium
     brave
     vlc
+    celluloid
     smile
 
     thunderbird

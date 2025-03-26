@@ -262,10 +262,10 @@
 
   boot = {
     # kernel
-    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
   
     # zen
-    kernelPackages = pkgs.linuxPackages_zen;
+    #kernelPackages = pkgs.linuxPackages_zen;
     
     # needed to unlock LUKS with key from TPM
     initrd.systemd.enable = true;
