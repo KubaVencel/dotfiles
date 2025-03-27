@@ -124,7 +124,6 @@
 #     showmode = false;
   
       shiftwidth = 2; # Tab width should be 2
-      tabStop = 2;
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
