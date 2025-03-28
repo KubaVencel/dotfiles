@@ -85,7 +85,7 @@
             ./home/gui
             #stylix.homeManagerModules.stylix
             prism.homeModules.prism
-            catppuccin.homeManagerModules.catppuccin
+            #catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index
           ] ++ modules;

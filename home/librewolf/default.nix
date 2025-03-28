@@ -65,7 +65,7 @@
         privacy-badger
         return-youtube-dislikes
         #sponsorblock
-        #tridactyl
+        tridactyl
       ];
       # https://www.deviceinfo.me/
     };

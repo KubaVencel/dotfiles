@@ -12,7 +12,7 @@ prism = {
     # There are a few different ways of setting the colorscheme.
 
     # If you pass the name it will use a lutgen builtin scheme
-    colorscheme = "catppuccin-mocha"; 
+    colorscheme = "gruvbox-dark"; 
   
     # If you pass a list of colors, it will build a scheme from them. 
     # They are formatted like base16 schemes

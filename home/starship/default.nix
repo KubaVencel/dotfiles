@@ -1,20 +1,16 @@
 { pkgs,lib, ... }: {
-  programs.starship =
-    let
-      flavour = "mocha"; # One of `latte`, `frappe`, `macchiato`, or `mocha`
-    in
-    {
+  programs.starship = {
       enable = true;
       settings = {
       format = lib.concatStrings [
-      	"[█](bg:base fg:text)"
+      	"[█](bg:bg1 fg:fg0)"
 	"$os" 
-	"[](bg:lavender fg:text)"
+	"[](bg:blue fg:fg0)"
 	"$directory"
-	"[](bg:blue fg:lavender)"
+	"[](bg:aqua fg:blue)"
 	"$git_branch"
 	"$git_status"
-	"[](bg:sapphire fg:blue)"
+	"[](bg:green fg:aqua)"
 	"$nodejs"
 	"$c"
 	"$rust"
@@ -24,15 +20,15 @@
 	"$kotlin"
 	"$haskell"
 	"$python"
-	"[](bg:teal fg:sapphire)"
+	"[](bg:orange fg:green)"
 	"$time"
-	"[](fg:teal)"
+	"[](fg:orange)"
 	"$character"
       ];
 
       os = {  
 	disabled = false;
-	style = "bg:text fg:base";
+	style = "bg:fg0 fg:bg1";
   	};
 
       os.symbols = {
@@ -59,7 +55,7 @@
 	};
 	
       	directory = {
-		style = "fg:base bg:lavender";
+		style = "fg:bg1 bg:blue";
 		format = "[ $path ]($style)";
 		truncation_length = 3;
 		truncation_symbol = "…/";
@@ -75,86 +71,92 @@
 
 	git_branch = {
 	  symbol = " ";
-	  style = "bg:blue";
-	  format = "[[ $symbol $branch ](fg:base bg:blue)]($style)";
+	  style = "bg:aqua";
+	  format = "[[ $symbol $branch ](fg:bg1 bg:aqua)]($style)";
 	  };
 
  	git_status = {
-	  style = "bg:blue";
-	  format = "[[($all_status$ahead_behind )](fg:base bg:blue)]($style)";
+	  style = "bg:aqua";
+	  format = "[[($all_status$ahead_behind )](fg:bg1 bg:aqua)]($style)";
 	  };
 
 	nodejs = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 	      
 	c = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 	      
 	rust = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 		};
 	      
 	golang = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 
 	php = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 
 	java = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 
 
 	kotlin = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 	      };
 
 	haskell = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
 		};
 	      
 	python = {
 		symbol = " ";
-		style = "bg:sapphire";
-		format = "[[ $symbol( $version) ](fg:base bg:sapphire)]($style)";
+		style = "bg:green";
+		format = "[[ $symbol( $version) ](fg:bg1 bg:green)]($style)";
     	};
 
 	time = {
 		disabled = false;
 		time_format = "%R";
-		style = "bg:teal";
-		format = "[[ $time ](fg:base bg:teal)]($style)";
+		style = "bg:orange";
+		format = "[[ $time ](fg:bg1 bg:orange)]($style)";
 	};
 
-        palette = "catppuccin_${flavour}";
-      }// builtins.fromTOML (builtins.readFile
+    palette = "gruvbox_dark";
 
-        (pkgs.fetchFromGitHub
-          {
-            owner = "catppuccin";
-            repo = "starship";
-            rev = "5629d23"; # Replace with the latest commit hash
-            sha256 = "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=";
-          } + /palettes/${flavour}.toml));
-	};
+    palettes.gruvbox_dark = {
+      fg0 = "#fbf1c7";
+      bg1 = "#3c3836";
+      bg3 = "#665c54";
+      blue = "#458588";
+      aqua = "#689d6a";
+      green = "#98971a";
+      orange = "#d65d0e";
+      purple = "#b16286";
+      red = "#cc241d";
+      yellow = "#d79921";
+      };
+    };
+  };
 }
+

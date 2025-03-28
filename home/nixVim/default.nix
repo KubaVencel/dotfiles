@@ -69,11 +69,11 @@
     # Don't forget to disable the colorschemes you arent using
     #
     # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    colorschemes.catppuccin = {
+    colorschemes.gruvbox = {
       enable = true;
       settings = {
-        flavor = "mocha";
-        transparent_background = true;
+        #flavor = "dark";
+        transparent_mode = true;
       };
     };
 

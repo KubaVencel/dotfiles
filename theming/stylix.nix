@@ -29,7 +29,7 @@
     # does not work >:(
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    image = ./img/girlOnRoofAnimeAestheticSunset.jpg;
+    image = ./img/anime_skull.png;
 
     fonts = {
       monospace = {
