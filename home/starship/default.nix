@@ -20,9 +20,9 @@
 	"$kotlin"
 	"$haskell"
 	"$python"
-	"[](bg:orange fg:green)"
+	"[](bg:yellow fg:green)"
 	"$time"
-	"[](fg:orange)"
+	"[](fg:yellow)"
 	"$character"
       ];
 
@@ -138,8 +138,8 @@
 	time = {
 		disabled = false;
 		time_format = "%R";
-		style = "bg:orange";
-		format = "[[ $time ](fg:bg1 bg:orange)]($style)";
+		style = "bg:yellow";
+		format = "[[ $time ](fg:bg1 bg:yellow)]($style)";
 	};
 
     palette = "gruvbox_dark";

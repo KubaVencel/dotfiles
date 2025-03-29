@@ -40,7 +40,7 @@
         ];
 
        "custom/powermenu"= {		
-          "format"= " ";
+          "format"= "  ";
           "interval"= "once";
           "on-click"= "wlogout";
           "tooltip"= false;
@@ -116,11 +116,11 @@
           on-click = "activate";
           format = "{icon}";
           format-icons = {
-                "1" = "󰖟";
-                "2" = "";
-                "3" = "";
-                "4" = "";
-                "5" = "";
+                "1" = " 󰖟 ";
+                "2" = "  ";
+                "3" = "  ";
+                "4" = "  ";
+                "5" = "  ";
           };
         };
 
