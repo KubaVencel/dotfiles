@@ -187,6 +187,7 @@
     chayang
     light
     procps
+    playerctl
     home-manager
 
     openssh

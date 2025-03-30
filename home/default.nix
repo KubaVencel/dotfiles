@@ -1,10 +1,11 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }: 
+{
   
   programs.home-manager.enable = true;
   
   imports = [
     ../theming/prism.nix
-    ./librewolf
+    ./firefox
     ./starship
     ./zsh
     ./games
@@ -17,6 +18,8 @@
     homeDirectory = "/home/vheac";
     sessionVariables = {
       EDITOR = "nvim";
+      TERM = "foot";
+      BROWSER = "firefox";
       VISUAL = "nvim";
       DEFAULT_USER = "$(whoami)";
     };
@@ -31,7 +34,7 @@
     vlc
     celluloid
     smile
-
+  
     thunderbird
     protonmail-bridge-gui
     discord
