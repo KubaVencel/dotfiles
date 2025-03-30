@@ -4,33 +4,33 @@
   ];
   
    home.sessionVariables = {
-     # # Invisible cursor
-     # WLR_NO_HARDWARE_CURSORS = "1";
-     #
-     # # fix some java apps
-     # _JAVA_AWT_WM_NONREPARENTING = "1";
-     #
-     # # General wayland environment variables
-     # XDG_SESSION_TYPE = "wayland";
-     # QT_QPA_PLATFORM = "wayland";
-     # QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"; 
-     # SDL_VIDEODRIVER = "wayland";
-     # GDK_BACKEND = "wayland";
-     #
-     # # Firefox wayland environment variable
-     # MOZ_ENABLE_WAYLAND = "1";
-     # MOZ_USE_XINPUT2 = "1";
-     #
-     # # OpenGL Variables
-     # LIBVA_DRIVER_NAME = "nvidia";
-     # GBM_BACKEND = "nvidia-drm";
-     # __GL_GSYNC_ALLOWED = "0";
-     # __GL_VRR_ALLOWED = "0";
-     # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-     #
-     # # Xwayland compatibility
-     # XWAYLAND_NO_GLAMOR = "1";
-     # WLR_DRM_DEVICES = "/dev/dri/card1";
+    # Invisible cursor
+    WLR_NO_HARDWARE_CURSORS = "1";
+    XCURSOR_SIZE = "24";
+     
+    # fix some java apps
+    _JAVA_AWT_WM_NONREPARENTING = "1";
+     
+    # General wayland environment variables
+    XDG_SESSION_TYPE = "wayland";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"; 
+    SDL_VIDEODRIVER = "wayland";
+    GDK_BACKEND = "wayland";
+     
+    # Firefox wayland environment variable
+    MOZ_ENABLE_WAYLAND = "1";
+    MOZ_USE_XINPUT2 = "1";
+     
+    # OpenGL Variables
+    #LIBVA_DRIVER_NAME = "nvidia";
+    #GBM_BACKEND = "nvidia-drm";
+    __GL_GSYNC_ALLOWED = "0";
+    __GL_VRR_ALLOWED = "0";
+    #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    
+    # Xwayland compatibility
+    XWAYLAND_NO_GLAMOR = "1";
    };
 
   wayland.windowManager.sway = {
@@ -76,7 +76,7 @@
       # home-manager home.sessionVariables
       source ${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh
       
-      #ln -s ~/.config/gtk-4.0/gtk.css ~/.config/gtk-3.0/gtk.css
+     # ln -s ~/.config/gtk-4.0/gtk.css ~/.config/gtk-3.0/gtk.css
       '';
 
     swaynag = {
@@ -88,10 +88,10 @@
           border-bottom-size = "0";
         };
         warning = {
-          background = "#1e1e2e";
-          text = "#cdd6f4";
-          border = "#cba6f7";
-          button-background = "#6e738d";
+          background = "#282828";
+          text = "#ebdbb2";
+          border = "#cc241d";
+          button-background = "#3c3836";
         };  
       };
     };
@@ -107,7 +107,7 @@
       startup = [
       	{ command = "swww-daemon"; }
         { command = "foot --server"; }
-        #{ command = "pkill -SIGHUP kanshi"; always = true; }
+        { command = "pkill -SIGHUP kanshi"; always = true; }
         { command = "swww img ~/theming/img/anime_skull.png"; }
         { command = "autotiling";}
                 ];
@@ -120,28 +120,28 @@
 
       colors =
         let
-          black = "#1e1e2e";
-          red = "#f38ba8";
-          green = "#a6e3a1";
-          yellow = "#f9e2af";
-          blue = "#89b4fa";
-          purple = "#b4befe";
-          aqua = "#74c7ec";
-          gray = "#585b70";
-          brgray = "#7f849c";
-          brred = "#e78284";
-          brgreen = "#a6d189";
-          bryellow = "#e5c890";
-          brblue = "#99d1db";
-          brpurple = "#babbf1";
-          braqua = "#85c1dc";
-          white = "#c6d0f5";
+          black = "#282828";
+          red = "#cc241d";
+          green = "#98971a";
+          yellow = "#d79921";
+          blue = "#458588";
+          purple = "#b16286";
+          aqua = "#689d61";
+          gray = "#928374";
+          brgray = "#a89983";
+          brred = "#fb4934";
+          brgreen = "#b8bb26";
+          bryellow = "#fabd2f";
+          brblue = "#83a598";
+          brpurple = "#d3869b";
+          braqua = "#8ec07c";
+          white = "#ebdbb2";
 
           a = "e0";
-          focused = braqua;
-          inactive = purple;
+          focused = green;
+          inactive = blue;
           unfocused = black;
-          urgent = yellow;
+          urgent = red;
         in
         {
           focused = {
@@ -216,7 +216,7 @@
           adaptive_sync = "disabled";
         };
       };
-
+      
       input = {
         "type:keyboard" = {
           xkb_layout = "us,cz";
