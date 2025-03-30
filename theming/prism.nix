@@ -7,7 +7,7 @@
 prism = {
   enable = true;
     wallpapers = ./img;
-    outPath = "./prismImg"; # Where in your home directory to output to.
+    outPath = "./theming/prismImg"; # Where in your home directory to output to.
 
     # There are a few different ways of setting the colorscheme.
 
