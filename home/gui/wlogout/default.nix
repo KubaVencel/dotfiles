@@ -49,7 +49,7 @@
       }
 
       window {
-        background: linear-gradient(135deg, rgba(17, 17, 27, 0.25), rgba(17, 17, 27, 0.50));
+        background: linear-gradient(135deg, rgba(40, 40, 40, 0.25), rgba(40, 40, 40, 0.50));
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         
         border: 1px; 
@@ -58,17 +58,17 @@
       }
       
       button {
-        color: #a6adc8;
+        color: #ebdbb2;
         font-size: 20px;
         
         background-repeat: no-repeat;
-        background-color: rgba(17, 17, 27, 0.25);
+        background-color: rgba(40, 40, 40, 0.25);
         background-position: center;
         background-size: 25%;
 
         border-width: 1px; 
         border-style: solid;
-        border-color: rgba(17, 17, 27, 0.5);
+        border-color: rgba(40, 40, 40, 0.5);
 
         margin: 1px;
       }
@@ -76,8 +76,8 @@
       
       button:active,
       button:hover {
-        color: #a6adc8;
-        background-color: rgba(17, 17, 27, 0.15);
+        color: #ebdbb2;
+        background-color: rgba(40, 40, 40, 0.15);
       }
 
       #lock {
