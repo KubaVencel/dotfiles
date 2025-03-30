@@ -1,40 +1,29 @@
-{ pkgs, config, ... }: {
-# Catppuccin
-# catppuccin = {
-#     flavor = "mocha";
-#     enable = true;
-#
-#     # disable themed in apps
-#     waybar.enable = false;
-#     wlogout.enable = false;
-#     mako.enable = false;
-#     imv.enable = false;
-#
-#     # enable theme in apps
-#     gtk.enable = true;
-#     btop.enable = true;
-#   };
-
-#cursorTheme themegtk
+{ pkgs, config, ... }: 
+{
 home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
 
-    package = pkgs.catppuccin-cursors.mochaLight;
+    package = pkgs.capitaine-cursors;
 
-    name = "catppuccin-mocha-light-cursors";
+    name = "capitaine-cursors";
 
-    size = 17;
-   };
+    size = 24;
+  };
 
   # gtk themegtk
-   gtk = {
-     enable = true;
-   # cursorTheme
-     cursorTheme = {
-       package = pkgs.catppuccin-cursors.mochaLight;
-       name = "catppuccin-mocha-light-cursors";
-     };
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      package = pkgs.capitaine-cursors;
+      name = "capitaine-cursors";
+      size = 24;
+    };
+    
+    theme = {
+      package = pkgs.gruvbox-dark-gtk;
+      name = "gruvbox-dark";
+    };
 
   # icons 
     iconTheme = {
@@ -42,4 +31,9 @@ home.pointerCursor = {
       name = "Papirus-Dark";
     };
   };
+
+   qt = {
+      enable = true;
+      platformTheme.name = "gtk";
+    };
 }
