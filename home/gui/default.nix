@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: 
+{
   imports = [
     #./kanshi
     ./waybar
@@ -26,7 +27,7 @@
     enable = true;
     settings = {
       main = {
-        font = "SourceCodePro:size=13";
+        font = "JetBrains:size=13";
         dpi-aware = false;
         prompt = "'> '";
         terminal = "footclient";
@@ -40,13 +41,13 @@
         exit-on-keyboard-focus-loss = false;
       };
       colors = {
-        background = "1e1e2edd";
-        text = "cdd6f4ff";
-        match = "f5c2e7ff";
-        selection = "181825ff";
-	selection-match = "f2cdcdff";
-        selection-text = "cdd6f4ff";
-        border = "11111bff";
+        background = "282828dd";
+        text = "ebdbb2ff";
+        match = "fabd2fff";
+        selection = "32302fff";
+	selection-match = "fe8019ff";
+        selection-text = "83a598ff";
+        border = "b8bb26ff";
       };
       border = {
         width = 3;
@@ -63,10 +64,10 @@
   services.mako = {
     enable = true;
     font = "SourceCodePro 13";
-    backgroundColor = "#1e1e2ee0";
-    borderColor = "#cba6f7";
-    textColor = "#cdd6f4";
-    progressColor = "source #f5c2e7";
+    backgroundColor = "#282828b3";
+    borderColor = "#b8bb26";
+    textColor = "#ebdbb2";
+    progressColor = "source #8ec07c";
     borderRadius = 0;
     borderSize = 2;
     defaultTimeout = 5000;
@@ -104,7 +105,7 @@
     programs.mpv = {
     enable = true;
     config = {
-      osd-font = "SourceCodePro";
+      osd-font = "JetBrains";
       osd-font-size = 20;
       osd-color = "#ebdbb2";
       osd-border-color = "#282828";
@@ -130,7 +131,7 @@
   programs.zathura = {
     enable = true;
     options = {
-      font = "SourceCodePro 11";
+      font = "JetBrains 11";
       selection-clipboard = "clipboard";
       synctex-editor-command = "footclient nvim";
 
@@ -151,11 +152,11 @@
       notification-warning-bg = "#282828";
       notification-warning-fg = "#fb4934";
       highlight-color = "#fabd2f";
-      highlight-active-color = "#83a598";
+      highlight-active-color = "#b8bb26";
       completion-bg = "#3c3836";
-      completion-fg = "#83a598";
+      completion-fg = "#b8bb26";
       completion-highlight-fg = "#fbf1c7";
-      completion-highlight-bg = "#83a598";
+      completion-highlight-bg = "#b8bb26";
       recolor-lightcolor = "#282828";
       recolor-darkcolor = "#ebdbb2";
     };
