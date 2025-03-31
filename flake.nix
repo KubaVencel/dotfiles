@@ -83,7 +83,7 @@
           modules = [
             ./home
             ./home/gui
-            #stylix.homeManagerModules.stylix
+            stylix.homeManagerModules.stylix
             prism.homeModules.prism
             #catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim

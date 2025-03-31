@@ -8,26 +8,26 @@
      enable = false;
      polarity = "dark";
      base16Scheme = {
-       base00 = "1e1e2e"; # Base
-       base01 = "181825"; # Mantle
-       base02 = "313244"; # Surface0
-       base03 = "45475a"; # Surface1
-       base04 = "585b70"; # Surface2
-       base05 = "cdd6f4"; # Text
-       base06 = "f5e0dc"; # Rosewater
-       base07 = "b4befe"; # Lavender
-       base08 = "f38ba8"; # Red
-       base09 = "fab387"; # Peach
-       base0A = "f9e2af"; # Yellow
-       base0B = "a6e3a1"; # Green
-       base0C = "94e2d5"; # Teal
-       base0D = "89b4fa"; # Blue
-       base0E = "cba6f7"; # Mauve
-       base0F = "f2cdcd"; # Flamingo
+       base00 = "282828"; # ----
+       base01 = "3c3836"; # ---
+       base02 = "504945"; # --
+       base03 = "665c54"; # -
+       base04 = "bdae93"; # +
+       base05 = "d5c4a1"; # ++
+       base06 = "ebdbb2"; # +++
+       base07 = "fbf1c7"; # ++++
+       base08 = "fb4934"; # Red
+       base09 = "fe8019"; # Orange
+       base0A = "fabd2f"; # Yellow
+       base0B = "b8bb26"; # Green
+       base0C = "8ec07c"; # Aqua/ Cyan
+       base0D = "83a598"; # Blue
+       base0E = "d3869b"; # Purple
+       base0F = "d65d0e"; # Brown
      };
   
     # does not work >:(
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
 
     image = ./img/anime_skull.png;
 
