@@ -10,13 +10,12 @@
       search.engines = {
         "kagi" = {
           urls = [{ template = "https://kagi.com/search?q={searchTerms}"; }];
-          icon = "󰩃 ";
-          iconColor = "brown";
+          icon = "https://kagi.com/asset/4f24904/kagi_assets/logos/yellow_3.svg";
           definedAliases = [ "@kagi" ];
         };
         "ecosia" = {
           urls = [{ template = "https://www.ecosia.org/search?q={searchTerms}"; }];
-          icon = " ";
+          icon = "https://images.seeklogo.com/logo-png/44/1/ecosia-logo-png_seeklogo-440094.png";
           definedAliases = [ "@ecosia" ];
         };
 
@@ -28,8 +27,7 @@
               { name = "query"; value = "{searchTerms}"; }
             ];
           }];
-          icon = "󱄅 ";
-          #icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           definedAliases = [ "@np" ];
         };
       };
