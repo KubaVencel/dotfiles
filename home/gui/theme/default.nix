@@ -4,10 +4,12 @@ home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
 
-    package = pkgs.capitaine-cursors;
-
-    name = "capitaine-cursors";
-
+    #package = pkgs.bibata-cursors;
+    #name = "Bibata-Original-Amber"; # Modern for rounded cursor
+    
+    package = pkgs.capitaine-cursors-themed;
+    name = "Capitaine Cursors (Gruvbox) - White"; 
+    
     size = 24;
   };
 
@@ -15,8 +17,12 @@ home.pointerCursor = {
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.capitaine-cursors;
-      name = "capitaine-cursors";
+      #package = pkgs.bibata-cursors;
+      #name = "Bibata-Original-Amber"; # Modern for rounded cursor
+      
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors (Gruvbox) - White"; 
+
       size = 24;
     };
     
