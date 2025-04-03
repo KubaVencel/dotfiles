@@ -6,7 +6,6 @@
    home.sessionVariables = {
     # Invisible cursor
     WLR_NO_HARDWARE_CURSORS = "1";
-    XCURSOR_SIZE = "24";
 
     # fix some java apps
     _JAVA_AWT_WM_NONREPARENTING = "1";
@@ -335,6 +334,7 @@
 
         seat = {
           "*" = {
+            xcursor_theme = "${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}";
             hide_cursor = "4000";
             idle_inhibit = "keyboard touch switch";
           };
