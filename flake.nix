@@ -56,6 +56,7 @@
             ({ ... }: { networking.hostName = name; })
             ./system
             ./theming/stylix.nix
+            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
           ] ++ modules;
         };
@@ -83,7 +84,6 @@
           modules = [
             ./home
             ./home/gui
-            stylix.homeManagerModules.stylix
             prism.homeModules.prism
             #catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
