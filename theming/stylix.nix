@@ -5,7 +5,7 @@
 }: 
 {
    stylix = {
-     enable = false;
+     enable = true;
      polarity = "dark";
      base16Scheme = {
        base00 = "282828"; # ----

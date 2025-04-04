@@ -56,8 +56,9 @@
             ({ ... }: { networking.hostName = name; })
             ./system
             ./theming/stylix.nix
-            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
+            lanzaboote.nixosModules.lanzaboote
           ] ++ modules;
         };
       in
@@ -66,13 +67,9 @@
 
         Power = makeNixosConfiguration "Power" [
           ./system/Power
-          lanzaboote.nixosModules.lanzaboote
-          inputs.stylix.nixosModules.stylix
         ];
         Makima = makeNixosConfiguration "Makima" [
           ./system/Makima
-          lanzaboote.nixosModules.lanzaboote
-          inputs.stylix.nixosModules.stylix
         ];
       };
 
@@ -85,9 +82,9 @@
             ./home
             ./home/gui
             prism.homeModules.prism
-            #catppuccin.homeManagerModules.catppuccin
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index
+            #catppuccin.homeManagerModules.catppuccin
           ] ++ modules;
         };
       in
