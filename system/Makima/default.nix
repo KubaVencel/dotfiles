@@ -17,7 +17,24 @@
   # Thermald proactively prevents overheating on Intel CPUs 
   # and works well with other tools.
   services.thermald.enable = true;
+
+  # Fix Intel CPU Throttling on Linux
+  services.throttled.enable = lib.mkDefault true;
   
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  boot.kernelParams = [
+    "i915.enable_guc=2"
+    "i915.enable_fbc=1"
+    "i915.enable_psr=2"
+  ];
+
+  # Discarding unused blocks
+  services.fstrim.enable = lib.mkDefault true;
+  
+  # GPU acceleration
+  hardware.graphics.extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
+
   # tlp : A common tool used to save power on laptops is tlp,# which has sensible defaults for most laptops. 
   services.tlp = {
     enable = true;
