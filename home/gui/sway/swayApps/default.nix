@@ -15,9 +15,9 @@
         command = "${pkgs.procps}/bin/pkill -USR1 swaylock";
       }
     ];
-    extraArgs = [
-      "idlehint 1200"
-    ];
+    # extraArgs = [
+    #   "idlehint 1200"
+    # ];
     timeouts = [
       {
         # turn the screen off quickly if the screen was locked manually
@@ -43,12 +43,12 @@
       font-size = 20;
       show-failed-attempts = true;
       daemonize = true;
-      color = "282828";
+      color = "1e1e2e";
 
-      key-hl-color = "#689d6a";
-      bs-hl-color = "#458088";
-      caps-lock-bs-hl-color = "#b16286";
-      caps-lock-key-hl-color = "#d65d0e";
+      key-hl-color = "a6e3a1";
+      bs-hl-color = "f5e0dc";
+      caps-lock-bs-hl-color = "f5e0dc";
+      caps-lock-key-hl-color = "a6e3a1";
 
       inside-color = "00000000"; 
       inside-clear-color = "00000000";
@@ -58,26 +58,26 @@
 
       layout-bg-color = "00000000";
       layout-border-color = "00000000";
-      layout-text-color = "#ebdbb2";
+      layout-text-color = "cdd6f4";
 
-      line-color = "000000";
+      line-color = "00000000";
       line-clear-color = "00000000";
       line-caps-lock-color = "00000000";
       line-ver-color = "00000000";
       line-wrong-color = "00000000";
 
-      ring-color = "#a89984";
-      ring-clear-color = "#98971a";
-      ring-caps-lock-color = "#d65d0e";
-      ring-ver-color = "#458588";
-      ring-wrong-color = "#cc241d";
+      ring-color = "b4befe";
+      ring-clear-color = "f5e0dc";
+      ring-caps-lock-color = "fab387";
+      ring-ver-color = "89b4fa";
+      ring-wrong-color = "eba0ac";
 
       separator-color = "00000000";
-      text-color = "#cdd6f4";
-      text-clear-color = "#b8bb26";
-      text-caps-lock-color = "#fe8019";
-      text-ver-color = "#83a598";
-      text-wrong-color = "#fb4934";    
+      text-color = "cdd6f4";
+      text-clear-color = "f5e0dc";
+      text-caps-lock-color = "fab387";
+      text-ver-color = "89b4fa";
+      text-wrong-color = "eba0ac";    
     };
   };
 }
