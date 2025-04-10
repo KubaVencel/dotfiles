@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, ... }: 
 {
   imports = [
     #./kanshi
@@ -6,6 +6,7 @@
     ./wlogout
     ./nixColors
     ./theme
+    ./spicetify
   ];
 
   home.packages = with pkgs; [

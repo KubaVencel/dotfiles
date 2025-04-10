@@ -33,6 +33,11 @@
     nix-colors.url = "github:misterio77/nix-colors";
     
     stylix.url = "github:danth/stylix";
+    
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     prism= {
       url = "github:IogaMaster/prism";

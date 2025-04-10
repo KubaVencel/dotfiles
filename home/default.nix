@@ -28,7 +28,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    spotify
+    #spotify
     ungoogled-chromium
     brave
     vlc
