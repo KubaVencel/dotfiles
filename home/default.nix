@@ -30,6 +30,7 @@
   home.packages = with pkgs; [
     #spotify
     ungoogled-chromium
+    vivaldi
     brave
     vlc
     celluloid
