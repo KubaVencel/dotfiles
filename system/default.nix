@@ -236,6 +236,9 @@
        pkgs.xdg-desktop-portal-wlr
      ];
    };
+  
+  # Gnome keyring
+  services.gnome.gnome-keyring.enable = true;
 
    security = {
      polkit.enable = true;
