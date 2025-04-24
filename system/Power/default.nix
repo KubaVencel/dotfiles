@@ -1,4 +1,5 @@
-    { pkgs, config, lib, ... }: {
+{ pkgs, config, lib, ... }: 
+{   
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -28,26 +29,27 @@
   services.xserver = {
     enable = true;
       videoDrivers = ["amdgpu"];
-      };    
+  };
+
     hardware = {
       graphics = {
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; 
-      [
-        amdvlk
-        rocmPackages.clr
- 	vaapiVdpau
-        libvdpau-va-gl
-      ];
+        [
+          amdvlk
+          rocmPackages.clr
+ 	  vaapiVdpau
+          libvdpau-va-gl
+        ];
       extraPackages32 = with pkgs; 
-      [  
-        driversi686Linux.amdvlk
-      ];
+        [  
+          driversi686Linux.amdvlk
+        ];
     };
   };
 
- # lanzaboote
+  # lanzaboote
 
   # Lanzaboote currently replaces the systemd-boot module.
   # This setting is usually set to true in configuration.nix

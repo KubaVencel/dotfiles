@@ -35,6 +35,13 @@
   # GPU acceleration
   hardware.graphics.extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
 
+  # Lid close behavior
+  services.logind.lidSwitch = "suspend-then-hibernate";
+  services.logind.lidSwitchExternalPower = "lock";
+  services.logind.lidSwitchDocked = "ignore";
+
+  # one of "ignore", "poweroff", "reboot", "halt", "kexec", "suspend", "hibernate", "hybrid-sleep", "suspend-then-hibernate", "lock"
+
   # tlp : A common tool used to save power on laptops is tlp,# which has sensible defaults for most laptops. 
   services.tlp = {
     enable = true;
