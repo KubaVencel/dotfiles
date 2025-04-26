@@ -26,15 +26,15 @@
         "fromYaml": "fromYaml"
       },
       "locked": {
-        "lastModified": 1745452037,
+        "lastModified": 1745523430,
         "narHash": "sha256-EAYWV+kXbwsH+8G/8UtmcunDeKwLwSOyfcmzZUkWE/c=",
-        "owner": "awwpotato",
+        "owner": "SenchoPens",
         "repo": "base16.nix",
-        "rev": "985d704b4ff9f75627f279ef091b2899f8456690",
+        "rev": "58bfe2553d937d8af0564f79d5b950afbef69717",
         "type": "github"
       },
       "original": {
-        "owner": "awwpotato",
+        "owner": "SenchoPens",
         "repo": "base16.nix",
         "type": "github"
       }
@@ -109,11 +109,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1745352209,
-        "narHash": "sha256-u3vJEzi6zxgG59KXjMR5koERsdKT5nd1OEKCpr6zgn8=",
+        "lastModified": 1745571143,
+        "narHash": "sha256-BndQEgBtQh6kPC+2PYdf9iWTSmrbaPjTFkVei2OtuKk=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "6268e50dbb0ac9375e110560395b5dc199e4dfb8",
+        "rev": "19919d666ead54e97f7886813db08f76ae0981dc",
         "type": "github"
       },
       "original": {
@@ -514,11 +514,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745494811,
-        "narHash": "sha256-YZCh2o9Ua1n9uCvrvi5pRxtuVNml8X2a03qIFfRKpFs=",
+        "lastModified": 1745555634,
+        "narHash": "sha256-lhVyVn1utb2UVTbyKJ6mfKB7wLTjrj14OlebvO0WU2s=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "abfad3d2958c9e6300a883bd443512c55dfeb1be",
+        "rev": "98f4fef7fd7b4a77245db12e33616023162bc6d9",
         "type": "github"
       },
       "original": {
@@ -756,11 +756,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1745518054,
-        "narHash": "sha256-jaYDGY/7Uja1/HRvogrvvfIdKKl600kI/fxPdQ3PcUw=",
+        "lastModified": 1745583324,
+        "narHash": "sha256-Ig9m38EL6gZHwqKS89401Eooe/Zi9CqQsaehVlf1wcQ=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "e6e536953580a956c143fc4413e8d9b4c876aeb8",
+        "rev": "a21504f2b084e7e1c5da09ca5cc87791d2564f3b",
         "type": "github"
       },
       "original": {
@@ -968,11 +968,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1745511266,
-        "narHash": "sha256-W68rSRTGhRF22nDzJgq2ffQwI/4k+4jMs84Mpj38aOI=",
+        "lastModified": 1745584517,
+        "narHash": "sha256-vk5fMNU/U+T9hHPPy7MvZbEHcgJ+XN2KTX3awc3ubJ4=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "3194470d07d2885da178a6baca10a91ea1068e1b",
+        "rev": "245a167c75a221e5692c08b8a4aa15c76e32c041",
         "type": "github"
       },
       "original": {

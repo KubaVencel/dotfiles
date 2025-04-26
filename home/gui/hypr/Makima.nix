@@ -36,7 +36,7 @@ in
           layout = "master";
         };
 
-        monitor = "eDP-1, 1920x1080@60.03100, 0x0, 1.5";
+        monitor = "eDP-1, 1920x1080@60.03100, 0x0, 1.3";
 
         env = [
          # "XCURSOR_SIZE,24"
@@ -136,14 +136,14 @@ in
         bind =
           [
             "$mainMod, return, exec, foot"
-            "$mainMod, Q, killactive,"
+            "$mainMod SHIFT, Q, killactive,"
             "$mainMod SHIFT, M, exit,"
-            "$mainMod SHIFT, F, togglefloating,"
-            "$mainMod, F, fullscreen,"
+            "$mainMod SHIFT, space, togglefloating,"
+            "$mainMod SHIFT, F, fullscreen,"
             "$mainMod, G, togglegroup,"
             "$mainMod, bracketleft, changegroupactive, b"
             "$mainMod, bracketright, changegroupactive, f"
-            "$mainMod, SPACE, exec, fuzzel"
+            "$mainMod, f, exec, fuzzel"
             "$mainMod, P, pin, active"
 
             "$mainMod, left, movefocus, l"
