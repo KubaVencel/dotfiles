@@ -91,6 +91,7 @@
           text = "#ebdbb2";
           border = "#cc241d";
           button-background = "#3c3836";
+          button-text = "#fb4934";
         };  
       };
     };
@@ -265,6 +266,14 @@
           "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           XF86SelectiveScreenshot = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           "${mod}+Ctrl+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
+           
+          # Toggle the current focus between tiling and floating mode
+          "${mod}+Shift+space" = "floating toggle";
+          # Move the currently focused window to the scratchpad          
+          "${mod}+Shift+minus" = "move scratchpad";
+          # Show the next scratchpad window or hide the focused scratchpad window.
+          # If there are multiple scratchpad windows, this command cycles through them.
+          "${mod}+minus" = "scratchpad show";
 
           # Workspaces
           "${mod}+Ctrl+${up}" = "workspace prev_on_output";
@@ -295,7 +304,6 @@
           "${mod}+Equal" = "mode passthrough";
           "${mod}+c" = "mode config";
         };
-
       modes = lib.mkOptionDefault {
         passthrough = {
           "${config.wayland.windowManager.sway.config.modifier}+Equal" =

@@ -48,6 +48,6 @@ home.pointerCursor = {
 
    qt = {
       enable = true;
-      platformTheme.name = "gtk2";
+      platformTheme.name = "gtk4";
     };
 }

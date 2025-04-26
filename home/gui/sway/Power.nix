@@ -7,7 +7,7 @@
     # # Invisible cursor
     # WLR_NO_HARDWARE_CURSORS = "1";
     #
-    # # fix some java apps
+    #   # fix some java apps
     # _JAVA_AWT_WM_NONREPARENTING = "1";
     #
     # # General wayland environment variables
@@ -22,15 +22,14 @@
     # MOZ_USE_XINPUT2 = "1";
     #
     # # OpenGL Variables
-    # LIBVA_DRIVER_NAME = "nvidia";
-    # GBM_BACKEND = "nvidia-drm";
+    # #LIBVA_DRIVER_NAME = "nvidia";
+    # #GBM_BACKEND = "nvidia-drm";
     # __GL_GSYNC_ALLOWED = "0";
     # __GL_VRR_ALLOWED = "0";
-    # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    # #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
     #
     # # Xwayland compatibility
     # XWAYLAND_NO_GLAMOR = "1";
-    # WLR_DRM_DEVICES = "/dev/dri/card1";
    };
 
   wayland.windowManager.sway = {
@@ -76,7 +75,7 @@
       # home-manager home.sessionVariables
       source ${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh
       
-      #ln -s ~/.config/gtk-4.0/gtk.css ~/.config/gtk-3.0/gtk.css
+     # ln -s ~/.config/gtk-4.0/gtk.css ~/.config/gtk-3.0/gtk.css
       '';
 
     swaynag = {
@@ -92,6 +91,7 @@
           text = "#ebdbb2";
           border = "#cc241d";
           button-background = "#3c3836";
+          button-text = "#fb4934";
         };  
       };
     };
@@ -205,7 +205,7 @@
           outer = 2;
         };
 
-      output = {
+       output = {
         #"DP-1" = {
         #  mode = "2560x1440@239.970Hz";
         #  position = "0,0";
@@ -271,6 +271,14 @@
           "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           XF86SelectiveScreenshot = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           "${mod}+Ctrl+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
+           
+          # Toggle the current focus between tiling and floating mode
+          "${mod}+Shift+space" = "floating toggle";
+          # Move the currently focused window to the scratchpad          
+          "${mod}+Shift+minus" = "move scratchpad";
+          # Show the next scratchpad window or hide the focused scratchpad window.
+          # If there are multiple scratchpad windows, this command cycles through them.
+          "${mod}+minus" = "scratchpad show";
 
           # Workspaces
           "${mod}+Ctrl+${up}" = "workspace prev_on_output";
@@ -301,7 +309,6 @@
           "${mod}+Equal" = "mode passthrough";
           "${mod}+c" = "mode config";
         };
-
       modes = lib.mkOptionDefault {
         passthrough = {
           "${config.wayland.windowManager.sway.config.modifier}+Equal" =
@@ -333,7 +340,7 @@
       };
 
         seat = {
-          "*" = {
+        "*" = {
             xcursor_theme = "${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}";
             hide_cursor = "4000";
             idle_inhibit = "keyboard touch switch";
