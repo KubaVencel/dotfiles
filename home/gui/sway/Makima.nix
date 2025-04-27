@@ -45,6 +45,12 @@
       "--unsupported-gpu"
     ];
 
+      extraConfig = ''
+      # Set floating window size constraints
+      floating_maximum_size 1280 x 1080
+      floating_minimum_size 920 x 580
+    '';
+
     extraSessionCommands = ''
       # Invisible cursor
       # export WLR_NO_HARDWARE_CURSORS=1
@@ -102,7 +108,7 @@
       terminal = "${pkgs.foot}/bin/footclient";
       menu = "${pkgs.fuzzel}/bin/fuzzel";
       workspaceAutoBackAndForth = true;
-      defaultWorkspace = "1";
+      defaultWorkspace = "workspace number 1";
 
       startup = [
       	{ command = "swww-daemon"; }

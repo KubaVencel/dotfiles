@@ -36,7 +36,7 @@ in
           layout = "master";
         };
 
-        monitor = "eDP-1, 1920x1080@60.03100, 0x0, 1.3";
+        monitor = "eDP-1, 1920x1080@60.03100, 0x0, 1.333333";
 
         env = [
          # "XCURSOR_SIZE,24"
