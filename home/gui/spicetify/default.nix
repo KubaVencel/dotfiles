@@ -25,6 +25,6 @@
         pointer
       ];
       theme = spicePkgs.themes.onepunch;
-    #colorScheme = "mocha";
+      colorScheme = "dark";
   };
 }

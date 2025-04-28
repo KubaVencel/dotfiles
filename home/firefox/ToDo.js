@@ -1,13 +1,18 @@
 /******
-*    name: arkenfox user.js
-*    date: 6 March 2025
-* version: 135
-*    urls: https://github.com/arkenfox/user.js [repo]
-*        : https://arkenfox.github.io/gui/ [interactive]
-* license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
+ *     
+ *     Arkenfox and some stuff from Bettefox
+ *     
+ *
+ *    name: arkenfox user.js
+ *    urls: https://github.com/arkenfox/user.js [repo]
+ *        : https://arkenfox.github.io/gui/ [interactive]
+ * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
+ * BetterFox
+ * 
+ * url: https://github.com/yokoffing/Betterfox        
+ * 
 
-* README:
-
+/* README:
   1. Consider using Tor Browser if it meets your needs or fits your threat model
        * https://2019.www.torproject.org/about/torusers.html
   2. Read the entire wiki
@@ -36,8 +41,74 @@
       So you should manually append your overrides (and keep a copy), and manually update when you
       change ESR releases (arkenfox is already past that release)
     - If you decide to keep updating, then the onus is on you - also see section 9999
+*/
 
-* INDEX:
+
+/* 
+   ______      _   _             __     
+   | ___ \    | | | |           / _|         
+   | |_/ / ___| |_| |_ ___ _ __| |_ _____  __
+   | ___ \/ _ \ __| __/ _ \ '__|  _/ _ \ \/ /
+   | |_/ /  __/ |_| ||  __/ |  | || (_) >  < 
+   \____/ \___|\__|\__\___|_|  |_| \___/_/\_\
+      
+  fastfox 
+*/
+
+user_pref("content.notify.interval", 100000); // (.10s); default=120000 (.12s)
+
+
+user_pref("gfx.canvas.accelerated.cache-size", 512); // default=256; Chrome=512
+user_pref("gfx.content.skia-font-cache-size", 20); // default=5; Chrome=20
+
+
+user_pref("media.cache_readahead_limit", 7200); // 120 min; default=60; stop reading ahead when our buffered data is this many seconds ahead of the current playback
+user_pref("media.cache_resume_threshold", 3600); // 60 min; default=30; when a network connection is suspended, don't resume it until the amount of buffered data falls below this threshold
+
+/
+user_pref("image.mem.decode_bytes_at_a_time", 32768); // default=16384; alt=65536; chunk size for calls to the image decoders
+
+
+user_pref("network.http.max-connections", 1800); // default=900
+user_pref("network.http.max-persistent-connections-per-server", 10); // default=6; download connections; anything above 10 is excessive
+user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5); // default=3
+
+
+user_pref("network.http.pacing.requests.enabled", false);
+user_pref("network.dnsCacheExpiration", 3600); // keep entries for 1 hour
+user_pref("network.ssl_tokens_cache_capacity", 10240); // default=2048; more TLS token caching (fast reconnects)
+
+
+user_pref("layout.css.grid-template-masonry-value.enabled", true);
+
+/* Betterfox 
+ * smoothfox */
+
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this number to your liking
+
+
+/* 
+  ___       _               __          
+ / _ \     | |             / _|         
+/ /_\ \_ __| | _____ _ __ | |_ _____  __
+|  _  | '__| |/ / _ \ '_ \|  _/ _ \ \/ /
+| | | | |  |   <  __/ | | | || (_) >  < 
+\_| |_/_|  |_|\_\___|_| |_|_| \___/_/\_\
+                                        
+*/
+
+/* INDEX:
 
   0100: STARTUP
   0200: GEOLOCATION
