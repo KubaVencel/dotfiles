@@ -35,7 +35,7 @@
     vlc
     celluloid
     smile
-  
+
     thunderbird
     protonmail-bridge-gui
     discord

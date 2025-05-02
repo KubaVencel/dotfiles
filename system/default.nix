@@ -98,7 +98,9 @@
 
   # Yubikey
   services.udev = {
-    packages = [ pkgs.yubikey-personalization ];
+    packages = [ 
+      pkgs.yubikey-personalization
+    ];
     extraRules = ''
       ACTION=="remove",\
       ENV{ID_BUS}=="usb",\
@@ -115,13 +117,25 @@
   };
   
   security.pam.services = {
-    swaylock = {};
+    swaylock = {
+      u2fAuth = true;
+    };
     login.u2fAuth = true;
     sudo.u2fAuth = true;
   };
 
+  security.pam.yubico = {
+   enable = true;
+   debug = true;
+   mode = "challenge-response";
+   id = [ "31225898" ];
+  };
+
   # List services that you want to enable:
   services = {
+    #     # Whether to enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC). 
+    pcscd.enable = true; 
+    
     # Enable the OpenSSH daemon.
     openssh = {
   	enable = true;
@@ -192,6 +206,9 @@
 
     openssh
     polkit
+
+    yubioath-flutter
+    yubikey-manager #ykman
 
     sbctl # secure boot keys
     libnotify
