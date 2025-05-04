@@ -64,16 +64,18 @@
 # notifications 
   services.mako = {
     enable = true;
-    font = "SourceCodePro 13";
-    backgroundColor = "#282828b3";
-    borderColor = "#b8bb26";
-    textColor = "#ebdbb2";
-    progressColor = "source #8ec07c";
-    borderRadius = 0;
-    borderSize = 2;
-    defaultTimeout = 5000;
-    margin = "10";
-    width = 400;
+    settings = {
+      font = "SourceCodePro 13";
+      backgroundColor = "#282828b3";
+      borderColor = "#b8bb26";
+      textColor = "#ebdbb2";
+      progressColor = "source #8ec07c";
+      borderRadius = "0";
+      borderSize = "2";
+      defaultTimeout = "5000";
+      margin = "10";
+      width = "400";
+    };
   };
 
   services.gammastep = {

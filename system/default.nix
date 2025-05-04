@@ -120,6 +120,12 @@
     swaylock = {
       u2fAuth = true;
     };
+    # Configure PAM to use YubiKey for greetd
+    greetd = {
+      enableGnomeKeyring = true;
+      u2fAuth = true;          # Enable U2F authentication
+      yubicoAuth = true;       # Enable Yubico authentication
+    };
     login.u2fAuth = true;
     sudo.u2fAuth = true;
   };
