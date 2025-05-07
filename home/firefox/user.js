@@ -10,9 +10,7 @@
   
 		name: BetterFox
 			url: https://github.com/yokoffing/Betterfox        
-*/
 
-/* 
 	 ______      _   _             __     
 	 | ___ \    | | | |           / _|         
 	 | |_/ / ___| |_| |_ ___ _ __| |_ _____  __
@@ -34,7 +32,6 @@ user_pref("gfx.content.skia-font-cache-size", 20); // default=5; Chrome=20
 user_pref("media.cache_readahead_limit", 7200); // 120 min; default=60; stop reading ahead when our buffered data is this many seconds ahead of the current playback
 user_pref("media.cache_resume_threshold", 3600); // 60 min; default=30; when a network connection is suspended, don't resume it until the amount of buffered data falls below this threshold
 
-/
 user_pref("image.mem.decode_bytes_at_a_time", 32768); // default=16384; alt=65536; chunk size for calls to the image decoders
 
 
@@ -51,6 +48,8 @@ user_pref("network.ssl_tokens_cache_capacity", 10240); // default=2048; more TLS
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
 
 /* Smoothfox */
+
+user_pref("browser.tabs.groups.enabled", true)
 
 user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
 user_pref("general.smoothScroll", true); // DEFAULT
