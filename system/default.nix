@@ -234,6 +234,7 @@
 
     neovim
     tmux
+    gnome-bluetooth
 
     gnutls
     fastfetch
