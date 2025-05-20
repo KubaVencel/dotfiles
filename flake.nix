@@ -31,16 +31,20 @@
     agenix.url = "github:ryantm/agenix";
 
     nix-colors.url = "github:misterio77/nix-colors";
-    
-    stylix.url = "github:danth/stylix";
-    
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    prism= {
+    prism = {
       url = "github:IogaMaster/prism";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    stylix = {
+      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
