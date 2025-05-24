@@ -11,7 +11,14 @@
   # boot.loader.efi.canTouchEfiVariables = true;    
   # needed to unlock LUKS with key from TPM
   #boot.initrd.systemd.enable = true;
-  
+
+  #btrfs
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+    fileSystems = [ "/" ];
+  };
+
   # Steam
   programs.steam = {
     enable = true;
@@ -59,6 +66,6 @@
 
   boot.lanzaboote = {
     enable = true;
-    pkiBundle = "/etc/secureboot";
+    pkiBundle = "/var/lib/sbctl";
   };
 }

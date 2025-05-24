@@ -212,10 +212,12 @@
 
     openssh
     polkit
-
+  
     yubioath-flutter
     yubikey-manager #ykman
-
+    
+    openrgb-with-all-plugins
+    
     sbctl # secure boot keys
     libnotify
     glib # gsettings
@@ -260,7 +262,9 @@
        pkgs.xdg-desktop-portal-wlr
      ];
    };
-  
+
+  services.hardware.openrgb.enable = true;
+
   # Gnome keyring
   services.gnome.gnome-keyring.enable = true;
 

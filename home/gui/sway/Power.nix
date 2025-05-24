@@ -41,9 +41,9 @@
 
     systemd.enable = true;
 
-    extraOptions = [ 
-      "--unsupported-gpu"
-    ];
+    # extraOptions = [ 
+    #   "--unsupported-gpu"
+    # ];
 
       extraConfig = ''
       # Set floating window size constraints
