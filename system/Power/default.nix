@@ -4,7 +4,12 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-
+  
+  environment.systemPackages = with pkgs;
+    [
+      lact
+    ];
+      
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
