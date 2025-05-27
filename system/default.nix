@@ -203,7 +203,6 @@
     libdrm
     mesa
 
-    brightnessctl
     chayang
     light
     procps
@@ -219,7 +218,6 @@
     openrgb-with-all-plugins
     
     sbctl # secure boot keys
-    libnotify
     glib # gsettings
 
     pulseaudioFull
@@ -298,7 +296,10 @@
   
     # zen
     #kernelPackages = pkgs.linuxPackages_zen;
-    
+
+    # xan
+    #kernelPackages = pkgs.linuxPackages_xanmod_latest
+
     # needed to unlock LUKS with key from TPM
     initrd.systemd.enable = true;
   

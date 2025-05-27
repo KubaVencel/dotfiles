@@ -148,7 +148,7 @@
         temperature= {
           critical-threshold= 90;
           interval= 5;
-          format= "{icon} {temperatureC}°";
+          format= "{icon} {temperatureC}°C";
           format-icons= [
             ""
             ""
@@ -156,7 +156,7 @@
             ""
             ""
           ];
-          tooltip= false;
+          tooltip= true;
         };
       
         idle_inhibitor = {

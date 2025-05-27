@@ -1,5 +1,6 @@
 { 
   config,
+  pkgs,
   ... 
 }: 
 {
@@ -8,11 +9,18 @@
     autosuggestion.enable = true;
     syntaxHighlighting = {
       enable = true;
+      package = pkgs.zsh-syntax-highlighting;
     };
     enableCompletion = true;
     dotDir = ".config/zsh";
     shellAliases = {
       ll = "ls -l";
+      cat = "bat";
+      fd = "fd -Lu";
+      w3m = "w3m -no-cookie -v";
+      neofetch = "disfetch";
+      fetch = "disfetch";
+      gitfetch = "onefetch";
       update = "nix flake update";
       upgrade = "sudo nixos-rebuild switch --flake .";
       upgradeHm = "home-manager switch --flake .";
