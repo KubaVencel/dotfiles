@@ -11,6 +11,7 @@
     ./games
     ./foot
     ./nixVim
+    ./cli
   ];
 
   home = {
@@ -47,7 +48,9 @@
 
     grim
     slurp
-    
+
+    gnome-multi-writer
+
     pcmanfm
     lazygit
   ];
