@@ -21,10 +21,14 @@
         bat
 
         eza
-        lsd
 
         fd
         bc
+        fzf
+        ripgrep
+
+        lazygit
+
         direnv
         nix-direnv
         cava
@@ -32,8 +36,6 @@
         libnotify
         timer
         brightnessctl
-        gnugrep
-        ripgrep
         rsync
         unzip
         w3m

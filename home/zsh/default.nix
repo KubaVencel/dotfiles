@@ -14,13 +14,16 @@
     enableCompletion = true;
     dotDir = ".config/zsh";
     shellAliases = {
-      ll = "ls -l";
+      ls = "eza --icons";
+      ll = "eza --icons -l";
+      
       cat = "bat";
       fd = "fd -Lu";
       w3m = "w3m -no-cookie -v";
-      neofetch = "disfetch";
-      fetch = "disfetch";
+      neofetch = "fastfetch";
+      fetch = "fastfetch";
       gitfetch = "onefetch";
+
       update = "nix flake update";
       upgrade = "sudo nixos-rebuild switch --flake .";
       upgradeHm = "home-manager switch --flake .";

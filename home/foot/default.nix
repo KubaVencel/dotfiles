@@ -44,7 +44,7 @@
 	bright7 = "ebdbb2";
 	
 	selection-foreground = "ebdbb2";
-	selection-background = "282828";
+	selection-background = "3c3836";
 
 	search-box-no-match = "32392f fb4934";
 	search-box-match = "b8bb26 3c3836";
