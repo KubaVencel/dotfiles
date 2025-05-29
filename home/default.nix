@@ -12,6 +12,7 @@
     ./foot
     ./nixVim
     ./cli
+    ./virt
   ];
 
   home = {
