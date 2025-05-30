@@ -240,7 +240,6 @@
     fastfetch
     networkmanagerapplet
 
-    # non-essential programs
     pulsemixer
     wl-clipboard
   ];

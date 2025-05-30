@@ -4,7 +4,6 @@
   programs.home-manager.enable = true;
   
   imports = [
-    ../theming/prism.nix
     ./firefox
     ./starship
     ./zsh
@@ -12,7 +11,6 @@
     ./foot
     ./nixVim
     ./cli
-    ./virt
   ];
 
   home = {
@@ -46,11 +44,6 @@
     
     kdePackages.kate
     gimp 
-
-    grim
-    slurp
-
-    gnome-multi-writer
 
     pcmanfm
     lazygit

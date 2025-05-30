@@ -64,10 +64,11 @@
           modules = [
             ({ ... }: { networking.hostName = name; })
             ./system
-            ./theming/stylix.nix
-            home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
-            lanzaboote.nixosModules.lanzaboote
+            ./modules/theming/stylix.nix
+            ./modules/virt
+            home-manager.modules.home-manager
+            stylix.modules.stylix
+            lanzaboote.modules.lanzaboote
           ] ++ modules;
         };
       in
@@ -90,6 +91,7 @@
           modules = [
             ./home
             ./home/gui
+            ./modules/theming/prism.nix
             prism.homeModules.prism
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index

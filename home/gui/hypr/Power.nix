@@ -10,8 +10,8 @@
 
       # wait a tiny bit for wallpaper
       sleep 2
-      ${pkgs.swww}/bin/swww img ~/stylix/girlOnRoofAnimeAestheticSunset.jpg
-  '';
+      ${pkgs.swww}/bin/swww img ~/modules/theming/img/anime_skull.png
+      '';
 
 in
 {  
