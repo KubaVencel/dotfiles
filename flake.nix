@@ -64,8 +64,8 @@
           modules = [
             ({ ... }: { networking.hostName = name; })
             ./system
-            ./modules/theming/stylix.nix
-            ./modules/virt
+            ./nixModules/theming/stylix.nix
+            ./nixModules/virt
             home-manager.modules.home-manager
             stylix.modules.stylix
             lanzaboote.modules.lanzaboote
@@ -91,7 +91,7 @@
           modules = [
             ./home
             ./home/gui
-            ./modules/theming/prism.nix
+            ./nixModules/theming/prism.nix
             prism.homeModules.prism
             nixvim.homeManagerModules.nixvim
             nix-index-database.hmModules.nix-index
