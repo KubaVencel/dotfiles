@@ -66,9 +66,9 @@
             ./system
             ./nixModules/theming/stylix.nix
             ./nixModules/virt
-            home-manager.modules.home-manager
-            stylix.modules.stylix
-            lanzaboote.modules.lanzaboote
+            home-manager.nixosModules.home-manager
+            stylix.nixosModules.stylix
+            lanzaboote.nixosModules.lanzaboote
           ] ++ modules;
         };
       in
