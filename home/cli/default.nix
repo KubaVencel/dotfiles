@@ -46,6 +46,7 @@
         w3m # Text based Browser
         #pandoc
         hwinfo # Probe for the hardware present in the system
+        glxinfo
         pciutils # The PCI Utilities
         #numbat
 

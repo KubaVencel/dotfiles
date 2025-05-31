@@ -134,7 +134,10 @@
    enable = true;
    debug = true;
    mode = "challenge-response";
-   id = [ "31225898" ];
+    id = [ 
+      "31225898" 
+      "31489112"
+    ];
   };
 
   # List services that you want to enable:

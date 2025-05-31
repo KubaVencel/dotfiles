@@ -8,6 +8,11 @@
   environment.systemPackages = with pkgs;
     [
       lact
+      mesa
+      mesa_glu
+      mesa_i686
+      mesa-gl-headers
+      mesa-demos
     ];
       
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -31,6 +36,10 @@
     #dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
+ 
+  services.udev.packages = [ pkgs.openrgb ];
+  boot.kernelModules = [ "i2c-dev" ];
+  hardware.i2c.enable = true;
 
   # Amd CPU
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
