@@ -55,12 +55,13 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
+    #desktopManager.gnome.enable = true;
     xkb.layout = "cz";
     xkb.variant = "";
   };
 
   # Configure console keymap
-    console.keyMap = "en";
+  console.keyMap = "en";
   
   # Fonts
   fonts.packages = with pkgs; [
