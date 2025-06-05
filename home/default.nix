@@ -10,6 +10,7 @@
     ./games
     ./foot
     ./nixVim
+    ./tmux
     ./cli
   ];
 
