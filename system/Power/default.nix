@@ -37,7 +37,10 @@
     gamescopeSession.enable = true;
   };
  
-  services.udev.packages = [ pkgs.openrgb ];
+  services.udev.packages = [ 
+    pkgs.openrgb-with-all-plugins 
+    pkgs.i2c-tools
+  ];
   boot.kernelModules = [ "i2c-dev" ];
   hardware.i2c.enable = true;
 

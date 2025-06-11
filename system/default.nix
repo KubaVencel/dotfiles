@@ -219,8 +219,6 @@
     yubioath-flutter
     yubikey-manager #ykman
     
-    openrgb-with-all-plugins
-    
     sbctl # secure boot keys
     glib # gsettings
 
