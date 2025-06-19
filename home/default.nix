@@ -38,10 +38,11 @@
 
     thunderbird
     protonmail-bridge-gui
-    discord
+
     bitwarden
-    keepassxc
-    
+
+    discord
+    qbittorrent
     kdePackages.kate
     gimp 
 

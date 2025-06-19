@@ -262,8 +262,6 @@
      ];
    };
 
-  services.hardware.openrgb.enable = true;
-
   # Gnome keyring
   services.gnome.gnome-keyring.enable = true;
 

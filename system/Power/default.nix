@@ -36,12 +36,26 @@
     #dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
- 
+  
+  services.hardware.openrgb = { 
+    enable = true; 
+    package = pkgs.openrgb-with-all-plugins; 
+    motherboard = "amd"; 
+    #server = { 
+    #  port = 6742; 
+    #  autoStart = true; 
+    #}; 
+  };
+
   services.udev.packages = [ 
     pkgs.openrgb-with-all-plugins 
     pkgs.i2c-tools
   ];
-  boot.kernelModules = [ "i2c-dev" ];
+  boot.kernelModules = [ 
+    "i2c-dev"
+    "i2c-piix4"
+  ];
+
   hardware.i2c.enable = true;
 
   # Amd CPU
