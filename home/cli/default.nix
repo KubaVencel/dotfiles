@@ -12,7 +12,7 @@
         pipes-rs # An over-engineered rewrite of pipes.sh in Rust
         cmatrix # Digital rain
         astroterm # Planetarium for your terminal
-
+        mapscii # Map in terminal
 
         starfetch # Displays constellations
         onefetch # Gitfetch
@@ -24,8 +24,12 @@
         gnutls # Implements the TLS/SSL
         gnused # Parse and transform text
         bat # A cat(1) clone with wings
+        dysk # A linux utility listing your filesystems
 
         eza # A modern alternative to ls 
+
+        tmux
+        zellij
 
         btop # Monitor of resources 
 

@@ -36,6 +36,8 @@
     steam
     steam-run
 
+    shadps4
+
     protonup-ng
     steamtinkerlaunch
     er-patcher
