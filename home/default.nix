@@ -39,6 +39,8 @@
     thunderbird
     protonmail-bridge-gui
 
+    file-roller
+
     bitwarden
 
     discord

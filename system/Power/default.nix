@@ -13,6 +13,8 @@
       mesa_i686
       mesa-gl-headers
       mesa-demos
+      openrgb-with-all-plugins 
+      i2c-tools
     ];
       
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -47,14 +49,12 @@
     #}; 
   };
 
-  services.udev.packages = [ 
-    pkgs.openrgb-with-all-plugins 
-    pkgs.i2c-tools
-  ];
   boot.kernelModules = [ 
     "i2c-dev"
     "i2c-piix4"
   ];
+  
+  users.groups.i2c.members = [ "vheac" ]; # create i2c group and add default user to it
 
   hardware.i2c.enable = true;
 

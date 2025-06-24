@@ -12,7 +12,7 @@
         pipes-rs # An over-engineered rewrite of pipes.sh in Rust
         cmatrix # Digital rain
         astroterm # Planetarium for your terminal
-        mapscii # Map in terminal
+        #mapscii # Map in terminal
 
         starfetch # Displays constellations
         onefetch # Gitfetch
@@ -47,6 +47,8 @@
         
         rsync # Copying tool
         unzip # Un Zip
+        unrar # Un Rar
+        xar
         w3m # Text based Browser
         #pandoc
         hwinfo # Probe for the hardware present in the system
