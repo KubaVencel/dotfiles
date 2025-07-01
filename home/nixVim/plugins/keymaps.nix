@@ -3,7 +3,7 @@
   # [[ Basic Keymaps ]]
   #  See `:help vim.keymap.set()`
   # https://nix-community.github.io/nixvim/keymaps/index.html
-  keymaps = [
+  programs.nixvim.keymaps = [
     # Clear highlights on search when pressing <Esc> in normal mode
     {
       mode = "n";

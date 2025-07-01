@@ -16,6 +16,8 @@
   # Install necessary packages
   environment.systemPackages = with pkgs; [
     qemu
+    quickemu
+    quickgui
     virt-manager
     virt-viewer
     spice spice-gtk

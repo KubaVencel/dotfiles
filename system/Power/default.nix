@@ -13,6 +13,7 @@
       mesa_i686
       mesa-gl-headers
       mesa-demos
+
       openrgb-with-all-plugins 
       i2c-tools
     ];
@@ -38,7 +39,10 @@
     #dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
-  
+
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
+
   services.hardware.openrgb = { 
     enable = true; 
     package = pkgs.openrgb-with-all-plugins; 
@@ -52,6 +56,9 @@
   boot.kernelModules = [ 
     "i2c-dev"
     "i2c-piix4"
+    "i2c-amd-mp2"
+
+    "acpi_enforce_resources=lax"
   ];
   
   users.groups.i2c.members = [ "vheac" ]; # create i2c group and add default user to it
