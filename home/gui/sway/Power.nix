@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }: {
   imports = [
     ./swayApps
+    ./swayApps/waybar/default.nix
+    ./swayApps/wlogout/default.nix
   ];
   
    home.sessionVariables = {

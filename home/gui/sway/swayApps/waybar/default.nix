@@ -168,7 +168,7 @@
           tooltip = false;
          };
 
-        battery = {swayterval = 10;
+        battery = {interval = 10;
           states = {
             warning = 30;
             critical = 15;

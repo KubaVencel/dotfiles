@@ -14,11 +14,16 @@
       '';
 
 in
-{  
+  {  
+  imports = [
+    ./hyprApps/default.nix
+    ./hyprApps/waybar/default.nix
+    ./hyprApps/wlogout/default.nix
+  ];
+  
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    
 	settings = {
 	exec-once = [
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

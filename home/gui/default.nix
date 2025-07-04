@@ -2,8 +2,6 @@
 {
   imports = [
     #./kanshi
-    ./waybar
-    ./wlogout
     ./nixColors
     ./theme
     ./spicetify
