@@ -81,27 +81,27 @@
       }
 
       #lock {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/lock.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/lock.png"));
       }
       
       #logout {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/logout.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/logout.png"));
       }
       
       #suspend {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/suspend.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/suspend.png"));
       }
       
       #hibernate {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/hibernate.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/hibernate.png"));
       }
       
       #shutdown {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/shutdown.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/hutdown.png"));
       }
       
       #reboot {
-        background-image: image(url("/home/vheac/home/gui/wlogout/icons/reboot.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/reboot.png"));
       }
       '';
     };

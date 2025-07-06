@@ -118,7 +118,7 @@
   };
   
   security.pam.services = {
-    swaylock = {
+      swaylock = {
       u2fAuth = true;
     };
     # Configure PAM to use YubiKey for greetd
@@ -171,7 +171,7 @@
       enable = true;
       settings = {
           default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd hyprland";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
           user = "greeter";
         };
       };
