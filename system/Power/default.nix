@@ -70,19 +70,26 @@
 
   # Amd GPU
   boot.initrd.kernelModules = [ "amdgpu" ];
-
+  
+  # Some games choose AMDVLK over RADV, which can cause noticeable performance issues (e.g. <50% less FPS in games) 
+  environment.variables.AMD_VULKAN_ICD = "RADV";
+``
   services.xserver = {
     enable = true;
       videoDrivers = ["amdgpu"];
   };
+  
+  hardware.opengl.driSupport = true; # This is already enabled by default
+  hardware.opengl.driSupport32Bit = true; # For 32 bit applications
 
-    hardware = {
-      graphics = {
+  hardware = { 
+    graphics = {
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; 
         [
           amdvlk
+          driversi686Linux.amdvlk
           rocmPackages.clr
  	  vaapiVdpau
           libvdpau-va-gl

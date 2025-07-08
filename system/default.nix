@@ -94,7 +94,7 @@
   users.users.vheac = {
     isNormalUser = true;
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "adbusers" "wireshark" "docker" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   # Yubikey
@@ -282,6 +282,7 @@
 
     dconf.enable =true;
 
+    fish.enable = true;
     zsh.enable = true;
 
     kdeconnect.enable = true;

@@ -6,7 +6,8 @@
   imports = [
     ./firefox
     ./starship
-    ./zsh
+    #./zsh
+    ./fish
     ./games
     ./foot
     ./nixVim
