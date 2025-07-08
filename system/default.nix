@@ -207,6 +207,7 @@
     libdrm
     mesa
 
+    grc
     chayang
     light
     procps

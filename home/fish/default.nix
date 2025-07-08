@@ -6,6 +6,17 @@
 {
   programs.fish = {
     enable = true;
+    functions = {
+      fish_greeting = {
+        description = "Greeting to show when starting a fish shell";
+        body = "fastfetch";
+      };
+    };
+
+    interactiveShellInit = ''
+     set fish_greeting 
+    '';
+
     shellAliases = {
       ls = "eza --icons";
       ll = "eza --icons -l";

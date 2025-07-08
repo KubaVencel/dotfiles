@@ -41,7 +41,7 @@ in
         layout = "master";
       };
 
-      monitor = "DP-1, 1920x1080@60.03100, 0x0, 1.333333";
+      monitor = "DP-1, 1920x1080@60.03100, 0x0, 1";
 
       env = [
         # "XCURSOR_SIZE,24"

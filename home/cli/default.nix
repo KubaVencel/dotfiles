@@ -13,6 +13,8 @@
         cmatrix # Digital rain
         astroterm # Planetarium for your terminal
         #mapscii # Map in terminal
+        asciiquarium # aquarium
+        charasay
 
         starfetch # Displays constellations
         onefetch # Gitfetch
