@@ -214,13 +214,18 @@
         };
 
       output = {
-        #"DP-1" = {
-        #  mode = "2560x1440@239.970Hz";
-        #  position = "0,0";
-        #  scale = "1";
-        #};
-        "Microstep MSI G241 0x00002317" = {
-          mode = "1920x1080@144.013Hz";
+        # "Microstep MSI G241 0x00002317" = {
+        #   mode = "1920x1080@144.013Hz";
+        #   position = "0,0";
+        #   scale = "1";
+        #   scale_filter = "linear";
+        #   transform = "normal";
+        #   max_render_time = "off";
+        #   adaptive_sync = "disabled";
+        # };
+        
+        "Dell Inc. DELL AW2723DF 5W3LNP3" = {
+          mode = "2560x1440@239.970Hz";
           position = "0,0";
           scale = "1";
           scale_filter = "linear";
