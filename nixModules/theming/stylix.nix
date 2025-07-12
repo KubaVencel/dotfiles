@@ -67,6 +67,6 @@
       nixos-icons.enable = true;
     };
 
-    autoEnable = true;
+    autoEnable = false;
   };
 }
