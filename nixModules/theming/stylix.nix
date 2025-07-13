@@ -65,6 +65,7 @@
       grub.useImage = true;
       plymouth.enable = false;
       nixos-icons.enable = true;
+      console.enable = true;
     };
 
     autoEnable = false;

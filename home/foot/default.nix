@@ -43,12 +43,12 @@
 	bright5 = "d3869b"; # bright magenta
 	bright6 = "8ec07c"; # bright cyan
 	bright7 = "ebdbb2"; # bright white
-	selection-foreground = "<inverse foreground/background>";
-	selection-background = "<inverse foreground/background>";
+	selection-foreground = "282828";  # "<inverse foreground/background>";
+	selection-background = "ebdbb2";  # "<inverse foreground/background>";
 	
-	jump-labels = "<regular0> <regular3>";
-	urls = "<regular3>";
-	scrollback-indicator = "<regular0> <bright4>";
+	jump-labels = "282828 d79921";	# "<regular0> <regular3>";
+	urls = "458588"; # "<regular4>";
+	scrollback-indicator = "282828 fb4934";  # "<regular0> <bright1>";
       };
     };
   };
