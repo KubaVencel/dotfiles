@@ -94,7 +94,7 @@
             ./nixModules/theming/prism.nix
             prism.homeModules.prism
             nixvim.homeManagerModules.nixvim
-            nix-index-database.hmModules.nix-index
+            nix-index-database.homeModules.nix-index
             #catppuccin.homeManagerModules.catppuccin
           ] ++ modules;
         };

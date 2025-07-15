@@ -9,7 +9,7 @@
 
       # wait a tiny bit for wallpaper
       sleep 2
-      ${pkgs.swww}/bin/swww img ~/nixModules/theming/img/anime_skull.png
+      ${pkgs.swww}/bin/swww img ~/nixModules/theming/prismImg/anime_skull.png
       '';
 
 in

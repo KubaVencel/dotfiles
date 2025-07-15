@@ -116,7 +116,7 @@
       	{ command = "swww-daemon"; }
         { command = "foot --server"; }
         { command = "pkill -SIGHUP kanshi"; always = true; }
-        { command = "swww img ~/nixModules/theming/img/anime_skull.png"; }
+        { command = "swww img ~/nixModules/theming/prismImg/anime_skull.png"; }
         { command = "autotiling";}
                 ];
 
