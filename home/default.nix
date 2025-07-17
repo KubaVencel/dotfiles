@@ -47,9 +47,11 @@
     discord
     qbittorrent
     kdePackages.kate
-    gimp 
+    gimp3 
 
-    pcmanfm
+    nemo
+    #pcmanfm
+
     lazygit
   ];
 
