@@ -1,27 +1,29 @@
+
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
 /*
 
-	Arkenfox and some stuff from Bettefox(fastfox, smoothfox)
+    Arkenfox and some stuff from Bettefox(fastfox, smoothfox)
 
 
-				name: Arkenfox user.js
-				urls: https://github.com/arkenfox/user.js [repo]
-				 : https://arkenfox.github.io/gui/ [interactive]
-		license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
+                name: Arkenfox user.js
+                urls: https://github.com/arkenfox/user.js [repo]
+                 : https://arkenfox.github.io/gui/ [interactive]
+        license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
   
-		name: BetterFox
-			url: https://github.com/yokoffing/Betterfox        
+        name: BetterFox
+            url: https://github.com/yokoffing/Betterfox        
 
-	 ______      _   _             __     
-	 | ___ \    | | | |           / _|         
-	 | |_/ / ___| |_| |_ ___ _ __| |_ _____  __
-	 | ___ \/ _ \ __| __/ _ \ '__|  _/ _ \ \/ /
-	 | |_/ /  __/ |_| ||  __/ |  | || (_) >  < 
-	 \____/ \___|\__|\__\___|_|  |_| \___/_/\_\
-		  
+     ______      _   _             __     
+     | ___ \    | | | |           / _|         
+     | |_/ / ___| |_| |_ ___ _ __| |_ _____  __
+     | ___ \/ _ \ __| __/ _ \ '__|  _/ _ \ \/ /
+     | |_/ /  __/ |_| ||  __/ |  | || (_) >  < 
+     \____/ \___|\__|\__\___|_|  |_| \___/_/\_\
+          
 */
 
 /* fastfox */
-
 user_pref("content.notify.interval", 100000); // (.10s); default=120000 (.12s)
 
 
@@ -66,44 +68,44 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 
 
 /* 
-	___       _               __          
+    ___       _               __          
  / _ \     | |             / _|         
 / /_\ \_ __| | _____ _ __ | |_ _____  __
 |  _  | '__| |/ / _ \ '_ \|  _/ _ \ \/ /
 | | | | |  |   <  __/ | | | || (_) >  < 
 \_| |_/_|  |_|\_\___|_| |_|_| \___/_/\_\
-																			  
+                                                                              
 */
 
 /* INDEX:
 
-	0100: STARTUP
-	0200: GEOLOCATION
-	0300: QUIETER FOX
-	0400: SAFE BROWSING
-	0600: BLOCK IMPLICIT OUTBOUND
-	0700: DNS / DoH / PROXY / SOCKS
-	0800: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS
-	0900: PASSWORDS
-	1000: DISK AVOIDANCE
-	1200: HTTPS (SSL/TLS / OCSP / CERTS / HPKP)
-	1600: REFERERS
-	1700: CONTAINERS
-	2000: PLUGINS / MEDIA / WEBRTC
-	2400: DOM (DOCUMENT OBJECT MODEL)
-	2600: MISCELLANEOUS
-	2700: ETP (ENHANCED TRACKING PROTECTION)
-	2800: SHUTDOWN & SANITIZING
-	4000: FPP (fingerprintingProtection)
-	4500: OPTIONAL RFP (resistFingerprinting)
-	5000: OPTIONAL OPSEC
-	5500: OPTIONAL HARDENING
-	6000: DON'T TOUCH
-	7000: DON'T BOTHER
-	8000: DON'T BOTHER: FINGERPRINTING
-	8500: TELEMETRY
-	9000: NON-PROJECT RELATED
-	9999: DEPRECATED / RENAMED
+    0100: STARTUP
+    0200: GEOLOCATION
+    0300: QUIETER FOX
+    0400: SAFE BROWSING
+    0600: BLOCK IMPLICIT OUTBOUND
+    0700: DNS / DoH / PROXY / SOCKS
+    0800: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS
+    0900: PASSWORDS
+    1000: DISK AVOIDANCE
+    1200: HTTPS (SSL/TLS / OCSP / CERTS / HPKP)
+    1600: REFERERS
+    1700: CONTAINERS
+    2000: PLUGINS / MEDIA / WEBRTC
+    2400: DOM (DOCUMENT OBJECT MODEL)
+    2600: MISCELLANEOUS
+    2700: ETP (ENHANCED TRACKING PROTECTION)
+    2800: SHUTDOWN & SANITIZING
+    4000: FPP (fingerprintingProtection)
+    4500: OPTIONAL RFP (resistFingerprinting)
+    5000: OPTIONAL OPSEC
+    5500: OPTIONAL HARDENING
+    6000: DON'T TOUCH
+    7000: DON'T BOTHER
+    8000: DON'T BOTHER: FINGERPRINTING
+    8500: TELEMETRY
+    9000: NON-PROJECT RELATED
+    9999: DEPRECATED / RENAMED
 
 ******/
 
@@ -197,15 +199,15 @@ user_pref("network.captive-portal-service.enabled", false); // [FF52+]
 user_pref("network.connectivity-service.enabled", false);
 
 /*** [SECTION 0400]: SAFE BROWSING (SB)
-	 SB has taken many steps to preserve privacy. If required, a full url is never sent
-	 to Google, only a part-hash of the prefix, hidden with noise of other real part-hashes.
-	 Firefox takes measures such as stripping out identifying parameters and since SBv4 (FF57+)
-	 doesn't even use cookies. (#Turn on browser.safebrowsing.debug to monitor this activity)
+     SB has taken many steps to preserve privacy. If required, a full url is never sent
+     to Google, only a part-hash of the prefix, hidden with noise of other real part-hashes.
+     Firefox takes measures such as stripping out identifying parameters and since SBv4 (FF57+)
+     doesn't even use cookies. (#Turn on browser.safebrowsing.debug to monitor this activity)
 
-	 [1] https://feeding.cloud.geek.nz/posts/how-safe-browsing-works-in-firefox/
-	 [2] https://wiki.mozilla.org/Security/Safe_Browsing
-	 [3] https://support.mozilla.org/kb/how-does-phishing-and-malware-protection-work
-	 [4] https://educatedguesswork.org/posts/safe-browsing-privacy/
+     [1] https://feeding.cloud.geek.nz/posts/how-safe-browsing-works-in-firefox/
+     [2] https://wiki.mozilla.org/Security/Safe_Browsing
+     [3] https://support.mozilla.org/kb/how-does-phishing-and-malware-protection-work
+     [4] https://educatedguesswork.org/posts/safe-browsing-privacy/
 ***/
 user_pref("_user.js.parrot", "0400 syntax error: the parrot's passed on!");
 /* 0401: disable SB (Safe Browsing)
@@ -362,7 +364,7 @@ user_pref("browser.search.separatePrivateDefault", true); // [FF70+]
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true); // [FF71+]
 
 /*** [SECTION 0900]: PASSWORDS
-	 [1] https://support.mozilla.org/kb/use-primary-password-protect-stored-logins-and-pas
+     [1] https://support.mozilla.org/kb/use-primary-password-protect-stored-logins-and-pas
 ***/
 user_pref("_user.js.parrot", "0900 syntax error: the parrot's expired!");
 /* 0903: disable auto-filling username & password form fields
@@ -412,11 +414,11 @@ user_pref("toolkit.winRegisterApplicationRestart", false);
 user_pref("browser.shell.shortcutFavicons", false);
 
 /*** [SECTION 1200]: HTTPS (SSL/TLS / OCSP / CERTS / HPKP)
-	 Your cipher and other settings can be used in server side fingerprinting
-	 [TEST] https://www.ssllabs.com/ssltest/viewMyClient.html
-	 [TEST] https://browserleaks.com/ssl
-	 [TEST] https://ja3er.com/
-	 [1] https://www.securityartwork.es/2017/02/02/tls-client-fingerprinting-with-bro/
+     Your cipher and other settings can be used in server side fingerprinting
+     [TEST] https://www.ssllabs.com/ssltest/viewMyClient.html
+     [TEST] https://browserleaks.com/ssl
+     [TEST] https://ja3er.com/
+     [1] https://www.securityartwork.es/2017/02/02/tls-client-fingerprinting-with-bro/
 ***/
 user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
 /** SSL (Secure Sockets Layer) / TLS (Transport Layer Security) ***/
@@ -441,8 +443,8 @@ user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("security.tls.enable_0rtt_data", false);
 
 /** OCSP (Online Certificate Status Protocol)
-	 [1] https://scotthelme.co.uk/revocation-is-broken/
-	 [2] https://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox/
+     [1] https://scotthelme.co.uk/revocation-is-broken/
+     [2] https://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox/
 ***/
 /* 1211: enforce OCSP fetching to confirm current validity of certificates
  * 0=disabled, 1=enabled (default), 2=enabled for EV certificates only
@@ -511,10 +513,10 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
 /*** [SECTION 1600]: REFERERS
-									full URI: https://example.com:8888/foo/bar.html?id=1234
-		 scheme+host+port+path: https://example.com:8888/foo/bar.html
-					scheme+host+port: https://example.com:8888
-	 [1] https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/
+                                    full URI: https://example.com:8888/foo/bar.html?id=1234
+         scheme+host+port+path: https://example.com:8888/foo/bar.html
+                    scheme+host+port: https://example.com:8888
+     [1] https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/
 ***/
 user_pref("_user.js.parrot", "1600 syntax error: the parrot rests in peace!");
 /* 1602: control the amount of cross-origin information to send [FF52+]
@@ -720,20 +722,20 @@ user_pref("privacy.clearHistory.formdata", true);
 user_pref("privacy.sanitize.timeSpan", 0);
 
 /*** [SECTION 4000]: FPP (fingerprintingProtection)
-	 RFP (4501) overrides FPP
+     RFP (4501) overrides FPP
 
-	 In FF118+ FPP is on by default in private windows (4001) and in FF119+ is controlled
-	 by ETP (2701). FPP will also use Remote Services in future to relax FPP protections
-	 on a per site basis for compatibility (4004).
+     In FF118+ FPP is on by default in private windows (4001) and in FF119+ is controlled
+     by ETP (2701). FPP will also use Remote Services in future to relax FPP protections
+     on a per site basis for compatibility (4004).
 
-	 https://searchfox.org/mozilla-central/source/toolkit/components/resistfingerprinting/RFPTargetsDefault.inc
+     https://searchfox.org/mozilla-central/source/toolkit/components/resistfingerprinting/RFPTargetsDefault.inc
 
-	 [NOTE] RFPTargets + granular overrides are somewhat experimental and may produce unexpected results
-	 - e.g. FrameRate can only be controlled per process, not per origin
+     [NOTE] RFPTargets + granular overrides are somewhat experimental and may produce unexpected results
+     - e.g. FrameRate can only be controlled per process, not per origin
 
-	 1826408 - restrict fonts to system (kBaseFonts + kLangPackFonts) (Windows, Mac, some Linux)
-			https://searchfox.org/mozilla-central/search?path=StandardFonts*.inc
-	 1858181 - subtly randomize canvas per eTLD+1, per session and per window-mode (FF120+)
+     1826408 - restrict fonts to system (kBaseFonts + kLangPackFonts) (Windows, Mac, some Linux)
+            https://searchfox.org/mozilla-central/search?path=StandardFonts*.inc
+     1858181 - subtly randomize canvas per eTLD+1, per session and per window-mode (FF120+)
 ***/
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's bereft of life!");
 /* 4001: enable FPP in PB mode [FF114+]
@@ -754,68 +756,68 @@ user_pref("_user.js.parrot", "4000 syntax error: the parrot's bereft of life!");
 // user_pref("privacy.fingerprintingProtection.remoteOverrides.enabled", false);
 
 /*** [SECTION 4500]: OPTIONAL RFP (resistFingerprinting)
-	 RFP overrides FPP (4000)
+     RFP overrides FPP (4000)
 
-	 FF128+ Arkenfox by default uses FPP (automatically enabled with ETP Strict). For most people
-	 this is all you need. To use RFP instead, add RFP (4501) to your overrides, and optionally
-	 add letterboxing (4504), spoof_english (4506), and webgl (4520).
+     FF128+ Arkenfox by default uses FPP (automatically enabled with ETP Strict). For most people
+     this is all you need. To use RFP instead, add RFP (4501) to your overrides, and optionally
+     add letterboxing (4504), spoof_english (4506), and webgl (4520).
 
-	 RFP is an all-or-nothing buy in: you cannot pick and choose what parts you want
+     RFP is an all-or-nothing buy in: you cannot pick and choose what parts you want
 
-	 [WARNING] DO NOT USE extensions to alter RFP protected metrics
+     [WARNING] DO NOT USE extensions to alter RFP protected metrics
 
-		418986 - limit window.screen & CSS media queries (FF41)
-	 1360039 - spoof navigator.hardwareConcurrency as 2 (FF55)
+        418986 - limit window.screen & CSS media queries (FF41)
+     1360039 - spoof navigator.hardwareConcurrency as 2 (FF55)
  FF56
-	 1333651 - spoof User Agent & Navigator API
-			JS: spoofed as Windows 10, OS 10.15, Android 10, or Linux
-			HTTP Header: spoofed as Windows 10 or Android 10.15 until FF136 then matches JS spoof
-	 1369319 - disable device sensor API
-	 1369357 - disable site specific zoom
-	 1337161 - hide gamepads from content
-	 1372072 - spoof network information API as "unknown" when dom.netinfo.enabled = true
-	 1333641 - reduce fingerprinting in WebSpeech API
+     1333651 - spoof User Agent & Navigator API
+            JS: spoofed as Windows 10, OS 10.15, Android 10, or Linux
+            HTTP Header: spoofed as Windows 10 or Android 10.15 until FF136 then matches JS spoof
+     1369319 - disable device sensor API
+     1369357 - disable site specific zoom
+     1337161 - hide gamepads from content
+     1372072 - spoof network information API as "unknown" when dom.netinfo.enabled = true
+     1333641 - reduce fingerprinting in WebSpeech API
  FF57
-	 1369309 - spoof media statistics
-	 1382499 - reduce screen co-ordinate fingerprinting in Touch API
-	 1217290 & 1409677 - enable some fingerprinting resistance for WebGL
-	 1354633 - limit MediaError.message to a whitelist
+     1369309 - spoof media statistics
+     1382499 - reduce screen co-ordinate fingerprinting in Touch API
+     1217290 & 1409677 - enable some fingerprinting resistance for WebGL
+     1354633 - limit MediaError.message to a whitelist
  FF58+
-	 1372073 - spoof/block fingerprinting in MediaDevices API (FF59)
-			Spoof: enumerate devices as one "Internal Camera" and one "Internal Microphone"
-			Block: suppresses the ondevicechange event
-	 1039069 - warn when language prefs are not set to "en*" (FF59)
-	 1222285 & 1433592 - spoof keyboard events and suppress keyboard modifier events (FF59)
-			Spoofing mimics the content language of the document. Currently it only supports en-US.
-			Modifier events suppressed are SHIFT and both ALT keys. Chrome is not affected.
-	 1337157 - disable WebGL debug renderer info (FF60)
-	 1459089 - disable OS locale in HTTP Accept-Language headers (ANDROID) (FF62)
-	 1479239 - return "no-preference" with prefers-reduced-motion (FF63)
-	 1363508 & 1826051 - spoof/suppress Pointer Events (FF64, FF132)
-	 1492766 - spoof pointerEvent.pointerid (FF65)
-	 1485266 - disable exposure of system colors to CSS or canvas (FF67)
-	 1494034 - return "light" with prefers-color-scheme (FF67)
-	 1564422 - spoof audioContext outputLatency (FF70)
-	 1595823 - return audioContext sampleRate as 44100 (FF72)
-	 1607316 - spoof pointer as coarse and hover as none (ANDROID) (FF74)
-	 1621433 - randomize canvas (previously FF58+ returned an all-white canvas) (FF78)
-	 1506364 - return "no-preference" with prefers-contrast (FF80)
-	 1653987 - limit font visibility to bundled and "Base Fonts" (Windows, Mac, some Linux) (FF80)
-	 1461454 - spoof smooth=true and powerEfficient=false for supported media in MediaCapabilities (FF82)
-		531915 - use fdlibm's sin, cos and tan in jsmath (FF93, ESR91.1)
-	 1756280 - enforce navigator.pdfViewerEnabled as true and plugins/mimeTypes as hard-coded values (FF100-115)
-	 1692609 - reduce JS timing precision to 16.67ms (previously FF55+ was 100ms) (FF102)
-	 1422237 - return "srgb" with color-gamut (FF110)
-	 1794628 - return "none" with inverted-colors (FF114)
-	 1787790 - normalize system fonts (FF128)
-	 1835987 - spoof timezone as Atlantic/Reykjavik (previously FF55+ was UTC) (FF128)
-	 1834307 - always use smooth scrolling (FF132)
-	 1918202 - spoof screen orientation based on spoofed screen size and platform (FF132)
-			previously it always returned landscape-primary and an angle of 0 (FF50+)
-	 1390465 - load all subtitles in WebVTT (Video Text Tracks) (FF133)
-	 1873382 - make spoofed devicePixelRatio and CSS media queries match (FF133)
-			previously FF41+ devicePixelRatio was hardcoded as 1 and FF127+ as 2
-			previously FF41+ CSS media queries were spoofed as zoom level at a devicePixelRatio of 1
+     1372073 - spoof/block fingerprinting in MediaDevices API (FF59)
+            Spoof: enumerate devices as one "Internal Camera" and one "Internal Microphone"
+            Block: suppresses the ondevicechange event
+     1039069 - warn when language prefs are not set to "en*" (FF59)
+     1222285 & 1433592 - spoof keyboard events and suppress keyboard modifier events (FF59)
+            Spoofing mimics the content language of the document. Currently it only supports en-US.
+            Modifier events suppressed are SHIFT and both ALT keys. Chrome is not affected.
+     1337157 - disable WebGL debug renderer info (FF60)
+     1459089 - disable OS locale in HTTP Accept-Language headers (ANDROID) (FF62)
+     1479239 - return "no-preference" with prefers-reduced-motion (FF63)
+     1363508 & 1826051 - spoof/suppress Pointer Events (FF64, FF132)
+     1492766 - spoof pointerEvent.pointerid (FF65)
+     1485266 - disable exposure of system colors to CSS or canvas (FF67)
+     1494034 - return "light" with prefers-color-scheme (FF67)
+     1564422 - spoof audioContext outputLatency (FF70)
+     1595823 - return audioContext sampleRate as 44100 (FF72)
+     1607316 - spoof pointer as coarse and hover as none (ANDROID) (FF74)
+     1621433 - randomize canvas (previously FF58+ returned an all-white canvas) (FF78)
+     1506364 - return "no-preference" with prefers-contrast (FF80)
+     1653987 - limit font visibility to bundled and "Base Fonts" (Windows, Mac, some Linux) (FF80)
+     1461454 - spoof smooth=true and powerEfficient=false for supported media in MediaCapabilities (FF82)
+        531915 - use fdlibm's sin, cos and tan in jsmath (FF93, ESR91.1)
+     1756280 - enforce navigator.pdfViewerEnabled as true and plugins/mimeTypes as hard-coded values (FF100-115)
+     1692609 - reduce JS timing precision to 16.67ms (previously FF55+ was 100ms) (FF102)
+     1422237 - return "srgb" with color-gamut (FF110)
+     1794628 - return "none" with inverted-colors (FF114)
+     1787790 - normalize system fonts (FF128)
+     1835987 - spoof timezone as Atlantic/Reykjavik (previously FF55+ was UTC) (FF128)
+     1834307 - always use smooth scrolling (FF132)
+     1918202 - spoof screen orientation based on spoofed screen size and platform (FF132)
+            previously it always returned landscape-primary and an angle of 0 (FF50+)
+     1390465 - load all subtitles in WebVTT (Video Text Tracks) (FF133)
+     1873382 - make spoofed devicePixelRatio and CSS media queries match (FF133)
+            previously FF41+ devicePixelRatio was hardcoded as 1 and FF127+ as 2
+            previously FF41+ CSS media queries were spoofed as zoom level at a devicePixelRatio of 1
 ***/
 user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs");
 /* 4501: enable RFP
@@ -873,7 +875,7 @@ user_pref("browser.link.open_newwindow.restriction", 0);
 // user_pref("webgl.disabled", true);
 
 /*** [SECTION 5000]: OPTIONAL OPSEC
-	 Disk avoidance, application data isolation, eyeballs...
+     Disk avoidance, application data isolation, eyeballs...
 ***/
 user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow");
 /* 5001: start Firefox in PB (Private Browsing) mode
@@ -964,8 +966,8 @@ user_pref("_user.js.parrot", "5000 syntax error: the parrot's taken 'is last bow
 // user_pref("keyword.enabled", false);
 
 /*** [SECTION 5500]: OPTIONAL HARDENING
-	 Not recommended. Overriding these can cause breakage and performance issues,
-	 they are mostly fingerprintable, and the threat model is practically nonexistent
+     Not recommended. Overriding these can cause breakage and performance issues,
+     they are mostly fingerprintable, and the threat model is practically nonexistent
 ***/
 user_pref("_user.js.parrot", "5500 syntax error: this is an ex-parrot!");
 /* 5501: disable MathML (Mathematical Markup Language) [FF51+]
@@ -1182,8 +1184,8 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
 // user_pref("privacy.globalprivacycontrol.enabled", true);
 
 /*** [SECTION 8000]: DON'T BOTHER: FINGERPRINTING
-	 [WHY] They are insufficient to help anti-fingerprinting and do more harm than good
-	 [WARNING] DO NOT USE with RFP. RFP already covers these and they can interfere
+     [WHY] They are insufficient to help anti-fingerprinting and do more harm than good
+     [WARNING] DO NOT USE with RFP. RFP already covers these and they can interfere
 ***/
 user_pref("_user.js.parrot", "8000 syntax error: the parrot's crossed the Jordan");
 /* 8001: prefsCleaner: reset items useless for anti-fingerprinting ***/
@@ -1211,26 +1213,26 @@ user_pref("_user.js.parrot", "8000 syntax error: the parrot's crossed the Jordan
 // user_pref("webgl.enable-debug-renderer-info", "");
 
 /*** [SECTION 8500]: TELEMETRY
-	 Arkenfox does not consider Firefox telemetry to be a privacy or security concern - comments below.
-	 But since most arkenfox users prefer it disabled, we'll do that rather than cause overrides.
+     Arkenfox does not consider Firefox telemetry to be a privacy or security concern - comments below.
+     But since most arkenfox users prefer it disabled, we'll do that rather than cause overrides.
 
-	 Opt-out
-	 - Telemetry is essential: a browser engine is a _very_ large complex beast costing billions to maintain
-	 - Opt-in telemetry _does not_ work and results in data that is unrepresentative and may be misleading
-	 Choice
-	 - Every new profile on first use provides data collection/use policy and the abillty to opt-out
-	 - It can be disabled at any time (Settings>Privacy & Security>Data Collection and Use) 
-	 Data
-	 - no PII (Personally Identifiable Information)
-	 - can be viewed in about:telemetry
-	 - uses Prio [1][2][3], Glean [4], Oblivious HTTP [5][6]
+     Opt-out
+     - Telemetry is essential: a browser engine is a _very_ large complex beast costing billions to maintain
+     - Opt-in telemetry _does not_ work and results in data that is unrepresentative and may be misleading
+     Choice
+     - Every new profile on first use provides data collection/use policy and the abillty to opt-out
+     - It can be disabled at any time (Settings>Privacy & Security>Data Collection and Use) 
+     Data
+     - no PII (Personally Identifiable Information)
+     - can be viewed in about:telemetry
+     - uses Prio [1][2][3], Glean [4], Oblivious HTTP [5][6]
 
-	 [1] https://crypto.stanford.edu/prio/
-	 [2] https://hacks.mozilla.org/2018/10/testing-privacy-preserving-telemetry-with-prio/
-	 [3] https://blog.mozilla.org/security/2019/06/06/next-steps-in-privacy-preserving-telemetry-with-prio/
-	 [4] https://firefox-source-docs.mozilla.org/toolkit/components/glean/index.html
-	 [5] https://firefox-source-docs.mozilla.org/toolkit/components/glean/user/ohttp.html
-	 [6] https://blog.mozilla.org/en/tag/oblivious-http/
+     [1] https://crypto.stanford.edu/prio/
+     [2] https://hacks.mozilla.org/2018/10/testing-privacy-preserving-telemetry-with-prio/
+     [3] https://blog.mozilla.org/security/2019/06/06/next-steps-in-privacy-preserving-telemetry-with-prio/
+     [4] https://firefox-source-docs.mozilla.org/toolkit/components/glean/index.html
+     [5] https://firefox-source-docs.mozilla.org/toolkit/components/glean/user/ohttp.html
+     [6] https://blog.mozilla.org/en/tag/oblivious-http/
 ***/
 user_pref("_user.js.parrot", "8500 syntax error: the parrot's off the twig!");
 /* 8500: disable new data submission [FF41+]
@@ -1279,8 +1281,8 @@ user_pref("_user.js.parrot", "9999 syntax error: the parrot's shuffled off 'is m
 // [NOTE] replace the * with a slash in the line above to re-enable active ones
 // FF132
 /* 2617: remove webchannel whitelist
-	 // [-] https://bugzilla.mozilla.org/1275612
-	 // user_pref("webchannel.allowObject.urlWhitelist", "");
+     // [-] https://bugzilla.mozilla.org/1275612
+     // user_pref("webchannel.allowObject.urlWhitelist", "");
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/

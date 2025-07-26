@@ -68,6 +68,6 @@
       console.enable = true;
     };
 
-    autoEnable = false;
+    autoEnable = true;
   };
 }
