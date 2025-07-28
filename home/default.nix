@@ -10,6 +10,8 @@
     ./fish
     ./games
     ./foot
+    ./ghostty
+    ./alacritty
     ./nixVim
     ./tmux
     ./cli
