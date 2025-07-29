@@ -2,7 +2,7 @@
 
   let
     startScript = pkgs.writeShellScriptBin "start" ''
-      ${pkgs.foot}/bin/foot --server &
+      #${pkgs.foot}/bin/foot --server &
       
       #systemctl --user import-environment PATH &
       #systemctl --user restart xdg-desktop-portal.service &
@@ -137,7 +137,7 @@ in
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind =
         [
-          "$mainMod, return, exec, foot"
+          "$mainMod, return, exec, alacritty"
           "$mainMod SHIFT, Q, killactive,"
           "$mainMod SHIFT, M, exit,"
           "$mainMod SHIFT, space, togglefloating,"

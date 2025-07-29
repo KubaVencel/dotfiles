@@ -9,7 +9,7 @@
     #./zsh
     ./fish
     ./games
-    ./foot
+    #./foot
     ./ghostty
     ./alacritty
     ./nixVim
@@ -22,7 +22,7 @@
     homeDirectory = "/home/vheac";
     sessionVariables = {
       EDITOR = "nvim";
-      TERM = "foot";
+      TERM = "alacritty";
       BROWSER = "firefox";
       VISUAL = "nvim";
       DEFAULT_USER = "$(whoami)";
@@ -92,7 +92,7 @@
     extraConfig = ''
       $mkdir -p ~/.trash
       cmd trash %set -f; mv "$fx" ~/.trash
-      cmd terminal &${pkgs.foot}/bin/footclient
+      cmd terminal &${pkgs.alacritty}/bin/alacritty
       set mouse
     '';
   };

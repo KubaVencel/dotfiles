@@ -107,14 +107,14 @@
     config = {
       modifier = "Mod4";
       bindkeysToCode = true;
-      terminal = "${pkgs.foot}/bin/footclient";
+      terminal = "${pkgs.alacritty}/bin/alacritty";
       menu = "${pkgs.fuzzel}/bin/fuzzel";
       workspaceAutoBackAndForth = true;
       defaultWorkspace = "workspace number 1";
 
       startup = [
       	{ command = "swww-daemon"; }
-        { command = "foot --server"; }
+        #{ command = "foot --server"; }
         { command = "pkill -SIGHUP kanshi"; always = true; }
         { command = "swww img ~/nixModules/theming/prismImg/anime_skull.png"; }
         { command = "autotiling";}
