@@ -175,7 +175,6 @@
           user = "greeter";
         };
       };
-       vt = 7;
     };
 
     pipewire = {
