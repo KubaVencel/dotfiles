@@ -93,7 +93,7 @@
             ./home/gui
             ./nixModules/theming/prism.nix
             prism.homeModules.prism
-            nixvim.homeManagerModules.nixvim
+            nixvim.homeModules.nixvim
             nix-index-database.homeModules.nix-index
             #catppuccin.homeManagerModules.catppuccin
           ] ++ modules;
