@@ -73,11 +73,4 @@
 	html body.activity-stream div#root div span button.personalize-button:hover {
 		background-color: rgba(var(--accent-color), 0.2) !important;
 	}
-
-	@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
-		body {
-			background: url(cappuccin.png) !important;
-			background-size: cover !important;
-		}
-	}
 }
