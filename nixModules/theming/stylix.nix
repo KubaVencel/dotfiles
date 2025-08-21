@@ -62,7 +62,7 @@
       chromium.enable = true;
       spicetify.enable = true;
       grub.enable = true;
-      grub.useImage = true;
+      grub.useWallpaper = true;
       plymouth.enable = false;
       nixos-icons.enable = true;
       console.enable = true;
