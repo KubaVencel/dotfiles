@@ -1,4 +1,9 @@
 { pkgs, ... }: {
+    
+  home.packages = with pkgs; [
+    autotiling
+  ];
+  
     services.swayidle = {
     enable = true;
     events = [

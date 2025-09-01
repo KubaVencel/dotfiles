@@ -104,13 +104,13 @@
 
         "vheac@Power" = makeHomeConfiguration [
           agenix.homeManagerModules.age
-          #./home/gui/hypr/Power.nix
-          ./home/gui/sway/Power.nix
+          ./home/gui/hypr/Power.nix
+          #./home/gui/sway/Power.nix
         ];
         "vheac@Makima" = makeHomeConfiguration [
           agenix.homeManagerModules.age
-          #./home/gui/hypr/Makima.nix
-          ./home/gui/sway/Makima.nix
+          ./home/gui/hypr/Makima.nix
+          #./home/gui/sway/Makima.nix
         ];
       };
   };

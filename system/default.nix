@@ -82,13 +82,13 @@
   # services.printing.enable = true;
 
   # kanshi systemd service
-  systemd.user.services.kanshi = {
-    description = "kanshi daemon";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
-    };
-  };
+  # systemd.user.services.kanshi = {
+  #   description = "kanshi daemon";
+  #   serviceConfig = {
+  #     Type = "simple";
+  #     ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+  #   };
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.vheac = {
@@ -171,7 +171,7 @@
       enable = true;
       settings = {
           default_session = {
-          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd hyprland";
           user = "greeter";
         };
       };
@@ -223,7 +223,6 @@
     glib # gsettings
 
     pulseaudioFull
-    autotiling
 
     swww # wallpapers
 
