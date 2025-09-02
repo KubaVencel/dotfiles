@@ -97,7 +97,7 @@
       }
       
       #shutdown {
-        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/hutdown.png"));
+        background-image: image(url("/home/vheac/home/gui/hypr/hyprApps/wlogout/icons/shutdown.png"));
       }
       
       #reboot {
