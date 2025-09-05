@@ -100,48 +100,48 @@ in
       # };
 
       animations = {
-        enabled = true;
+        enabled = false;
         
-        bezier = [
-          "smooth, 0.25, 0.46, 0.45, 0.94"
-          "snappy, 0.16, 1, 0.3, 1" 
-          "bouncy, 0.68, -0.55, 0.265, 1.55"
-          "linear, 0, 0, 1, 1"
-          "elastic, 0.175, 0.885, 0.32, 1.275"    # Elastic stretch
-          "back, 0.68, -0.6, 0.32, 1.6"           # Back and forth
-          "easeOut, 0, 0, 0.58, 1"                # Slow ending
-        ];
-        
-        animation = [
-          # Window animations
-          "windows, 1, 4, smooth"
-          "windowsIn, 1, 4, smooth, popin 80%"
-          "windowsOut, 1, 4, smooth, fadeOut"
-          "windowsMove, 1, 4, smooth"
-          
-          # Border animations
-          "border, 1, 4, smooth"
-          "borderangle, 1, 4, smooth"
-          
-          # Fade animations
-          "fade, 1, 4, smooth"
-          "fadeIn, 1, 4, smooth"
-          "fadeOut, 1, 4, smooth"
-          "fadeSwitch, 1, 4, smooth"
-          "fadeShadow, 1, 4, smooth"
-          "fadeDim, 1, 4, smooth"
-          
-          # Workspace animations
-          "workspaces, 1, 4, smooth, fade"
-          "specialWorkspace, 1, 4, smooth, slidevert"
-          
-          # Layer animations (waybar, rofi, etc.)
-          "layers, 1, 4, smooth"
-          "layersIn, 1, 4, smooth, slide"
-          "layersOut, 1, 4, smooth, slide"
-        ];
+        # bezier = [
+        #   "smooth, 0.25, 0.46, 0.45, 0.94"
+        #   "snappy, 0.16, 1, 0.3, 1" 
+        #   "bouncy, 0.68, -0.55, 0.265, 1.55"
+        #   "linear, 0, 0, 1, 1"
+        #   "elastic, 0.175, 0.885, 0.32, 1.275"    # Elastic stretch
+        #   "back, 0.68, -0.6, 0.32, 1.6"           # Back and forth
+        #   "easeOut, 0, 0, 0.58, 1"                # Slow ending
+        # ];
+        #
+        # animation = [
+        #   # Window animations
+        #   "windows, 1, 4, smooth"
+        #   "windowsIn, 1, 4, smooth, gnomed"
+        #   "windowsOut, 1, 4, smooth, gnomed"
+        #   "windowsMove, 1, 4, smooth"
+        #
+        #   # Border animations
+        #   "border, 1, 4, smooth"
+        #   "borderangle, 1, 4, smooth"
+        #
+        #   # Fade animations
+        #   "fade, 1, 4, smooth"
+        #   "fadeIn, 1, 4, smooth"
+        #   "fadeOut, 1, 4, smooth"
+        #   "fadeSwitch, 1, 4, smooth"
+        #   "fadeShadow, 1, 4, smooth"
+        #   "fadeDim, 1, 4, smooth"
+        #
+        #   # Workspace animations
+        #   "workspaces, 1, 4, smooth, fade"
+        #   "specialWorkspace, 1, 4, smooth, slidevert"
+        #
+        #   # Layer animations (waybar, rofi, etc.)
+        #   "layers, 1, 4, smooth"
+        #   "layersIn, 1, 4, smooth, slide"
+        #   "layersOut, 1, 4, smooth, slide"
+        # ];
       };
-   
+
       dwindle = {
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
         pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below

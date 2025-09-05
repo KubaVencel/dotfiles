@@ -115,8 +115,8 @@ in
         animation = [
           # Window animations
           "windows, 1, 4, smooth"
-          "windowsIn, 1, 4, smooth, popin 80%"
-          "windowsOut, 1, 4, smooth, fadeOut"
+          "windowsIn, 1, 4, smooth, gnomed"
+          "windowsOut, 1, 4, smooth, gnomed"
           "windowsMove, 1, 4, smooth"
           
           # Border animations

@@ -36,9 +36,9 @@
   hardware.graphics.extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
 
   # Lid close behavior
-  services.logind.lidSwitch = "suspend-then-hibernate";
-  services.logind.lidSwitchExternalPower = "lock";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "suspend-then-hibernate";
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "lock";
+  services.logind.settings.Login.HandleLidSwitchDocked = "ignore";
 
   # one of "ignore", "poweroff", "reboot", "halt", "kexec", "suspend", "hibernate", "hybrid-sleep", "suspend-then-hibernate", "lock"
 
