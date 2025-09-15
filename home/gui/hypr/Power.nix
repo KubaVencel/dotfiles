@@ -155,7 +155,6 @@ in
 
       gestures = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        workspace_swipe = false;
       };
 
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
