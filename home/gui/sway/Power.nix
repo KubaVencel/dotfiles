@@ -47,7 +47,7 @@
     #  "--unsupported-gpu"
     #];
 
-      extraConfig = ''
+    extraConfig = ''
       # Set floating window size constraints
       floating_maximum_size 1280 x 1080
       floating_minimum_size 920 x 580
@@ -183,27 +183,7 @@
         };
 
         floating = {
-          border = 2; output = {
-        # "Microstep MSI G241 0x00002317" = {
-        #   mode = "1920x1080@144.013Hz";
-        #   position = "0,0";
-        #   scale = "1";
-        #   scale_filter = "linear";
-        #   transform = "normal";
-        #   max_render_time = "off";
-        #   adaptive_sync = "disabled";
-        # };
-        
-        "Dell Inc. DELL AW2723DF 5W3LNP3" = {
-          mode = "2560x1440@239.970Hz";
-          position = "0,0";
-          scale = "1";
-          scale_filter = "linear";
-          transform = "normal";
-          max_render_time = "off";
-          adaptive_sync = "disabled";
-        };
-      };
+          border = 2;
           titlebar = true;
           criteria = [
             {
@@ -217,33 +197,23 @@
         #  "2" = [{ app_id = "org.telegram.desktop"; }];
         #};
 
-        focus = {
-          newWindow = "urgent";
-        };
+      focus = {
+        newWindow = "urgent";
+      };
 
-        fonts = {
-          names = [ "JetBrains" ];
-          size = 13.0;
-        };
+      fonts = {
+        names = [ "JetBrains" ];
+        size = 13.0;
+      };
 
-        gaps = {
-          smartGaps = true;
-          smartBorders = "on";
-          inner = 2;
-          outer = 2;
-        };
+      gaps = {
+        smartGaps = true;
+        smartBorders = "on";
+        inner = 2;
+        outer = 2;
+      };
 
       output = {
-        # "Microstep MSI G241 0x00002317" = {
-        #   mode = "1920x1080@144.013Hz";
-        #   position = "0,0";
-        #   scale = "1";
-        #   scale_filter = "linear";
-        #   transform = "normal";
-        #   max_render_time = "off";
-        #   adaptive_sync = "disabled";
-        # };
-        
         "Dell Inc. DELL AW2723DF 5W3LNP3" = {
           mode = "2560x1440@239.970Hz";
           position = "0,0";
@@ -415,7 +385,7 @@
           XF86Back = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⬅️ (Back)
           XF86Forward = "exec ${pkgs.playerctl}/bin/playerctl next"; # ➡️ (Forward)
           XF86Refresh = "exec swaymsg reload"; # ♻️ (Refresh)
-  
+          
           # ====================
           # FULLSCREEN & MODES
           # ====================
@@ -454,7 +424,7 @@
         # ====================
         v = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"; # 🔊 Volume up
         "Shift+v" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"; # 🔉 Volume down
-        m = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 Mute toggle
+        m = "exec ${pkgs.pulseaudio}/bin/pactSp1d3rl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 Mute toggle
         "Shift+m" = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle"; # 🎤🔇 Mic mute
 
         # ====================

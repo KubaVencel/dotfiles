@@ -47,7 +47,7 @@
     #  "--unsupported-gpu"
     #];
 
-      extraConfig = ''
+    extraConfig = ''
       # Set floating window size constraints
       floating_maximum_size 1280 x 1080
       floating_minimum_size 920 x 580
@@ -151,7 +151,7 @@
           unfocused = black;
           urgent = red;
         in
-        {
+          {
           focused = {
             border = focused;
             background = focused;
@@ -181,37 +181,37 @@
             childBorder = "";
           };
         };
+      
+      floating = {
+        border = 2;
+        titlebar = true;
+        criteria = [
+          {
+            app_id = "^floating_foot$";
+          }
+        ];
+      };
 
-        floating = {
-          border = 2;
-          titlebar = true;
-          criteria = [
-            {
-              app_id = "^floating_foot$";
-            }
-          ];
-        };
+      #assigns = {
+      #  "1" = [{ app_id = "org.qutebrowser.qutebrowser"; }];
+      #  "2" = [{ app_id = "org.telegram.desktop"; }];
+      #};
 
-        #assigns = {
-        #  "1" = [{ app_id = "org.qutebrowser.qutebrowser"; }];
-        #  "2" = [{ app_id = "org.telegram.desktop"; }];
-        #};
+      focus = {
+        newWindow = "urgent";
+      };
 
-        focus = {
-          newWindow = "urgent";
-        };
+      fonts = {
+        names = [ "JetBrains" ];
+        size = 13.0;
+      };
 
-        fonts = {
-          names = [ "JetBrains" ];
-          size = 13.0;
-        };
-
-        gaps = {
-          smartGaps = true;
-          smartBorders = "on";
-          inner = 2;
-          outer = 2;
-        };
+      gaps = {
+        smartGaps = true;
+        smartBorders = "on";
+        inner = 2;
+        outer = 2;
+      };
 
       output = {
         "AU Optronics 0x243D Unknown" = {
