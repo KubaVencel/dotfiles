@@ -115,10 +115,15 @@
       startup = [
       	{ command = "swww-daemon"; }
         #{ command = "foot --server"; }
-        { command = "pkill -SIGHUP kanshi"; always = true; }
-        { command = "swww img ~/nixModules/theming/prismImg/anime_skull.png"; }
-        { command = "autotiling";}
-                ];
+        #{ command = "pkill -SIGHUP kanshi"; always = true; }
+        { command = "sleep 1 && swww img ~/nixModules/theming/prismImg/anime_skull.png"; }
+        { command = "autotiling";} 
+        { command = "sleep 2 && firefox";} 
+        { command = "alacritty";} 
+        { command = "sleep 4 && spotify";}
+        #{ command = "sleep 5 && discord";} 
+        #{ command = "sleep 6 && steam";} 
+      ];
 
       bars = [
         {
@@ -192,10 +197,13 @@
         ];
       };
 
-      #assigns = {
-      #  "1" = [{ app_id = "org.qutebrowser.qutebrowser"; }];
-      #  "2" = [{ app_id = "org.telegram.desktop"; }];
-      #};
+      assigns = {
+        "1" = [{ app_id = "firefox"; }];
+        "2" = [{ app_id = "Alacritty"; }];
+        "3" = [{ class = "Spotify"; }];
+        "4" = [{ class = "discord"; }];
+        "5" = [{ class = "steam"; }];
+      };
 
       focus = {
         newWindow = "urgent";
