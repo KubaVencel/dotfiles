@@ -160,7 +160,10 @@
 	
     # Enable tailscale
     tailscale.enable = true;
-    
+
+    # Enable mullvad
+    mullvad-vpn.enable = true;
+
     # Dbus 
     dbus = {
       enable = true;
@@ -205,7 +208,10 @@
     linux-firmware  
     libdrm
     mesa
-
+    
+    exfat
+    exfatprogs
+    
     grc
     chayang
     light
@@ -215,7 +221,10 @@
 
     openssh
     polkit
-  
+
+    mullvad-vpn
+    mullvad-browser
+
     yubioath-flutter
     yubikey-manager #ykman
     
