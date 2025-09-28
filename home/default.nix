@@ -35,6 +35,7 @@
     #spotify
     ungoogled-chromium
     brave
+    mullvad-browser
     vlc
     celluloid
     smile
