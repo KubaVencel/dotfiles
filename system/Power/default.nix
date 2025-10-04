@@ -85,15 +85,15 @@
       enable32Bit = true;
       extraPackages = with pkgs; 
         [
-          amdvlk
-          driversi686Linux.amdvlk
+          # amdvlk # RADV by default
+          # driversi686Linux.amdvlk
           rocmPackages.clr
  	  vaapiVdpau
           libvdpau-va-gl
         ];
       extraPackages32 = with pkgs; 
         [  
-          driversi686Linux.amdvlk
+          # driversi686Linux.amdvlk
         ];
     };
   };
