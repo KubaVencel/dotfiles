@@ -33,6 +33,7 @@
 
   home.packages = with pkgs; [
     #spotify
+    cider-2
     ungoogled-chromium
     brave
     mullvad-browser

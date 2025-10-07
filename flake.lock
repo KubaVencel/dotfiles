@@ -110,6 +110,7 @@
       },
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1758956381,
         "narHash": "sha256-ROUw5E8CibG3jEy6oHjrkF6/P60eiaUJmc2s2ecC/LM=",
         "owner": "catppuccin",
@@ -122,6 +123,13 @@
         "repo": "nix",
         "rev": "eeada12912d80d04733383d231a9d66172858718",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759572023,
+        "narHash": "sha256-2fzYq/m2PXie5WZO5LhyiZrTIUdUFp1SCLZAwvPL5xo=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "eeada12912d80d04733383d231a9d66172858718",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -176,6 +184,7 @@
       "locked": {
         "dir": "pkgs/firefox-addons",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1758879217,
         "narHash": "sha256-vWk2iw/i5c0RHc/zLVyB51UYvmbzPq3uB14NN7kaouE=",
         "owner": "rycee",
@@ -188,6 +197,13 @@
         "repo": "nur-expressions",
         "rev": "77baff367f8f79fc3227a956b8f7b173d9b3e08b",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759809815,
+        "narHash": "sha256-A/XECNG6gVdVKsiWwPI8YS3LXM7sHKshDaCPaX6327E=",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "rev": "d0e91a86a8db15a83ae9afb37809f392fced941c",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "gitlab"
       },
       "original": {
@@ -446,6 +462,7 @@
       },
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1759043321,
         "narHash": "sha256-Efi3THvsIS6Qd97s52/PSSHWybDlSbtUZXP8l3AR9Ps=",
         "owner": "nix-community",
@@ -458,6 +475,13 @@
         "repo": "home-manager",
         "rev": "5f06ceafc6c9b773a776b9195c3f47bbe1defa43",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759843719,
+        "narHash": "sha256-uDCZabbZYy7i5OBF+zORWzbEQsmcq1sdvFVA/94jGDg=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "5443ca20ed5c5da327de37a09910dc1c66fc3712",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -543,11 +567,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759032422,
-        "narHash": "sha256-WZf+FhebP2/1pK2np5xj/NuDjD6fXK2BHnq/tPUN18o=",
+        "lastModified": 1759637156,
+        "narHash": "sha256-8NI1SqntLfKl6Q0Luemc3aIboezSJElofUrqipF5g78=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "ec7a78cb0e098832d8acac091a4df393259c4839",
+        "rev": "0ca69684091aa3a6b1fe994c4afeff305b15e915",
         "type": "github"
       },
       "original": {
@@ -622,6 +646,7 @@
     "nixpkgs_4": {
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1758690382,
         "narHash": "sha256-NY3kSorgqE5LMm1LqNwGne3ZLMF2/ILgLpFr1fS4X3o=",
         "owner": "nixos",
@@ -634,6 +659,13 @@
         "repo": "nixpkgs",
         "rev": "7df7ff7d8e00218376575f0acdcc5d66741351ee",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759733170,
+        "narHash": "sha256-TXnlsVb5Z8HXZ6mZoeOAIwxmvGHp1g4Dw89eLvIwKVI=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "8913c168d1c56dc49a7718685968f38752171c3b",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -645,6 +677,7 @@
     },
     "nixpkgs_5": {
       "locked": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "lastModified": 1758763312,
         "narHash": "sha256-puBMviZhYlqOdUUgEmMVJpXqC/ToEqSvkyZ30qQ09xM=",
@@ -658,6 +691,13 @@
         "repo": "nixpkgs",
         "rev": "dc704e6102e76aad573f63b74c742cd96f8f1e6c",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759632233,
+        "narHash": "sha256-krgZxGAIIIKFJS+UB0l8do3sYUDWJc75M72tepmVMzE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d7f52a7a640bc54c7bb414cca603835bf8dd4b10",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -676,6 +716,7 @@
       },
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1759016999,
         "narHash": "sha256-UhQmUPSWYpKJQutTzy9TKiRBMg/qVJn6AoNsFR+5Zmc=",
         "owner": "nix-community",
@@ -688,6 +729,13 @@
         "repo": "nixvim",
         "rev": "3fa0e487260af16dde609940e49c3ddc6c31c6ed",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759841782,
+        "narHash": "sha256-ff2JDWzXMd5kMVfFUFaM03z268fPTbyTQQy6QnS/FKA=",
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "rev": "b9d0415b1cb141db5486a9def7e92996c1718690",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -863,6 +911,7 @@
       },
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1759033744,
         "narHash": "sha256-fQovpddotIEsvdJzpQhtb3wYZYGIg4I/QUX5rJJQTi4=",
         "owner": "Gerg-L",
@@ -875,6 +924,13 @@
         "repo": "spicetify-nix",
         "rev": "e13267e8f3eb1664329fcb78a43b38b985f96f6f",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759638324,
+        "narHash": "sha256-bj0L3n2UWE/DjqFjsydWsSzO74+dqUA4tiOX4At6LbM=",
+        "owner": "Gerg-L",
+        "repo": "spicetify-nix",
+        "rev": "c39a58510e55c4970e57176ab14b722a978e5f01",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
@@ -905,6 +961,7 @@
       },
       "locked": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "lastModified": 1759050561,
         "narHash": "sha256-cnYj2r1DlNCghX0GXpwhNkXKpqVTZhssbRuaHuInU4g=",
         "owner": "danth",
@@ -917,6 +974,13 @@
         "repo": "stylix",
         "rev": "3f70c5855572004f9c630ed4a92aa186755361be",
 >>>>>>> d93a515 (amd drivers)
+=======
+        "lastModified": 1759690047,
+        "narHash": "sha256-Vlpa0d1xOgPO9waHwxJNi6LcD2PYqB3EjwLRtSxXlHc=",
+        "owner": "danth",
+        "repo": "stylix",
+        "rev": "09022804b2bcd217f3a41a644d26b23d30375d12",
+>>>>>>> 890e768 (qemu.ovmf submodule removed ovmf images are default now, cider)
         "type": "github"
       },
       "original": {
