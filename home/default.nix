@@ -74,6 +74,7 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 
   services.ssh-agent.enable = true;

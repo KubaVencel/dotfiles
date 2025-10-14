@@ -208,7 +208,7 @@
     linux-firmware  
     libdrm
     mesa
-    
+
     exfat
     exfatprogs
 
