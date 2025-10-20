@@ -32,7 +32,7 @@ programs.nixvim = {
 
     startup = {
       enable = true;
-      theme = "evil";
+      settings.theme = "evil";
     };
     
     # Language Server Protocol 

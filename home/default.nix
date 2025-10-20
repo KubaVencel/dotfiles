@@ -102,9 +102,10 @@
 
   programs.git = {
     enable = true;
-    userName = "kubaVencel";
-    userEmail = "105190657+KubaVencel@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user.name = "kubaVencel";
+      user.email = "105190657+KubaVencel@users.noreply.github.com";
+            
       init.defaultBranch = "main";
       rebase = {
         autosquash = true;

@@ -4,7 +4,7 @@
     #./kanshi
     ./nixColors
     ./theme
-    ./spicetify
+    #./spicetify
   ];
 
   home.packages = with pkgs; [
