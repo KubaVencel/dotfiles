@@ -120,9 +120,25 @@
         { command = "autotiling";} 
         { command = "sleep 2 && firefox";} 
         { command = "alacritty";} 
-        { command = "sleep 4 && spotify";}
-        #{ command = "sleep 5 && discord";} 
-        #{ command = "sleep 6 && steam";} 
+        { command = "sleep 4 && cider-2";}
+        { command = "sleep 4 && blueman-manager";} 
+        { command = "sleep 6 && mullvad-vpn";} 
+      ];
+
+      assigns = {
+        "1" = [{ app_id = "firefox"; }];
+        "2" = [{ app_id = "Alacritty"; }];
+        "3" = [{ class = "steam"; }];
+        "4" = [{ class = "discord"; }];
+      };
+
+      # Move to scratchpad
+      window.commands = [
+        { criteria = { class = "Cider"; };
+          command = "move scratchpad"; }
+
+        { criteria = { app_id = ".blueman-manager-wrapped"; };
+          command = "move scratchpad"; }
       ];
 
       bars = [
@@ -197,14 +213,6 @@
         ];
       };
 
-      assigns = {
-        "1" = [{ app_id = "firefox"; }];
-        "2" = [{ app_id = "Alacritty"; }];
-        "3" = [{ class = "Spotify"; }];
-        "4" = [{ class = "discord"; }];
-        "5" = [{ class = "steam"; }];
-      };
-
       focus = {
         newWindow = "urgent";
       };
@@ -249,161 +257,170 @@
           right = config.wayland.windowManager.sway.config.right;
           floating_term = "${config.wayland.windowManager.sway.config.terminal} -a floating_foot";
         in
-        lib.mkOptionDefault {
+          lib.mkOptionDefault {
+            
           # ====================
           # APPLICATION LAUNCHES
           # ====================
           
           # File manager in floating terminal
-          "${mod}+o" = "exec ${floating_term} ${pkgs.lf}/bin/lf";
+            "${mod}+o" = "exec ${floating_term} ${pkgs.lf}/bin/lf";
           
           # Application launcher/menu
-          "${mod}+f" = "exec ${config.wayland.windowManager.sway.config.menu}";
+            "${mod}+f" = "exec ${config.wayland.windowManager.sway.config.menu}";
           
           # Floating terminal
-          "${mod}+Shift+Return" = "exec ${floating_term}";
+            "${mod}+Shift+Return" = "exec ${floating_term}";
 
           # ====================
           # BRIGHTNESS CONTROLS
           # ====================
           
-          XF86MonBrightnessDown = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ (Brightness down)
-          XF86MonBrightnessUp = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ (Brightness up)
+            XF86MonBrightnessDown = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ (Brightness down)
+            
+            XF86MonBrightnessUp = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ (Brightness up)
 
           # ====================
           # AUDIO CONTROLS
           # ====================
           
-          XF86AudioRaiseVolume = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"; # 🔊 (Volume up)
-          XF86AudioLowerVolume = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"; # 🔉 (Volume down)
-          XF86AudioMute = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 (Mute toggle)
-          XF86AudioMicMute = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle"; # 🎤🔇 (Mic mute)
+            XF86AudioRaiseVolume = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"; # 🔊 (Volume up)
+            XF86AudioLowerVolume = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"; # 🔉 (Volume down)
+            XF86AudioMute = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 (Mute toggle)
+            XF86AudioMicMute = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle"; # 🎤🔇 (Mic mute)
 
           # ====================
           # MEDIA PLAYER CONTROLS
           # ====================
           
-          XF86AudioPlay = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # ⏯️ (Play/pause)
-          XF86AudioNext = "exec ${pkgs.playerctl}/bin/playerctl next"; # ⏭️ (Next track)
-          XF86AudioPrev = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⏮️ (Previous track)
-          XF86AudioStop = "exec ${pkgs.playerctl}/bin/playerctl stop"; # ⏹️ (Stop)
-          Pause = "exec ${pkgs.playerctl}/bin/playerctl pause"; # ⏸️ (Pause key)
+            XF86AudioPlay = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # ⏯️ (Play/pause)
+            XF86AudioNext = "exec ${pkgs.playerctl}/bin/playerctl next"; # ⏭️ (Next track)
+            XF86AudioPrev = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⏮️ (Previous track)
+            XF86AudioStop = "exec ${pkgs.playerctl}/bin/playerctl stop"; # ⏹️ (Stop)
+            Pause = "exec ${pkgs.playerctl}/bin/playerctl pause"; # ⏸️ (Pause key)
 
           # ====================
           # NOTIFICATION CONTROLS
           # ====================
           
-          XF86NotificationCenter = "exec ${pkgs.mako}/bin/makoctl dismiss -a"; # 🔔 (Notification center)
+            XF86NotificationCenter = "exec ${pkgs.mako}/bin/makoctl dismiss -a"; # 🔔 (Notification center)
 
           # ====================
           # DISPLAY CONTROLS
           # ====================
           
-          XF86Display = "output eDP-1 toggle"; # 🖥️ (Display toggle)
+            XF86Display = "output eDP-1 toggle"; # 🖥️ (Display toggle)
 
           # ====================
           # SCREENSHOT CONTROLS
           # ====================
           
-          "${mod}+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output";
-          Print = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output"; # 🖨️ (Print screen)
-          "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          XF86SelectiveScreenshot = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area"; # 📷 (Screenshot area)
-          "${mod}+Ctrl+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
+            "${mod}+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output";
+            Print = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output"; # 🖨️ (Print screen)
+            "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
+            XF86SelectiveScreenshot = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area"; # 📷 (Screenshot area)
+            "${mod}+Ctrl+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
            
           # ====================
           # WINDOW MANAGEMENT
           # ====================
-          
+
+          # Show cider
+            "${mod}+m" = "[class=\"Cider\"] scratchpad show";
+         
+          # Show bluemon  
+            "${mod}+b" = "[class=\".blueman-manager-wrapped\"] scratchpad show";
+
+
           # Toggle the current focus between tiling and floating mode
-          "${mod}+Shift+space" = "floating toggle";
+            "${mod}+Shift+space" = "floating toggle";
           
           # Move the currently focused window to the scratchpad          
-          "${mod}+Shift+minus" = "move scratchpad";
+            "${mod}+Shift+minus" = "move scratchpad";
           
           # Show the next scratchpad window or hide the focused scratchpad window.
           # If there are multiple scratchpad windows, this command cycles through them.
-          "${mod}+minus" = "scratchpad show";
+            "${mod}+minus" = "scratchpad show";
 
           # ====================
           # WORKSPACE NAVIGATION
           # ====================
           
-          "${mod}+Ctrl+${up}" = "workspace prev_on_output";
-          "${mod}+Ctrl+${down}" = "workspace next_on_output";
-          "${mod}+Ctrl+Up" = "workspace prev_on_output";
-          "${mod}+Ctrl+Down" = "workspace next_on_output";
+            "${mod}+Ctrl+${up}" = "workspace prev_on_output";
+            "${mod}+Ctrl+${down}" = "workspace next_on_output";
+            "${mod}+Ctrl+Up" = "workspace prev_on_output";
+            "${mod}+Ctrl+Down" = "workspace next_on_output";
 
-          "${mod}+Ctrl+Shift+${up}" = "move container to workspace prev_on_output";
-          "${mod}+Ctrl+Shift+${down}" = "move container to workspace next_on_output";
-          "${mod}+Ctrl+Shift+Up" = "move container to workspace prev_on_output";
-          "${mod}+Ctrl+Shift+Down" = "move container to workspace next_on_output";
+            "${mod}+Ctrl+Shift+${up}" = "move container to workspace prev_on_output";
+            "${mod}+Ctrl+Shift+${down}" = "move container to workspace next_on_output";
+            "${mod}+Ctrl+Shift+Up" = "move container to workspace prev_on_output";
+            "${mod}+Ctrl+Shift+Down" = "move container to workspace next_on_output";
 
           # ====================
           # MONITOR MANAGEMENT
           # ====================
           
-          "${mod}+Ctrl+${left}" = "focus output left";
-          "${mod}+Ctrl+${right}" = "focus output right";
-          "${mod}+Ctrl+Left" = "focus output left";
-          "${mod}+Ctrl+Right" = "focus output right";
+            "${mod}+Ctrl+${left}" = "focus output left";
+            "${mod}+Ctrl+${right}" = "focus output right";
+            "${mod}+Ctrl+Left" = "focus output left";
+            "${mod}+Ctrl+Right" = "focus output right";
 
-          "${mod}+Ctrl+Shift+${left}" = "move workspace to output left";
-          "${mod}+Ctrl+Shift+${right}" = "move workspace to output right";
-          "${mod}+Ctrl+Shift+Left" = "move workspace to output left";
-          "${mod}+Ctrl+Shift+Right" = "move workspace to output right";
+            "${mod}+Ctrl+Shift+${left}" = "move workspace to output left";
+            "${mod}+Ctrl+Shift+${right}" = "move workspace to output right";
+            "${mod}+Ctrl+Shift+Left" = "move workspace to output left";
+            "${mod}+Ctrl+Shift+Right" = "move workspace to output right";
 
           # ====================
           # ADDITIONAL MEDIA KEYS (XF86)
           # ====================
           
           # Application shortcuts
-          XF86Calculator = "exec ${pkgs.gnome-calculator}/bin/gnome-calculator"; # 🧮 (Calculator)
-          XF86Explorer = "exec ${pkgs.nemo}/bin/nemo"; # 📁 (File manager)
-          XF86MyComputer = "exec ${pkgs.nemo}/bin/nemo ~"; # 🏠💻 (My computer)
-          XF86WWW = "exec ${pkgs.firefox}/bin/firefox"; # 🌐 (Web browser)
-          XF86HomePage = "exec ${pkgs.firefox}/bin/firefox"; # 🏠 (Home page)
-          XF86Mail = "exec ${pkgs.thunderbird}/bin/thunderbird"; # 📧 (Mail client)
-          XF86Search = "exec ${pkgs.fuzzel}/bin/fuzzel"; # 🔍 (Search)
-          XF86Favorites = "exec ${pkgs.fuzzel}/bin/fuzzel"; # ⭐ (Favorites)
+            XF86Calculator = "exec ${pkgs.gnome-calculator}/bin/gnome-calculator"; # 🧮 (Calculator)
+            XF86Explorer = "exec ${pkgs.nemo}/bin/nemo"; # 📁 (File manager)
+            XF86MyComputer = "exec ${pkgs.nemo}/bin/nemo ~"; # 🏠💻 (My computer)
+            XF86WWW = "exec ${pkgs.firefox}/bin/firefox"; # 🌐 (Web browser)
+            XF86HomePage = "exec ${pkgs.firefox}/bin/firefox"; # 🏠 (Home page)
+            XF86Mail = "exec ${pkgs.thunderbird}/bin/thunderbird"; # 📧 (Mail client)
+            XF86Search = "exec ${pkgs.fuzzel}/bin/fuzzel"; # 🔍 (Search)
+            XF86Favorites = "exec ${pkgs.fuzzel}/bin/fuzzel"; # ⭐ (Favorites)
           
           # System control keys
-          XF86Sleep = "exec systemctl suspend"; # 🌙 (Sleep)
-          XF86Suspend = "exec systemctl suspend"; # 😴 (Suspend)
-          XF86Hibernate = "exec systemctl hibernate"; # 🥶 (Hibernate)
-          XF86PowerOff = "exec systemctl poweroff"; # ⏻ (Power off)
+            XF86Sleep = "exec systemctl suspend"; # 🌙 (Sleep)
+            XF86Suspend = "exec systemctl suspend"; # 😴 (Suspend)
+            XF86Hibernate = "exec systemctl hibernate"; # 🥶 (Hibernate)
+            XF86PowerOff = "exec systemctl poweroff"; # ⏻ (Power off)
           
           # Hardware toggles
-          XF86TouchpadToggle = "exec swaymsg input type:touchpad events toggle enabled disabled"; # 👆 (Touchpad toggle)
-          XF86WLAN = "exec nmcli radio wifi"; # 📶 (WiFi toggle)
-          XF86Bluetooth = "exec bluetoothctl power toggle"; # 📶🔵 (Bluetooth toggle)
+            XF86TouchpadToggle = "exec swaymsg input type:touchpad events toggle enabled disabled"; # 👆 (Touchpad toggle)
+            XF86WLAN = "exec nmcli radio wifi"; # 📶 (WiFi toggle)
+            XF86Bluetooth = "exec bluetoothctl power toggle"; # 📶🔵 (Bluetooth toggle)
           
           # Additional media keys
-          XF86AudioMedia = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # 🎵 (Media key)
-          XF86AudioRewind = "exec ${pkgs.playerctl}/bin/playerctl position 10-"; # ⏪ (Rewind 10s)
-          XF86AudioForward = "exec ${pkgs.playerctl}/bin/playerctl position 10+"; # ⏩ (Forward 10s)
-          XF86AudioRecord = "exec ${pkgs.playerctl}/bin/playerctl stop"; # 🔴 (Record key)
+            XF86AudioMedia = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # 🎵 (Media key)
+            XF86AudioRewind = "exec ${pkgs.playerctl}/bin/playerctl position 10-"; # ⏪ (Rewind 10s)
+            XF86AudioForward = "exec ${pkgs.playerctl}/bin/playerctl position 10+"; # ⏩ (Forward 10s)
+            XF86AudioRecord = "exec ${pkgs.playerctl}/bin/playerctl stop"; # 🔴 (Record key)
           
           # Launch keys
-          XF86Tools = "exec ${floating_term}"; # 🔧 (Tools)
-          XF86LaunchA = "exec ${pkgs.fuzzel}/bin/fuzzel"; # Ⓐ (Launch A)
-          XF86LaunchB = "exec ${floating_term}"; # Ⓑ (Launch B)
+            XF86Tools = "exec ${floating_term}"; # 🔧 (Tools)
+            XF86LaunchA = "exec ${pkgs.fuzzel}/bin/fuzzel"; # Ⓐ (Launch A)
+            XF86LaunchB = "exec ${floating_term}"; # Ⓑ (Launch B)
           
           # Navigation keys
-          XF86Back = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⬅️ (Back)
-          XF86Forward = "exec ${pkgs.playerctl}/bin/playerctl next"; # ➡️ (Forward)
-          XF86Refresh = "exec swaymsg reload"; # ♻️ (Refresh)
+            XF86Back = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⬅️ (Back)
+            XF86Forward = "exec ${pkgs.playerctl}/bin/playerctl next"; # ➡️ (Forward)
+            XF86Refresh = "exec swaymsg reload"; # ♻️ (Refresh)
           
           # ====================
           # FULLSCREEN & MODES
           # ====================
           
           # Global fullscreen
-          "${mod}+Shift+f" = "fullscreen toggle global";
+            "${mod}+Shift+f" = "fullscreen toggle global";
 
           # Modes
-          "${mod}+Equal" = "mode passthrough";
-          "${mod}+c" = "mode config";
+            "${mod}+Equal" = "mode passthrough";
+            "${mod}+c" = "mode config";
         };
         
       modes = lib.mkOptionDefault {
@@ -412,55 +429,55 @@
             "mode default";
         };
         
-      config = {
+        config = {  
         # ====================
         # CONFIG MODE - POWER OPTIONS
         # ====================
-        p = "exec swaynag -t warning -m 'Poweroff?' -b 'Yes' 'systemctl poweroff'; mode default"; # ⏻ Power off
-        r = "exec swaynag -t warning -m 'Reboot?' -b 'Yes' 'systemctl reboot'; mode default"; # 🔄 Reboot
-        s = "exec systemctl suspend; mode default"; # 🌙 Suspend
-        "--release l" = "exec loginctl lock-session; mode default"; # 🔒 Lock session
+          p = "exec swaynag -t warning -m 'Poweroff?' -b 'Yes' 'systemctl poweroff'; mode default"; # ⏻ Power off
+          r = "exec swaynag -t warning -m 'Reboot?' -b 'Yes' 'systemctl reboot'; mode default"; # 🔄 Reboot
+          s = "exec systemctl suspend; mode default"; # 🌙 Suspend
+          "--release l" = "exec loginctl lock-session; mode default"; # 🔒 Lock session
 
         # ====================
         # CONFIG MODE - BRIGHTNESS
         # ====================
-        b = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ Brightness up
-        "Shift+b" = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ Brightness down
+          b = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ Brightness up
+          "Shift+b" = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ Brightness down
 
         # ====================
         # CONFIG MODE - VOLUME
         # ====================
-        v = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"; # 🔊 Volume up
-        "Shift+v" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"; # 🔉 Volume down
-        m = "exec ${pkgs.pulseaudio}/bin/pactSp1d3rl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 Mute toggle
-        "Shift+m" = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle"; # 🎤🔇 Mic mute
+          v = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"; # 🔊 Volume up
+          "Shift+v" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"; # 🔉 Volume down
+          m = "exec ${pkgs.pulseaudio}/bin/pactSp1d3rl set-sink-mute @DEFAULT_SINK@ toggle"; # 🔇 Mute toggle
+          "Shift+m" = "exec ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle"; # 🎤🔇 Mic mute
 
         # ====================
         # CONFIG MODE - MEDIA
         # ====================
-        z = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⏮️ Previous track
-        x = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # ⏯️ Play/pause
-        c = "exec ${pkgs.playerctl}/bin/playerctl next"; # ⏭️ Next track
+          z = "exec ${pkgs.playerctl}/bin/playerctl previous"; # ⏮️ Previous track
+          x = "exec ${pkgs.playerctl}/bin/playerctl play-pause"; # ⏯️ Play/pause
+          c = "exec ${pkgs.playerctl}/bin/playerctl next"; # ⏭️ Next track
 
         # ====================
         # CONFIG MODE - NOTIFICATIONS
         # ====================
-        n = "exec ${pkgs.mako}/bin/makoctl dismiss -a"; # 🔔 Dismiss notifications
+          n = "exec ${pkgs.mako}/bin/makoctl dismiss -a"; # 🔔 Dismiss notifications
 
         # ====================
         # CONFIG MODE - EXIT
         # ====================
-        Return = "mode default"; # ↩️ Exit config mode
-        Escape = "mode default"; # ⎋ Exit config mode
+          Return = "mode default"; # ↩️ Exit config mode
+          Escape = "mode default"; # ⎋ Exit config mode
         };
       };
 
-        seat = {
-        "*" = {
-            xcursor_theme = "${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}";
-            hide_cursor = "4000";
-            idle_inhibit = "keyboard touch switch";
-          };
+      seat = {
+        "*" = { 
+          xcursor_theme = "${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}";
+          hide_cursor = "4000";
+          idle_inhibit = "keyboard touch switch";
+        };
       };
 
       window = {
