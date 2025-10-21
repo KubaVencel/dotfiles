@@ -123,7 +123,7 @@
         { command = "sleep 4 && cider-2";}
         { command = "sleep 5 && discord";} 
         { command = "sleep 6 && steam";} 
-        { command = "sleep 7 && mullvad-vpn"}
+        { command = "sleep 7 && mullvad-vpn";}
       ];
 
       assigns = {
