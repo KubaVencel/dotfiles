@@ -42,11 +42,12 @@
     smile
 
     thunderbird
-    protonmail-bridge-gui
+    #protonmail-bridge-gui
+    protonmail-bridge
 
     file-roller
 
-    bitwarden
+    bitwarden-desktop
 
     discord
     qbittorrent

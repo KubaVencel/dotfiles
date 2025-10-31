@@ -88,7 +88,7 @@
           # amdvlk # RADV by default
           # driversi686Linux.amdvlk
           rocmPackages.clr
- 	  vaapiVdpau
+          libva-vdpau-driver
           libvdpau-va-gl
         ];
       extraPackages32 = with pkgs; 
