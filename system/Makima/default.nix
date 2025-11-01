@@ -33,7 +33,10 @@
   services.fstrim.enable = lib.mkDefault true;
   
   # GPU acceleration
-  hardware.graphics.extraPackages = with pkgs; [ vaapiIntel intel-media-driver ];
+  hardware.graphics.extraPackages = with pkgs; [ 
+    intel-vaapi-driver
+    intel-media-driver 
+  ];
 
   # Lid close behavior
   services.logind.settings.Login.HandleLidSwitch = "suspend-then-hibernate";
