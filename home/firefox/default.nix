@@ -60,8 +60,9 @@
         bitwarden
 	decentraleyes
 	darkreader
-        ublock-origin
-        privacy-badger
+        #ublock-origin
+        #privacy-badger
+        adnauseam
         #sponsorblock
         tridactyl
       ];

@@ -51,6 +51,7 @@
         unzip # Un Zip
         unrar # Un Rar
         xar
+        p7zip
         w3m # Text based Browser
         #pandoc
         hwinfo # Probe for the hardware present in the system
