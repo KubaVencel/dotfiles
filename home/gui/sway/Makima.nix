@@ -134,7 +134,7 @@
 
       # Move to scratchpad
       window.commands = [
-        { criteria = { class = "Cider"; };
+        { criteria = { app_id = "Cider"; };
           command = "move scratchpad"; }
 
         { criteria = { app_id = ".blueman-manager-wrapped"; };
@@ -208,7 +208,7 @@
         titlebar = true;
         criteria = [
           {
-            app_id = "^floating_foot$";
+            app_id = "floating_foot$";
           }
         ];
       };
@@ -326,11 +326,10 @@
           # ====================
 
           # Show cider
-            "${mod}+m" = "[class=\"Cider\"] scratchpad show";
+            "${mod}+m" = "[app_id=\"Cider\"] scratchpad show";
          
           # Show bluemon  
-            "${mod}+b" = "[class=\".blueman-manager-wrapped\"] scratchpad show";
-
+            "${mod}+b" = "[app_id=\".blueman-manager-wrapped\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode
             "${mod}+Shift+space" = "floating toggle";

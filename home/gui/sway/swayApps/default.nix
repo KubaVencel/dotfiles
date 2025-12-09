@@ -6,23 +6,15 @@
   
     services.swayidle = {
     enable = true;
-    events = [
-      {
-        event = "before-sleep";
-        command = "${pkgs.playerctl}/bin/playerctl -a pause; ${pkgs.swaylock}/bin/swaylock";
-      }
-      {
-        event = "lock";
-        command = "${pkgs.swaylock}/bin/swaylock";
-      }
-      {
-        event = "unlock";
-        command = "${pkgs.procps}/bin/pkill -USR1 swaylock";
-      }
-    ];
+    events = {
+      before-sleep = "${pkgs.playerctl}/bin/playerctl -a pause; ${pkgs.swaylock}/bin/swaylock";
+      lock = "${pkgs.swaylock}/bin/swaylock";
+      unlock = "${pkgs.procps}/bin/pkill -usr1 swaylock";
+    };
     # extraArgs = [
     #   "idlehint 1200"
     # ];
+
     timeouts = [
       {
         # turn the screen off quickly if the screen was locked manually
