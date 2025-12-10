@@ -64,8 +64,10 @@
         #privacy-badger
         adnauseam
         #sponsorblock
+        new-tab-override
         tridactyl
       ];
+      # https://gitlab.com/rycee/nur-expressions/-/tree/master/pkgs/firefox-addons?ref_type=heads
       # https://www.deviceinfo.me/
     };
   };
