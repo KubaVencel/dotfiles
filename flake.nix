@@ -40,7 +40,6 @@
     prism = {
       url = "github:IogaMaster/prism";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
 
     stylix = {
@@ -55,7 +54,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, prism, catppuccin, agenix, nix-index-database, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, nix-colors, prism, catppuccin, agenix, nix-index-database, ... }@inputs: {
     nixosConfigurations =
       let
         makeNixosConfiguration = name: modules: nixpkgs.lib.nixosSystem {
@@ -91,8 +90,9 @@
           modules = [
             ./home
             ./home/gui
-            ./nixModules/theming/prism.nix
-            prism.homeModules.prism
+            nix-colors.homeManagerModules.default
+            #prism.homeModules.prism
+            #./nixModules/theming/prism.nix
             nixvim.homeModules.nixvim
             nix-index-database.homeModules.nix-index
             #catppuccin.homeManagerModules.catppuccin

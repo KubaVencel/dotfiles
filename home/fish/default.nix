@@ -28,12 +28,24 @@
       fetch = "fastfetch";
       gitfetch = "onefetch";
 
+      # Update
       update = "nix flake update";
       upgrade = "sudo nixos-rebuild switch --flake .";
       upgradeHm = "home-manager switch --flake .";
+      
+      upgradeAll = "nix flake update && sudo nixos-rebuild switch --flake . && home-manager switch --flake .";
+
+      # nixDeleteOld => nixOptimise
+      # garbageDay => nixOptimise
+
+      # Agresive clean
       garbageDay = "sudo nix-collect-garbage -d";
-      storeGarbage = "sudo nix-store --gc --print-dead";
-      nixDeleteOld = "nix-env --delete-generations";
+
+      # Cleanup (monthly or when needed)
+      nixDeleteOld = "sudo nix-collect-garbage --delete-older-than 2d";
+      nixOptimise = "sudo nix-store --optimise";
+      
+      # Maintenance
       storeRepair = "sudo nix-store --verify --check-contents --repair";
     };
     plugins = [
