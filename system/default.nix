@@ -213,6 +213,8 @@
 
     exfat
     exfatprogs
+    
+    jq
 
     grc
     chayang
