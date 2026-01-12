@@ -40,6 +40,7 @@
     vlc
     celluloid
     smile
+    gowall
 
     thunderbird
     #protonmail-bridge-gui
