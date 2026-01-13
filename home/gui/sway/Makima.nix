@@ -116,7 +116,7 @@
       	{ command = "swww-daemon"; }
         #{ command = "foot --server"; }
         #{ command = "pkill -SIGHUP kanshi"; always = true; }
-        { command = "sleep 1 && swww img ~/nixModules/theming/themedImg/anime_skull.png"; }
+        { command = "sleep 1 && swww img ~/nixModules/theming/themedImg/animeSkull.png"; }
         { command = "autotiling";} 
         { command = "sleep 2 && firefox";} 
         { command = "alacritty";} 
