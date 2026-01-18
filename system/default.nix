@@ -64,7 +64,7 @@
 
   # Configure console keymap
   console.keyMap = "en";
-  
+ 
   # Fonts
   fonts.packages = with pkgs; [
     jetbrains-mono
@@ -145,7 +145,10 @@
 
   # List services that you want to enable:
   services = {
-    #     # Whether to enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC). 
+    # fwupd is a simple daemon allowing you to update some devices' firmware, including UEFI for several machines. 
+    fwupd.enable = true;
+
+    # Whether to enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC). 
     pcscd.enable = true; 
     
     # Enable the OpenSSH daemon.
