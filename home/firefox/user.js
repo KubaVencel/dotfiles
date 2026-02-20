@@ -23,6 +23,8 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
           
 */
 
+user_pref("cbrowser.preferences.aiControls", true); // enable the master AI kill switch
+
 /* fastfox */
 user_pref("content.notify.interval", 100000); // (.10s); default=120000 (.12s)
 
