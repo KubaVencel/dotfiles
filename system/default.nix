@@ -221,7 +221,8 @@
 
     grc
     chayang
-    light
+    brightnessctl
+
     procps
     playerctl
     home-manager
@@ -292,8 +293,6 @@
   programs = {
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
-    # programs.mtr.enable = true;
-    light.enable = true;
 
     dconf.enable =true;
 
