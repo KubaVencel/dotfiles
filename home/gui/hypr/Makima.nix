@@ -225,10 +225,10 @@ in
           # BRIGHTNESS CONTROLS
           # ====================
           
-          ", XF86MonBrightnessDown, exec, ${pkgs.light}/bin/light -T 0.72" # ☀️⬇️ (Brightness down)
-          ", XF86MonBrightnessUp, exec, ${pkgs.light}/bin/light -T 1.4" # ☀️⬆️ (Brightness up)
-          ", XF86BrightnessDown, exec, ${pkgs.light}/bin/light -U 5" # 💡⬇️ (Alternative brightness down)
-          ", XF86BrightnessUp, exec, ${pkgs.light}/bin/light -A 5" # 💡⬆️ (Alternative brightness up)
+          ", XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-" # ☀️⬇️ (Brightness down)
+          ", XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%+" # ☀️⬆️ (Brightness up)
+          ", XF86BrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-" # 💡⬇️ (Alternative brightness down)
+          ", XF86BrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-" # 💡⬆️ (Alternative brightness up)
           
           # ====================
           # AUDIO CONTROLS

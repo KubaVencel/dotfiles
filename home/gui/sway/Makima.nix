@@ -275,10 +275,10 @@
           # ====================
           # BRIGHTNESS CONTROLS
           # ====================
-          
-            XF86MonBrightnessDown = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ (Brightness down)
-            
-            XF86MonBrightnessUp = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ (Brightness up)
+         
+            XF86MonBrightnessDown = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"; # ☀️⬇️ (Brightness down)
+
+            XF86MonBrightnessUp = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%+"; # ☀️⬆️ (Brightness up)
 
           # ====================
           # AUDIO CONTROLS
@@ -440,8 +440,9 @@
         # ====================
         # CONFIG MODE - BRIGHTNESS
         # ====================
-          b = "exec ${pkgs.light}/bin/light -T 1.4"; # ☀️⬆️ Brightness up
-          "Shift+b" = "exec ${pkgs.light}/bin/light -T 0.72"; # ☀️⬇️ Brightness down
+       
+          b = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%+"; # ☀️⬆️ Brightness up
+          "Shift+b" = "exec ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"; # ☀️⬇️ Brightness down
 
         # ====================
         # CONFIG MODE - VOLUME
