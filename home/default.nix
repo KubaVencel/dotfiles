@@ -112,6 +112,7 @@
       rebase = {
         autosquash = true;
       };
+      signing.format = "openpgp";
       # Unbreak mouse scrolling
       core.pager = "less -+X";
     };

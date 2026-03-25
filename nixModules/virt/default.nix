@@ -13,7 +13,6 @@
 
   services.spice-vdagentd.enable = true;
 
-  # Install necessary packages
   environment.systemPackages = with pkgs; [
     qemu
     quickemu
