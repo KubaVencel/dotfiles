@@ -41,6 +41,7 @@
     celluloid
     smile
     gowall
+    audacity
 
     thunderbird
     #protonmail-bridge-gui
@@ -104,6 +105,7 @@
 
   programs.git = {
     enable = true;
+    signing.format = "openpgp";
     settings = {
       user.name = "kubaVencel";
       user.email = "105190657+KubaVencel@users.noreply.github.com";
@@ -112,7 +114,6 @@
       rebase = {
         autosquash = true;
       };
-      signing.format = "openpgp";
       # Unbreak mouse scrolling
       core.pager = "less -+X";
     };
