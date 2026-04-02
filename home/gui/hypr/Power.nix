@@ -9,7 +9,7 @@
 
       # wait a tiny bit for wallpaper
       sleep 2
-      ${pkgs.swww}/bin/swww img ~/nixModules/theming/themedImg/animeSkull.png
+      ${pkgs.awww}/bin/awww img ~/nixModules/theming/themedImg/animeSkull.png
       '';
 
     # Terminal for floating windows (using alacritty from your config)
@@ -29,7 +29,7 @@ in
       settings = {
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "swww-daemon"
+        "awww-daemon"
         "${pkgs.bash}/bin/bash ${startScript}/bin/start"
         "waybar"
         "mako"

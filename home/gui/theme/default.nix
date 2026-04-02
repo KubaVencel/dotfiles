@@ -33,7 +33,17 @@ home.pointerCursor = {
 
       size = 24;
     };
-    
+
+    gtk2.theme = {
+      package = pkgs.gruvbox-dark-gtk;
+      name = "gruvbox-dark";
+    };
+
+    gtk3.theme = {
+      package = pkgs.gruvbox-dark-gtk;
+      name = "gruvbox-dark";
+    };
+
     gtk4.theme = {
       package = pkgs.gruvbox-dark-gtk;
       name = "gruvbox-dark";

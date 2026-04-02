@@ -241,7 +241,7 @@
 
     pulseaudioFull
 
-    swww # wallpapers
+    awww # wallpapers
 
     # system utils
     btop
