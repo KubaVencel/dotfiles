@@ -52,7 +52,7 @@
     r2modman
 
     heroic
-    lutris
-    bottles
+    #lutris
+    #bottles
   ];
 }

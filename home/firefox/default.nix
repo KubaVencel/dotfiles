@@ -1,7 +1,9 @@
-{ lib, inputs, pkgs, ... }:
+{ lib, inputs, pkgs, config, ... }:
 {
   programs.firefox = {
     enable = true;
+    #configPath = ".mozilla/firefox";
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
@@ -48,7 +50,6 @@
         }
       ];
     };
-
 
       extraConfig = "${builtins.readFile ./user.js}";
 
