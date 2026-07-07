@@ -120,7 +120,7 @@
         { command = "autotiling";} 
         { command = "sleep 2 && firefox";} 
         { command = "alacritty";} 
-        { command = "sleep 4 && cider-2";}
+        { command = "sleep 4 && sidra";}
         { command = "sleep 5 && discord";} 
         { command = "sleep 6 && steam";} 
         { command = "sleep 7 && mullvad-vpn";}
@@ -135,7 +135,7 @@
 
       # Move to scratchpad
       window.commands = [
-        { criteria = { app_id = "Cider"; };
+        { criteria = { app_id = "sidra"; };
           command = "move scratchpad"; }
 
         { criteria = { app_id = ".blueman-manager-wrapped"; };
@@ -325,8 +325,8 @@
           # WINDOW MANAGEMENT
           # ====================
 
-          # Show cider
-            "${mod}+m" = "[app_id=\"Cider\"] scratchpad show";
+            # Show sidra
+            "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode
             "${mod}+Shift+space" = "floating toggle";

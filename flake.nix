@@ -52,9 +52,14 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sidra = {
+      url = "github:wimpysworld/sidra";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, nix-colors, prism, catppuccin, agenix, nix-index-database, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, lanzaboote, nixvim, stylix, nix-colors, prism, catppuccin, agenix, nix-index-database, sidra, ... }@inputs: {
     nixosConfigurations =
       let
         makeNixosConfiguration = name: modules: nixpkgs.lib.nixosSystem {
@@ -91,11 +96,11 @@
             ./home
             ./home/gui
             nix-colors.homeManagerModules.default
-            #prism.homeModules.prism
-            #./nixModules/theming/prism.nix
             nixvim.homeModules.nixvim
             nix-index-database.homeModules.nix-index
             #catppuccin.homeManagerModules.catppuccin
+            #prism.homeModules.prism
+            #./nixModules/theming/prism.nix
           ] ++ modules;
         };
       in

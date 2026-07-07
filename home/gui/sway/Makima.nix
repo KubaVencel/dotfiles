@@ -120,7 +120,7 @@
         { command = "autotiling";} 
         { command = "sleep 2 && firefox";} 
         { command = "alacritty";} 
-        { command = "sleep 4 && cider-2";}
+        { command = "sleep 4 && sidra";}
         { command = "sleep 4 && blueman-manager";} 
         { command = "sleep 6 && mullvad-vpn";} 
       ];
@@ -134,7 +134,7 @@
 
       # Move to scratchpad
       window.commands = [
-        { criteria = { app_id = "Cider"; };
+        { criteria = { app_id = "sidra"; };
           command = "move scratchpad"; }
 
         { criteria = { app_id = ".blueman-manager-wrapped"; };
@@ -183,7 +183,7 @@
           focusedInactive = {
             border = inactive;
             background = inactive;
-            text = white;
+            text = sidra;
             indicator = red;
             childBorder = "";
           };
@@ -325,8 +325,8 @@
           # WINDOW MANAGEMENT
           # ====================
 
-          # Show cider
-            "${mod}+m" = "[app_id=\"Cider\"] scratchpad show";
+          # Show sidra
+            "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
          
           # Show bluemon  
             "${mod}+b" = "[app_id=\".blueman-manager-wrapped\"] scratchpad show";

@@ -1,8 +1,7 @@
-{ pkgs, config, ... }: 
+{ pkgs, config, inputs,  ... }: 
 {
-  
   programs.home-manager.enable = true;
-  
+ 
   imports = [
     ./firefox
     ./starship
@@ -28,12 +27,12 @@
       DEFAULT_USER = "$(whoami)";
     };
   };
-	
+  
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     #spotify
-    cider-2
+    inputs.sidra.packages.${pkgs.system}.default
     ungoogled-chromium
     brave
     mullvad-browser
