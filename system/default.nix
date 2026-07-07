@@ -241,6 +241,10 @@
 
     pulseaudioFull
 
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
+    gruvbox-kvantum
+
     awww # wallpapers
 
     # system utils
