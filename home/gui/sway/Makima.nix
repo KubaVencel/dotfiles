@@ -183,7 +183,7 @@
           focusedInactive = {
             border = inactive;
             background = inactive;
-            text = sidra;
+            text = white;
             indicator = red;
             childBorder = "";
           };
