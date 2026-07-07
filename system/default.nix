@@ -229,7 +229,8 @@
 
     openssh
     polkit
-
+    
+    mullvad
     mullvad-vpn
     mullvad-browser
 
