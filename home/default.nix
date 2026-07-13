@@ -51,7 +51,6 @@
     bitwarden-desktop
 
     discord
-    qbittorrent-enhanced
     qbittorrent-enhanced-nox
     kdePackages.kate
     gimp3 
