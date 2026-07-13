@@ -1,6 +1,7 @@
-{ pkgs, config, ... }: 
+{ pkgs, config, lib, ... }: 
 {
 home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     x11.enable = true;
 
@@ -56,8 +57,25 @@ home.pointerCursor = {
     };
   };
 
-   qt = {
-      enable = true;
-      platformTheme.name = "gtk3";
-    };
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3";
+    style.name = "kvantum";
+  };
+
+  home.packages = [
+    (pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Brown"; })
+  ];
+
+  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+    [General]
+    theme=Gruvbox-Dark-Brown
+  '';
+
+  dconf.settings."org/gnome/desktop/interface" = {
+  gtk-theme = lib.mkForce "Gruvbox-Dark";
+  icon-theme = lib.mkForce "Papirus-Dark";
+  cursor-theme = lib.mkForce "phinger-cursors-light";
+  color-scheme = "prefer-dark";  
+  };
 }
