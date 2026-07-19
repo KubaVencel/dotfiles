@@ -73,9 +73,9 @@ home.pointerCursor = {
   '';
 
   dconf.settings."org/gnome/desktop/interface" = {
-  gtk-theme = lib.mkForce "Gruvbox-Dark";
-  icon-theme = lib.mkForce "Papirus-Dark";
-  cursor-theme = lib.mkForce "phinger-cursors-light";
+    #gtk-theme = lib.mkForce "Gruvbox-Dark";
+    #icon-theme = lib.mkForce "Papirus-Dark";
+    #cursor-theme = lib.mkForce "phinger-cursors-light";
   color-scheme = "prefer-dark";  
   };
 }
