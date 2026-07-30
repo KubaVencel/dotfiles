@@ -29,7 +29,7 @@
     # does not work >:(
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
 
-    image = ./prismImg/anime_skull.png;
+    image = ./themedImg/animeSkull.png;
    
     #package = pkgs.capitaine-cursors-themed;
     #name = "Capitaine Cursors (Gruvbox) - White"; 
