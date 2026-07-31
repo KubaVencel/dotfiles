@@ -1,7 +1,6 @@
 { pkgs, config, inputs,  ... }: 
 {
   programs.home-manager.enable = true;
- 
   imports = [
     ./firefox
     ./starship
@@ -51,7 +50,7 @@
     bitwarden-desktop
 
     discord
-    qbittorrent-enhanced-nox
+    qbittorrent-enhanced
     kdePackages.kate
     gimp3 
 
