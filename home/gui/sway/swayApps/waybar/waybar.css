@@ -64,7 +64,7 @@
 #pulseaudio,
 #memory,
 #cpu,
-#temperature {
+#temperature #backlight {
 	padding-left: 0.1rem;
 	padding-right: 0.1rem;
 }
@@ -111,7 +111,7 @@
 /* Inactive (on unfocused output) */
 #workspaces button.visible {
 	color: @base;
-	background: @overlay0;
+	background: @overlay;
 }
 
 /* Active (on focused output) */
@@ -240,5 +240,4 @@
 #backlight {
 	background: @yellow;
 	color: @base;
-	padding-right: 0.3rem;
 }

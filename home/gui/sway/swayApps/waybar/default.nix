@@ -35,9 +35,9 @@
           "custom/arrow2"
           "clock#date"
           "custom/arrow1"
+          "backlight"
           "clock#time"
           "sway/language"
-          "backlight"
         ];
 
        "custom/powermenu"= {		
