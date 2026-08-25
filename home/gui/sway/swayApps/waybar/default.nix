@@ -1,9 +1,9 @@
 { pkgs, ... }: {
-  programs.waybar = {
-    enable = true;
-    style = ./waybar.css;
-    settings = {
-      mainBar = {
+  programs.waybar= {
+    enable= true;
+    style= ./waybar.css;
+    settings= {
+      mainBar= {
         layer= "top";
         position= "top";
         reload_style_on_change= true; 
@@ -37,6 +37,7 @@
           "custom/arrow1"
           "clock#time"
           "sway/language"
+          "backlight"
         ];
 
        "custom/powermenu"= {		
@@ -47,39 +48,39 @@
           "signal"= 8;
         };
 
-        tray = {
-          icon-size = 18;
+        tray= {
+          icon-size= 23;
         };
 
       /* Modules */
 
-        "sway/language" = {
-          format = " {}";
-          min-length = 5;
-          on-click = "${pkgs.sway}/bin/swaymsg 'input * xkb_switch_layout next'";
-          tooltip = false;
+        "sway/language"= {
+          format= " {}";
+          min-length= 5;
+          on-click= "${pkgs.sway}/bin/swaymsg 'input * xkb_switch_layout next'";
+          tooltip= false;
         };
 
-        "clock#time" = {
-          interval = 10;
-          format = "{:%H:%M}";
-          tooltip = false;
+        "clock#time"= {
+          interval= 10;
+          format= "{:%H:%M}";
+          tooltip= false;
         };
 
-        "clock#date" = { 
-          interval = 20;
-          format = "{:%e %b %Y}";
-          tooltip = false;
+        "clock#date"= { 
+          interval= 20;
+          format= "{:%e %b %Y}";
+          tooltip= false;
         };
 
-        network = {
-          interval = 5;
-          format-wifi = " {essid} ({signalStrength}%)";
-          format-ethernet = "󰈁 {ifname}";
-          format-disconnected = "No connection";
-          format-alt = "󰈀 {ipaddr}/{cidr}";
-          tooltip = true;
-          tooltip-format = " {bandwidthUpBits}  {bandwidthDownBits}";
+        network= {
+          interval= 5;
+          format-wifi= " {essid} ({signalStrength}%)";
+          format-ethernet= "󰈁 {ifname}";
+          format-disconnected= "No connection";
+          format-alt= "󰈀 {ipaddr}/{cidr}";
+          tooltip= true;
+          tooltip-format= " {bandwidthUpBits}  {bandwidthDownBits}";
         };
     
         cpu= {
@@ -103,23 +104,24 @@
           tooltip= false;
         };
 
-        sway = {
+        sway= {
           format= "{}";
           max-length= 30;
           tooltip= false;
         };
 
-        "sway/workspaces" = {
+        "sway/workspaces"= {
           disable-scroll-wraparound= true;
           smooth-scrolling-threshold= 4;
           enable-bar-scroll= true;
-          on-click = "activate";
-          format = "{icon}";
+          on-click= "activate";
+          format= "{icon}";
           format-icons = {
-                "1" = " 󰖟 ";
-                "2" = "  ";
-                "3" = "  ";
-                "4" = "  ";
+                "1"= " 󰖟 ";
+                "2"= "  ";
+                "3"= "  ";
+                "4"= "  ";
+                "5"= "  ";
           };
         };
 
@@ -158,36 +160,51 @@
           tooltip= true;
         };
       
-        idle_inhibitor = {
-          format = "{icon}";
-          format-icons = {
-            activated = "";
-            deactivated = "";
+        idle_inhibitor= {
+          format= "{icon}";
+          format-icons= {
+            activated= "";
+            deactivated= "";
           };
-          tooltip = false;
+          tooltip= false;
          };
 
-        battery = {interval = 10;
-          states = {
-            warning = 30;
-            critical = 15;
+        battery= { interval = 10;
+          states= {
+            warning= 30;
+            critical= 15;
           };
-          format-time = "{H}:{M:02}";
-          format = "{icon} {capacity}% ({time})";
-          format-charging = " {capacity}% ({time})";
-          format-charging-full = " {capacity}%";
-          format-full = "{icon} {capacity}%";
-          format-alt = "{icon} {power}W";
-          format-icons = [
+          format-time= "{H}:{M:02}";
+          format= "{icon} {capacity}% ({time})";
+          format-charging= " {capacity}% ({time})";
+          format-charging-full= " {capacity}%";
+          format-full= "{icon} {capacity}%";
+          format-alt= "{icon} {power}W";
+          format-icons= [
             " "
             " "
             " "
             " "
             " "
           ];
-          tooltip = false;
+          tooltip= false;
         };
-          
+              
+        backlight= {
+          device = "intel_backlight";
+          scroll-step = 1;
+          format= "{icon}";
+          format-icons= [
+            "󰋙"
+            "󰫃"
+            "󰫄"
+            "󰫅"
+            "󰫆"
+            "󰫇"
+            "󰫈"
+          ];
+        };
+        
         "custom/arrow1"= {
           format= "";
           tooltip= false;
