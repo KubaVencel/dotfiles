@@ -56,7 +56,6 @@
 #custom-powermenu,
 #clock,
 #language,
-#workspaces,
 #window,
 #network,
 #tray,
@@ -67,7 +66,6 @@
 #cpu,
 #temperature {
 	padding-left: 0.1rem;
-	/* 0.313 left 0.625 right */
 	padding-right: 0.1rem;
 }
 
