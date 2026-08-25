@@ -257,7 +257,6 @@
 
     neovim
     tmux
-    gnome-bluetooth
 
     gnutls
     fastfetch
@@ -266,8 +265,8 @@
     pulsemixer
     wl-clipboard
   ];
-
-   xdg.portal = {
+ 
+  xdg.portal = {
      enable = true;
      wlr.enable = true;
      configPackages = with pkgs; [
