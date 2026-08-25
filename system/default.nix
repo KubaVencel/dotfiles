@@ -148,6 +148,9 @@
     # fwupd is a simple daemon allowing you to update some devices' firmware, including UEFI for several machines. 
     fwupd.enable = true;
 
+    # mouse config
+    ratbagd.enable = true; 
+
     # Whether to enable PCSC-Lite daemon, to access smart cards using SCard API (PC/SC). 
     pcscd.enable = true; 
     
