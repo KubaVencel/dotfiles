@@ -163,8 +163,8 @@
         idle_inhibitor= {
           format= "{icon}";
           format-icons= {
-            activated= "";
-            deactivated= "";
+            activated= " ";
+            deactivated= " ";
           };
           tooltip= false;
          };
@@ -195,13 +195,13 @@
           scroll-step = 1;
           format= "{icon}";
           format-icons= [
-            "󰋙"
-            "󰫃"
-            "󰫄"
-            "󰫅"
-            "󰫆"
-            "󰫇"
-            "󰫈"
+            "󰋙 "
+            "󰫃 "
+            "󰫄 "
+            "󰫅 "
+            "󰫆 "
+            "󰫇 "
+            "󰫈 "
           ];
         };
         

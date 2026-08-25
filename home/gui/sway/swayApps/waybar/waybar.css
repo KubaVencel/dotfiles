@@ -56,7 +56,7 @@
 #custom-powermenu,
 #clock,
 #language,
-#worcc241d,
+#workspaces,
 #window,
 #network,
 #tray,
@@ -66,8 +66,9 @@
 #memory,
 #cpu,
 #temperature {
-	padding-left: 0.313rem;
-	padding-right: 0.625rem;
+	padding-left: 0.1rem;
+	/* 0.313 left 0.625 right */
+	padding-right: 0.1rem;
 }
 
 
