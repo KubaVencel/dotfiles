@@ -13,6 +13,7 @@
       mesa_i686
       mesa-gl-headers
       mesa-demos
+      solaar
 
       openrgb-with-all-plugins 
       i2c-tools
@@ -42,8 +43,6 @@
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
-
-  services.blueman.enable = true;
 
   services.hardware.openrgb = { 
     enable = true; 
