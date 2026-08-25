@@ -91,7 +91,7 @@
       settings = {
         "<config>" = {
           edge = "bottom";
-          font = "JetBrains 11";
+          font = "JetBrains 14";
           border-bottom-size = "0";
         };
         warning = {
@@ -219,7 +219,7 @@
 
       fonts = {
         names = [ "JetBrains" ];
-        size = 13.0;
+        size = 17.0;
       };
 
       gaps = {

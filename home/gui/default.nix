@@ -26,7 +26,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrains:size=13";
+        font = "JetBrains:size=17";
         dpi-aware = false;
         prompt = "'> '";
         terminal = "footclient";
