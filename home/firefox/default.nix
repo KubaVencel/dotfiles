@@ -1,5 +1,10 @@
 { lib, inputs, pkgs, config, ... }:
 {
+  programs.firefoxpwa = {
+    enable = true;
+    package = pkgs.firefoxpwa; 
+  };
+
   programs.firefox = {
     enable = true;
     #configPath = ".mozilla/firefox";
@@ -61,12 +66,13 @@
         bitwarden
 	decentraleyes
 	darkreader
-        #ublock-origin
-        #privacy-badger
+        privacy-badger
         adnauseam
-        #sponsorblock
+        pwas-for-firefox
         new-tab-override
         tridactyl
+        #sponsorblock
+        #ublock-origin
       ];
       # https://gitlab.com/rycee/nur-expressions/-/tree/master/pkgs/firefox-addons?ref_type=heads
       # https://www.deviceinfo.me/

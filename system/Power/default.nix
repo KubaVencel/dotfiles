@@ -43,6 +43,8 @@
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
+  services.blueman.enable = true;
+
   services.hardware.openrgb = { 
     enable = true; 
     package = pkgs.openrgb-with-all-plugins; 

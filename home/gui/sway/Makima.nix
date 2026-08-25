@@ -129,7 +129,7 @@
         "1" = [{ app_id = "firefox"; }];
         "2" = [{ app_id = "Alacritty"; }];
         "3" = [{ class = "steam"; }];
-        "4" = [{ class = "discord"; }];
+        "5" = [{ app_id = "discord"; }];
       };
 
       # Move to scratchpad
@@ -233,7 +233,7 @@
         "AU Optronics 0x243D Unknown" = {
           mode = "1920x1080@60.031Hz";
           position = "0,0";
-          scale = "1.3";
+          scale = "1";
           scale_filter = "linear";
           transform = "normal";
           max_render_time = "off";

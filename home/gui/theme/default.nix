@@ -21,6 +21,11 @@ home.pointerCursor = {
   # gtk themegtk
   gtk = {
     enable = true;
+    font = {
+      name = "jetbrains-mono";
+      size = 17;
+    };
+
     cursorTheme = {
       
       #package = pkgs.bibata-cursors;

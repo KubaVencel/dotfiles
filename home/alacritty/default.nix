@@ -15,7 +15,7 @@
     };
     
     font = {
-      size = lib.mkDefault 13.0;
+      size = lib.mkDefault 17.0;
 
       offset = {
         x = 0;

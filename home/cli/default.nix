@@ -70,4 +70,20 @@
         fi
         '')
     ];
+
+    programs.cava = {
+    enable = true;
+    settings = {
+      color = {
+        # theme: https://github.com/catppuccin/cava/blob/main/themes/frappe-transparent.cava
+        gradient = 1;
+        gradient_color_1 = "'#98971a'";
+        gradient_color_2 = "'#8ec07c'";
+        gradient_color_3 = "'#fabd2f'";
+        gradient_color_4 = "'#d79921'";   
+        gradient_color_5 = "'#fb4934'";
+        gradient_color_6 = "'#cc241d'";
+      };
+    };
+  };
 }

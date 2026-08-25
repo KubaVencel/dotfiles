@@ -121,7 +121,7 @@
         { command = "sleep 2 && firefox";} 
         { command = "alacritty";} 
         { command = "sleep 4 && sidra";}
-        { command = "sleep 5 && discord";} 
+        { command = "sleep app_idblueman-manager";} 
         { command = "sleep 6 && steam";} 
         { command = "sleep 7 && mullvad-vpn";}
       ];
@@ -130,7 +130,7 @@
         "1" = [{ app_id = "firefox"; }];
         "2" = [{ app_id = "Alacritty"; }];
         "3" = [{ class = "steam"; }];
-        "4" = [{ class = "discord"; }];        
+        "5" = [{ app_id = "discord"; }];        
       };
 
       # Move to scratchpad
@@ -325,8 +325,11 @@
           # WINDOW MANAGEMENT
           # ====================
 
-            # Show sidra
+          # Show sidra
             "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
+
+          # Show bluemon  
+            "${mod}+b" = "[app_id=\".blueman-manager-wrapped\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode
             "${mod}+Shift+space" = "floating toggle";
