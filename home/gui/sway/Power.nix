@@ -121,7 +121,7 @@
         { command = "sleep 2 && mullvad-vpn";} 
         { command = "alacritty";} 
         { command = "sleep 4 && firefox";}
-        { command = "sleep 5 && blueman-manager";} 
+        { command = "sleep 5 && solaar";} 
         { command = "sleep 6 && steam";} 
         { command = "sleep 7 && sidra";}
       ];
@@ -138,7 +138,7 @@
         { criteria = { app_id = "sidra"; };
           command = "move scratchpad"; }
 
-        { criteria = { app_id = ".blueman-manager-wrapped"; };
+        { criteria = { app_id = "solaar"; };
           command = "move scratchpad"; }
       ];
       
@@ -328,8 +328,8 @@
           # Show sidra
             "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
 
-          # Show bluemon  
-            "${mod}+b" = "[app_id=\".blueman-manager-wrapped\"] scratchpad show";
+          # Show solaar  
+            "${mod}+b" = "[app_id=\"solaar\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode
             "${mod}+Shift+space" = "floating toggle";

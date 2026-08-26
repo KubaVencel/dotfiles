@@ -95,7 +95,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.vheac = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" "adbusers" "wireshark" "docker" ];
+    extraGroups = [ "wheel" "video" "audio" "networkmanager" "adbusers" "wireshark" "docker" "games" ];
     shell = pkgs.fish;
   };
 
@@ -254,6 +254,8 @@
     # system utils
     btop
     htop
+    lm_sensors
+
     wget
     curl
     git

@@ -7,6 +7,7 @@
 
   programs.firefox = {
     enable = true;
+    nativeMessagingHosts = [ pkgs.firefoxpwa ];
     #configPath = ".mozilla/firefox";
     configPath = "${config.xdg.configHome}/mozilla/firefox";
     policies = {

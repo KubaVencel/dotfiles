@@ -13,12 +13,13 @@
       mesa_i686
       mesa-gl-headers
       mesa-demos
+
       solaar
 
       openrgb-with-all-plugins 
       i2c-tools
     ];
-      
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
@@ -40,6 +41,9 @@
     #dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
+
+  # Solaar
+  hardware.logitech.wireless.enable = true;
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
