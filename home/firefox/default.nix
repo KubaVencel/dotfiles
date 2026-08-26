@@ -1,13 +1,7 @@
 { lib, inputs, pkgs, config, ... }:
 {
-  programs.firefoxpwa = {
-    enable = true;
-    package = pkgs.firefoxpwa; 
-  };
-
   programs.firefox = {
     enable = true;
-    nativeMessagingHosts = [ pkgs.firefoxpwa ];
     #configPath = ".mozilla/firefox";
     configPath = "${config.xdg.configHome}/mozilla/firefox";
     policies = {
@@ -69,7 +63,6 @@
 	darkreader
         privacy-badger
         adnauseam
-        pwas-for-firefox
         new-tab-override
         tridactyl
         #sponsorblock

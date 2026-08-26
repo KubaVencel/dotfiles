@@ -260,6 +260,8 @@
     curl
     git
 
+    piper
+
     neovim
     tmux
 

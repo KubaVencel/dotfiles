@@ -57,7 +57,6 @@
     nemo
     #pcmanfm
 
-    piper
     easyeffects
   ];
 
