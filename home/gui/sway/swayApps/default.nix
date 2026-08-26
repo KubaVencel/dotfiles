@@ -41,6 +41,8 @@
       show-failed-attempts = true;
       daemonize = true;
       color = "1e1e2e";
+      indicator-radius = 100;
+
 
       key-hl-color = "a6e3a1";
       bs-hl-color = "f5e0dc";
