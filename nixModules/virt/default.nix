@@ -7,9 +7,11 @@
   users.users.vheac.extraGroups = [ "libvirtd" "podman" ];
   
   # Manage the virtualisation services
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
+  virtualisation= {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
     libvirtd = {
       enable = true;
       qemu = {
