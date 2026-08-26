@@ -140,6 +140,9 @@
 
         { criteria = { app_id = "solaar"; };
           command = "move scratchpad"; }
+        
+        { criteria = { app_id = "com.github.wwmm.easyeffects"; };
+          command = "move scratchpad"; }
       ];
       
       bars = [
@@ -328,7 +331,10 @@
           # Show sidra
             "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
 
-          # Show solaar  
+          # Show easyEffects  
+            "${mod}+Shift+m" = "[app_id=\"com.github.wwmm.easyeffects\"] scratchpad show";
+          
+          # Show solaar 
             "${mod}+b" = "[app_id=\"solaar\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode

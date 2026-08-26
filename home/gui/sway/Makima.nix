@@ -137,7 +137,10 @@
         { criteria = { app_id = "sidra"; };
           command = "move scratchpad"; }
 
-        { criteria = { app_id = ".blueman-manager-wrapped"; };
+        { criteria = { app_id = "blueman-manager"; };
+          command = "move scratchpad"; }
+
+        { criteria = { app_id = "com.github.wwmm.easyeffects"; };
           command = "move scratchpad"; }
       ];
 
@@ -328,8 +331,11 @@
           # Show sidra
             "${mod}+m" = "[app_id=\"sidra\"] scratchpad show";
          
+          # Show easyEffects  
+            "${mod}+Shift+m" = "[app_id=\"com.github.wwmm.easyeffects\"] scratchpad show";
+          
           # Show bluemon  
-            "${mod}+b" = "[app_id=\".blueman-manager-wrapped\"] scratchpad show";
+            "${mod}+b" = "[app_id=\"blueman-manager\"] scratchpad show";
 
           # Toggle the current focus between tiling and floating mode
             "${mod}+Shift+space" = "floating toggle";

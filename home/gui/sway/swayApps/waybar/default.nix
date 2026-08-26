@@ -149,6 +149,9 @@
         temperature= {
           critical-threshold= 90;
           interval= 5;
+          hwmon-path = [
+            "/sys/class/hwmon/hwmon0/temp1_input"
+          ];
           format= "{icon} {temperatureC}°C";
           format-icons= [
             ""
@@ -164,7 +167,7 @@
           format= "{icon}";
           format-icons= {
             activated= " ";
-            deactivated= " ";
+            deactivated= "  ";
           };
           tooltip= false;
          };
