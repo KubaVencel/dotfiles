@@ -3,13 +3,29 @@
   pkgs,
   ... }:
 {
-  # Enable dconf (System Management Tool)
-  programs.dconf.enable = true;
-
   # Add user to libvirtd group
-  users.users.vheac.extraGroups = [ "libvirtd" ];
+  users.users.vheac.extraGroups = [ "libvirtd" "podman" ];
+  
+  # Manage the virtualisation services
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+        #ovmf.enable = true;
+        #ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+    spiceUSBRedirection.enable = true;
+  };
 
-  programs.virt-manager.enable = true;
+  programs = {
+    virt-manager.enable = true;
+  # Enable dconf (System Management Tool)
+    dconf.enable = true;
+  };
 
   services.spice-vdagentd.enable = true;
 
@@ -25,17 +41,4 @@
     win-spice
     adwaita-icon-theme
   ];
-
-  # Manage the virtualisation services
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemu = {
-        swtpm.enable = true;
-        #ovmf.enable = true;
-        #ovmf.packages = [ pkgs.OVMFFull.fd ];
-      };
-    };
-    spiceUSBRedirection.enable = true;
-  };
 }

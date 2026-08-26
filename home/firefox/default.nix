@@ -61,10 +61,10 @@
         bitwarden
 	decentraleyes
 	darkreader
-        privacy-badger
         adnauseam
         new-tab-override
         tridactyl
+        #privacy-badger
         #sponsorblock
         #ublock-origin
       ];
