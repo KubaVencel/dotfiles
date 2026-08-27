@@ -118,12 +118,11 @@
         #{ command = "pkill -SIGHUP kanshi"; always = true; }
         { command = "sleep 1 && awww img ~/nixModules/theming/themedImg/girlOnRoofAnimeAestheticSunset.jpg"; }
         { command = "autotiling";} 
-        { command = "sleep 3 && mullvad-vpn";} 
         { command = "alacritty";} 
-        { command = "sleep 4 && firefox";}
-        { command = "sleep 5 && solaar";} 
-        { command = "sleep 6 && steam";} 
-        { command = "sleep 7 && sidra";}
+        { command = "sleep 2 && firefox";}
+        { command = "sleep 3 && solaar";} 
+        { command = "sleep 4 && steam";} 
+        { command = "sleep 5 && sidra";}
       ];
 
       assigns = {
