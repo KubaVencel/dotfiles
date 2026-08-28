@@ -70,6 +70,8 @@
             ./system
             ./nixModules/theming/stylix.nix
             ./nixModules/virt
+            .nixModules/mullvad/mullvadStart.nix
+            .nixModules/mullvad/mullvad.nix
             home-manager.nixosModules.home-manager
             stylix.nixosModules.stylix
             lanzaboote.nixosModules.lanzaboote

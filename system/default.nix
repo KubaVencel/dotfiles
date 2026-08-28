@@ -171,6 +171,7 @@
 
     # Enable mullvad
     mullvad-vpn.enable = true;
+    mullvad-vpn.gui.enable = true;
 
     # Dbus 
     dbus = {
@@ -233,10 +234,6 @@
     openssh
     polkit
     
-    mullvad
-    mullvad-vpn
-    mullvad-browser
-
     yubioath-flutter
     yubikey-manager #ykman
     
