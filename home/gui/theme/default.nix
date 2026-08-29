@@ -40,47 +40,59 @@ home.pointerCursor = {
       size = 24;
     };
 
-    gtk2.theme = {
-      package = pkgs.gruvbox-dark-gtk;
-      name = "gruvbox-dark";
+    gtk2= {
+      theme = {
+        package = pkgs.gruvbox-gtk-theme.override { colorVariants = [ "dark" ]; };
+        name = "Gruvbox-dark";
+      }; 
     };
+    
+    gtk3 = {
+      theme = {
+        package = pkgs.gruvbox-gtk-theme.override { colorVariants = [ "dark" ]; };
+        name = "Gruvbox-dark";
+      };
+        extraConfig = {
+          gtk-application-prefer-dark-theme = true;
+        };
+      };
+    
+    gtk4 = {
+      theme = {
+        package = pkgs.gruvbox-gtk-theme.override { colorVariants = [ "dark" ]; };
+        name = "Gruvbox-dark";
+      };
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+        };
+      };
 
-    gtk3.theme = {
-      package = pkgs.gruvbox-dark-gtk;
-      name = "gruvbox-dark";
-    };
-
-    gtk4.theme = {
-      package = pkgs.gruvbox-dark-gtk;
-      name = "gruvbox-dark";
-    };
-
-  # icons 
+      # icons 
     iconTheme = {
       package =  pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
     };
   };
 
+  
   qt = {
     enable = true;
-    platformTheme.name = "gtk3";
+    platformTheme.name = "kvantum";
     style.name = "kvantum";
+
+    kvantum.settings.General = {
+      theme = "Gruvbox-Dark-Brown";
+    };
   };
 
   home.packages = [
     (pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Brown"; })
   ];
 
-  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
-    [General]
-    theme=Gruvbox-Dark-Brown
-  '';
-
   dconf.settings."org/gnome/desktop/interface" = {
-    #gtk-theme = lib.mkForce "Gruvbox-Dark";
-    #icon-theme = lib.mkForce "Papirus-Dark";
-    #cursor-theme = lib.mkForce "phinger-cursors-light";
-  color-scheme = "prefer-dark";  
+    gtk-theme = lib.mkForce "Gruvbox-Dark";
+    icon-theme = lib.mkForce "Papirus-Dark";
+    cursor-theme = lib.mkForce "phinger-cursors-light";
+    color-scheme = "prefer-dark";
   };
 }

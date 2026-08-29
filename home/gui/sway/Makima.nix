@@ -120,6 +120,7 @@
         { command = "autotiling";} 
         { command = "alacritty";} 
         { command = "sleep 2 && blueman-manager";}
+        { command = "sleep 5 && mullvad-vpn";}
         { command = "sleep 3 && firefox";} 
         { command = "sleep 4 && sidra";} 
       ];
