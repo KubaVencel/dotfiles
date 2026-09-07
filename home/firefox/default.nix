@@ -2,11 +2,19 @@
 {
   programs.firefox = {
     enable = true;
-    #configPath = ".mozilla/firefox";
-    configPath = "${config.xdg.configHome}/mozilla/firefox";
+    configPath = ".mozilla/firefox";
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
+      EnableTrackingProtection = {
+        Value= true;
+        #Locked= true;
+        #Cryptomining= true;
+        #Fingerprinting= true;
+        #EmailTracking= true;
+        #SuspectedFingerprinting= true;
+        Category= "Standart";
+      };
     };
     profiles.echoes = {
       search.engines = {
