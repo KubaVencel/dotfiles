@@ -176,7 +176,6 @@
     # Dbus 
     dbus = {
       enable = true;
-      packages = [ pkgs.gcr ];
     };	
 
     greetd = {
@@ -217,13 +216,13 @@
     linux-firmware  
     libdrm
     mesa
+    grc
 
     exfat
     exfatprogs
     
     jq
 
-    grc
     chayang
     brightnessctl
 
