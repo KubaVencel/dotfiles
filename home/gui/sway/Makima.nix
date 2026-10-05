@@ -100,7 +100,8 @@
           border = "#cc241d";
           button-background = "#3c3836";
           button-text = "#fb4934";
-        };  
+        };
+      };
     };
           
     config = {
