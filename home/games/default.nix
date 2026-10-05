@@ -35,6 +35,7 @@
   home.packages = with pkgs; [
     steam
     steam-run
+    protonup-ng 
 
     shadps4
 

@@ -122,7 +122,8 @@
         { command = "sleep 2 && firefox";}
         { command = "sleep 3 && solaar";} 
         { command = "sleep 4 && steam";} 
-        { command = "sleep 5 && sidra";}
+        { command = "sleep 5 && mullvad-vpn";}
+        { command = "sleep 7 && sidra";}
       ];
 
       assigns = {
