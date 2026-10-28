@@ -20,13 +20,6 @@
       i2c-tools
     ];
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;    
-  # needed to unlock LUKS with key from TPM
-  #boot.initrd.systemd.enable = true;
-
   #btrfs
   services.btrfs.autoScrub = {
     enable = true;

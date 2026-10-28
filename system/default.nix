@@ -321,8 +321,6 @@
     # xan
     #kernelPackages = pkgs.linuxPackages_xanmod_latest
 
-    # needed to unlock LUKS with key from TPM
-    initrd.systemd.enable = true;
   
     # loader = {
     #   efi.canTouchEfiVariables = true;
@@ -349,7 +347,6 @@
 
     # Enable "Silent Boot"
     consoleLogLevel = 0;
-    initrd.verbose = false;
     kernelParams = [
       "quiet"
       "splash"
