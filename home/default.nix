@@ -33,7 +33,6 @@
     #spotify
     inputs.sidra.packages.${pkgs.system}.default
     ungoogled-chromium
-    brave
     
     vlc
     celluloid
