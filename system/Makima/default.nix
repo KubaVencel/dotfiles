@@ -3,6 +3,12 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+
+  environment.systemPackages = with pkgs;
+    [
+      solaar
+    ];
+
   # Thermald proactively prevents overheating on Intel CPUs 
   # and works well with other tools.
   services.thermald.enable = true;
